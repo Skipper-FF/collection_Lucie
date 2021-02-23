@@ -4,14 +4,14 @@
 // 3. You can override them below!
 
 // General style
-$font-family-sans-serif:  $body-font;
-$headings-font-family:    $headers-font;
+$font-family-sans-serif:  $body-font: "Open Sans", "sans-serif";
+$headings-font-family:    $headers-font: "Poppins", "sans-serif";
 $body-bg:                 $light-gray;
 $font-size-base: 1rem;
 
 // Colors
 $body-color: $gray;
-$primary:    $blue;
+$primary:    $#f87060;
 $success:    $green;
 $info:       $yellow;
 $danger:     $red;

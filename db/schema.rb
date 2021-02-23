@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2021_02_22_164334) do
   end
 
   create_table "components", force: :cascade do |t|
-    t.string "type"
+    t.string "element_type"
     t.string "supplier"
     t.string "name"
     t.string "reference"
