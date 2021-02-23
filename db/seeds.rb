@@ -47,12 +47,17 @@ user1 = User.create!(
   password: "jean12345",
   )
 
-season1 = Season.create!(
+p user1
+
+season1 = Season.new(
   name: "AW21",
-  user_id: user1.id,
-  begining_date: "July 2021",
-  ending_date: "January 2022",
-  )
+  beginning_date: Date.new(2021,07,01),
+  ending_date: Date.new(2022,01,01),
+)
+
+season1.user = user1
+season1.save
+p season1
 
 
 
