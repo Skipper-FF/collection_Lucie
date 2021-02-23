@@ -8,7 +8,7 @@
   background-color: #33a170; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
 }
- 
+
 .search-form-control {
   position: relative;
 }
@@ -33,3 +33,53 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+
+.menu {
+  margin-top: 150px;
+  margin-left: 20px;
+}
+
+.title-tissu {
+  margin-bottom: 30px;
+}
+
+.element-collection{
+  li {
+    list-style-type: none;
+    color:black;
+}
+  a:hover {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a {
+    color: black;
+  }
+}
+
+.menu {
+  ul {
+    margin-left: -15px;
+    margin-top: 15px;
+  }
+}
+
+ul {
+  li {
+    padding: 3px;
+  }
+}
+
+.element-collection {
+  display: block;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
