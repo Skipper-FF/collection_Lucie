@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>All Seasons</h1>
+      <ul class="list-group">
+        <% @seasons.each do |season| %>
+          <li class="list-group-item">
+            <%= link_to season.name, season_path(season) %>
+          </li>
+        <% end %>
+      </ul>
+      <%= link_to "Add a new Season", new_season_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
