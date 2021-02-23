@@ -1,0 +1,54 @@
+.navbar-lewagon {
+    justify-content: flex-start;
+    position: relative;
+    background: white;
+    color: white;
+    .navbar-collapse {
+        flex-grow: 0;
+        position: absolute;
+        right: 16px;
+    }
+    .navbar-brand {
+        img {
+            width: 40px;
+        }
+    }
+  }
+
+  .navbar-nav {
+      .btn-green-flash {
+        padding: 8px;
+        margin-left: 16px;
+        &:hover {
+            opacity: 0.8;
+        }
+      }
+  }
+
+//   HOMEPAGE - NAVBAR - TABS
+
+.tabs-underlined {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    .tab-underlined {
+        color: black;
+        padding: 8px;
+        margin: 8px 16px;
+        opacity: .7;
+        cursor: pointer;
+        text-decoration: none;
+        border-bottom: 4px solid transparent;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .active {
+        opacity: 1;
+        border-bottom: 3px solid $caribbean;
+    }
+  }
+
+
+  
+  

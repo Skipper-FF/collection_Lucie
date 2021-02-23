@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2021_02_22_164334) do
   end
 
   create_table "components", force: :cascade do |t|
-    t.string "type"
+    t.string "element_type"
     t.string "supplier"
     t.string "name"
     t.string "reference"
@@ -75,12 +75,22 @@ ActiveRecord::Schema.define(version: 2021_02_22_164334) do
 
   create_table "seasons", force: :cascade do |t|
     t.string "name"
-    t.date "begining_date"
+    t.date "beginning_date"
     t.date "ending_date"
-    t.bigint "users_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_seasons_on_users_id"
+    t.index ["user_id"], name: "index_seasons_on_user_id"
+  end
+
+  create_table "technical_details", force: :cascade do |t|
+    t.bigint "clothe_id", null: false
+    t.bigint "component_id", null: false
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["clothe_id"], name: "index_technical_details_on_clothe_id"
+    t.index ["component_id"], name: "index_technical_details_on_component_id"
   end
 
   create_table "technical_details", force: :cascade do |t|
@@ -109,7 +119,7 @@ ActiveRecord::Schema.define(version: 2021_02_22_164334) do
   add_foreign_key "clothes", "patterns"
   add_foreign_key "clothes", "seasons"
   add_foreign_key "patterns", "families"
-  add_foreign_key "seasons", "users", column: "users_id"
+  add_foreign_key "seasons", "users"
   add_foreign_key "technical_details", "clothes"
   add_foreign_key "technical_details", "components"
 end
