@@ -1,0 +1,21 @@
+.homepage-cards {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    .homepage-card {
+        width: 100%;
+        margin: 16px 8px;
+        padding: 32px;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 4px 4px 20px rgba(0,0,0,0.1);
+        background-color: white;
+        ul {
+            list-style: none;
+            padding-inline-start: 0px;
+        }
+        img {
+            width: 50%;
+            margin-bottom: 32px;
+        }
+    }
+}

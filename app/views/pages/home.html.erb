@@ -1,5 +1,39 @@
 <%= render "shared/homepage_navbar" %>
 <%= render "shared/homepage_banner" %>
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="content">
+    <h1>Comment ça fonctionne</h1>
+    <div class="homepage-cards">
+        <div class="homepage-card">
+          <%= image_tag("collections.svg") %>
+          <h4>Développez facilement vos collections</h4>
+          <ul>
+            <li>Ajoutez vos tissus et vos trims</li>
+            <li>Créez vos produits</li>
+            <li>Decidez sereinements, les calculs de prix de revient sont automatiques</li>
+          </ul>
+        </div>
+        <div class="homepage-card">
+          <%= image_tag("production.svg") %>
+          <h4>Planifiez et organisez vos productions</h4>
+          <ul>
+            <li>Suivez les quantités de composants à commander et leur répartition</li>
+            <li>Validez la conformité de vos prototypes et lancez vos productions</li>
+            <li>Suivez les stocks présents chez vos partenaires de production</li>
+          </ul>
+        </div>
+        <div class="homepage-card">
+          <%= image_tag("pilotage.svg") %>
+          <h4>Suivez et analysez vos indicateurs</h4>
+          <ul>
+            <li>Pilotez vos marges et vos coûts</li>
+            <li>Analysez vos ventes</li>
+            <li>Optimisez vos stocks et réduisez vos ruptures</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+

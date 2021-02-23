@@ -4,27 +4,16 @@
     padding: 200px 0;
     background-position: 50% 30%;
     h1 {
-        margin: 64px 0px;
+        margin: 64px 0px 16px 0px;
         color: white;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
         font-size: 32px;
         font-weight: bold;
     }
     p {
         font-size: 24px;
         color: white;
-        opacity: .9;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-    .btn-green-flash {
-        font-size: 20px;
-        &:hover {
-            color: rgba(255,255,255,0.8);
-        }
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        margin-bottom: 64px;
     }
 }
-
-
-  
-
-  
