@@ -1,7 +1,7 @@
 .navbar-lewagon {
     justify-content: flex-start;
     position: relative;
-    background: $blue;
+    background: white;
     color: white;
     .navbar-collapse {
         flex-grow: 0;
@@ -15,6 +15,16 @@
     }
   }
 
+  .navbar-nav {
+      .btn-green-flash {
+        padding: 8px;
+        margin-left: 16px;
+        &:hover {
+            opacity: 0.8;
+        }
+      }
+  }
+
 //   HOMEPAGE - NAVBAR - TABS
 
 .tabs-underlined {
@@ -22,10 +32,10 @@
     align-items: center;
     margin: 0px;
     .tab-underlined {
-        color: white;
+        color: black;
         padding: 8px;
         margin: 8px 16px;
-        opacity: .4;
+        opacity: .7;
         cursor: pointer;
         text-decoration: none;
         border-bottom: 4px solid transparent;
@@ -35,21 +45,10 @@
     }
     .active {
         opacity: 1;
-        border-bottom: 3px solid $sunset;
+        border-bottom: 3px solid $caribbean;
     }
   }
 
-  .nav-link {
-      padding: 8px;
-      border-radius: 50px;
-      background-color: $sunset;
-      opacity: 0.8;
-      margin-left: 16px;
-      &:hover {
-          opacity: 1;
-          color: white;
-      }
-  }
 
   
   
