@@ -1,14 +1,4 @@
-<div container>
-  <h2>Collection</h2>
-  <%= form_tag season_clothes(@season), method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a reference"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-</div>
+<%= render "shared/sidebar"%>
 
 
 <div class="container">
@@ -27,8 +17,6 @@
           </tr>
         </tbody>
       </table>  -->
-
-      
     </div>
   </div>
 </div>

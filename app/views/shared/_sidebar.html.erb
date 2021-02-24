@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container d-flex">
 
   <div class="sidenav">
 
@@ -20,6 +20,17 @@
     </div>
   </div>
 
+<div>
+  <h2>Collection</h2>
+  <%= form_tag season_clothes_path(@season), method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a reference"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
 </div>
 
 
