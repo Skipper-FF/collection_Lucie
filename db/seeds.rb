@@ -22,30 +22,6 @@ user1 = User.create!(
 )
 p user1
 
-family1 = Family.create!(
-  name: "SWEATS"
-)
-
-factory1 = Factory.create!(
-  name: "RGT Textiles",
-  address: "Porto",
-  speciality: "Sportswear",
-  production_capacity: "10 000/month",
-  moq: "100",
-  rating: 4
-)
-
-factory2 = Factory.create!(
-  name: "AAC-Textiles",
-  address: "Lisbonne",
-  speciality: "Sportswear",
-  production_capacity: "7 000/month",
-  moq: "150",
-  rating: 3.5
-)
-
-
-# =========== Cloth example nb 1  =====
 
 season1 = Season.new(
   name: "SS21",
@@ -57,6 +33,82 @@ season1.user = user1
 season1.save
 p season1
 
+
+season2 = Season.new(
+  name: "AW21",
+  beginning_date: Date.new(2021,07,01),
+  ending_date: Date.new(2022,01,01),
+)
+
+season2.user = user1
+season2.save
+p season2
+
+
+family1 = Family.create!(
+  name: "SWEATS"
+)
+
+family2 = Family.create!(
+  name: "JEANS"
+)
+
+family3 = Family.create!(
+  name: "COATS"
+)
+
+family4 = Family.create!(
+  name: "SHIRTS"
+)
+
+factory1 = Factory.create!(
+  name: "RGT Textiles",
+  address: "Porto (Portugal)",
+  speciality: "Sportswear",
+  production_capacity: "10 000/month",
+  moq: "100",
+  rating: 4
+)
+
+factory2 = Factory.create!(
+  name: "AAC-Textiles",
+  address: "Lisbonne (Portugal)",
+  speciality: "Sportswear",
+  production_capacity: "7 000/month",
+  moq: "150",
+  rating: 3.5
+)
+
+
+factory3 = Factory.create!(
+  name: "BFIELD",
+  address: "Łódź (Poland)",
+  speciality: "Jeans",
+  production_capacity: "10 000/month",
+  moq: "1000",
+  rating: 4
+)
+
+factory4 = Factory.create!(
+  name: "M-Corp",
+  address: "Łask (Poland)",
+  speciality: "Coats",
+  production_capacity: "5 000/month",
+  moq: "500",
+  rating: 4.5
+)
+
+factory5 = Factory.create!(
+  name: "Baltic SC",
+  address: "Kaunas (Lithuania)",
+  speciality: "Shirts",
+  production_capacity: "15 000/month",
+  moq: "1000",
+  rating: 4
+)
+
+
+# =========== Cloth example nb 1  =====
 
 pattern1 = Pattern.create!(
   name: "Sleeveless sweatshirt",
@@ -176,17 +228,6 @@ TechnicalDetail.create!(
 
 # =========== Cloth example nb 2 =====
 
-season2 = Season.new(
-  name: "AW21",
-  beginning_date: Date.new(2021,07,01),
-  ending_date: Date.new(2022,01,01),
-)
-
-season2.user = user1
-season2.save
-p season2
-
-
 pattern2 = Pattern.create!(
   name: "Longsleeve sweatshirt",
   description: "",
@@ -241,7 +282,7 @@ component3b = Component.create!(
   description: "Trendy zip",
   color: "Bright inox",
   composition: "Inox",
-  unit: "Uniu",
+  unit: "Unit",
   unit_price: "2.5€",
   rating: 4
 )
@@ -272,3 +313,324 @@ component5b = Component.create!(
   rating: 4
 )
 
+
+TechnicalDetail.create!(
+  clothe_id: clothe2.id,
+  component_id: component1b.id,
+  quantity: 0.5,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe2.id,
+  component_id: component2b.id,
+  quantity: 0.3,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe2.id,
+  component_id: component3b.id,
+  quantity: 1,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe2.id,
+  component_id: component4b.id,
+  quantity: 1,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe2.id,
+  component_id: component5b.id,
+  quantity: 1,
+)
+
+
+# =========== Cloth example nb 3  =====
+
+pattern3 = Pattern.create!(
+  name: "Regular jeans",
+  description: "",
+  family_id: family2.id,
+)
+
+clothe3 = Clothe.create!(
+  factory_id: factory3.id,
+  season_id: season1.id,
+  pattern_id: pattern3.id,
+  name: "Hot and thick jeans",
+  reference: "RJ430",
+  quantity: 15000,
+  confection_cost: 9,
+  total_cost: 135000,
+  selling_price: 35
+)
+
+componentAA = Component.create!(
+  element_type: "Main fabrics",
+  supplier: "Reda",
+  name: "Cotton",
+  reference: "JKS789",
+  description: "Thick cotton",
+  color: "Blue denim",
+  composition: "95% cotton, 5% elasthane",
+  unit: "Weight",
+  unit_price: "7€",
+  rating: 4.5
+)
+
+componentBB = Component.create!(
+  element_type: "Secondary fabrics",
+  supplier: "Reda",
+  name: "Cotton",
+  reference: "KW21",
+  description: "Light fabrics",
+  color: "Dark Gray",
+  composition: "100% cotton",
+  unit: "Length",
+  unit_price: "3€",
+  rating: 4
+)
+
+componentCC = Component.create!(
+  element_type: "Zip",
+  supplier: "YKK",
+  name: "Flying",
+  reference: "LM-blk",
+  description: "Small zip",
+  color: "Golden inox",
+  composition: "Inox",
+  unit: "Unit",
+  unit_price: "1€",
+  rating: 4
+)
+
+componentDD = Component.create!(
+  element_type: "Brand trim",
+  supplier: "Trim-Factory",
+  name: "Show brand",
+  reference: "SB651",
+  description: "Small patch",
+  color: "Brown",
+  composition: "Leather",
+  unit: "Unit",
+  unit_price: "0.15€",
+  rating: 4
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe3.id,
+  component_id: componentAA.id,
+  quantity: 0.25,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe3.id,
+  component_id: componentBB.id,
+  quantity: 0.15,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe3.id,
+  component_id: componentCC.id,
+  quantity: 1,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe3.id,
+  component_id: componentDD.id,
+  quantity: 1,
+)
+
+
+# =========== Cloth example nb 4  =====
+
+pattern4 = Pattern.create!(
+  name: "Trench coat",
+  description: "",
+  family_id: family3.id,
+)
+
+clothe4 = Clothe.create!(
+  factory_id: factory4.id,
+  season_id: season1.id,
+  pattern_id: pattern4.id,
+  name: "Light trench coat",
+  reference: "LTRC520",
+  quantity: 8000,
+  confection_cost: 12,
+  total_cost: 96000,
+  selling_price: 79
+)
+
+componentZZ = Component.create!(
+  element_type: "Main fabrics",
+  supplier: "Reda",
+  name: "Polyester",
+  reference: "ERT287",
+  description: "Light waterproof fabrics",
+  color: "Light brown",
+  composition: "95% polyester, 5% elasthane",
+  unit: "Weight",
+  unit_price: "7.5€",
+  rating: 4
+)
+
+componentYY = Component.create!(
+  element_type: "Secondary fabrics",
+  supplier: "Reda",
+  name: "Polyester",
+  reference: "TLB741",
+  description: "Light fabrics",
+  color: "Light Gray",
+  composition: "100% polyester",
+  unit: "Length",
+  unit_price: "2€",
+  rating: 4
+)
+
+componentXX = Component.create!(
+  element_type: "Belt",
+  supplier: "Reda",
+  name: "Wizz",
+  reference: "LB-brwn",
+  description: "Trench belt",
+  color: "Light brown",
+  composition: "Polyester",
+  unit: "Unit",
+  unit_price: "2€",
+  rating: 3.5
+)
+
+componentWW = Component.create!(
+  element_type: "Large Round Plastic Button",
+  supplier: "Trim-Factory",
+  name: "Round brown",
+  reference: "BB159",
+  description: "Bright large round brown plastic",
+  color: "Dark Brown",
+  composition: "Plastic",
+  unit: "Unit",
+  unit_price: "0.1€",
+  rating: 4
+)
+
+componentVV = Component.create!(
+  element_type: "Brand trim",
+  supplier: "Trim-Factory",
+  name: "Show brand lite",
+  reference: "SB651",
+  description: "Rectangular patch",
+  color: "Brown",
+  composition: "Polyester",
+  unit: "Unit",
+  unit_price: "0.05€",
+  rating: 4
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe4.id,
+  component_id: componentZZ.id,
+  quantity: 0.5,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe4.id,
+  component_id: componentYY.id,
+  quantity: 0.1,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe4.id,
+  component_id: componentXX.id,
+  quantity: 1,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe4.id,
+  component_id: componentWW.id,
+  quantity: 6,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe4.id,
+  component_id: componentVV.id,
+  quantity: 1,
+)
+
+
+# =========== Cloth example nb 5  =====
+
+pattern5 = Pattern.create!(
+  name: "Shirt",
+  description: "",
+  family_id: family4.id,
+)
+
+clothe5 = Clothe.create!(
+  factory_id: factory5.id,
+  season_id: season1.id,
+  pattern_id: pattern5.id,
+  name: "Summer shirt",
+  reference: "LSH023",
+  quantity: 10000,
+  confection_cost: 7,
+  total_cost: 70000,
+  selling_price: 34
+)
+
+componentMM = Component.create!(
+  element_type: "Main fabrics",
+  supplier: "Reda",
+  name: "Regular cotton shirt",
+  reference: "WSH580",
+  description: "Elegant fabrics",
+  color: "White",
+  composition: "95% polyecottonster, 5% elasthane",
+  unit: "Weight",
+  unit_price: "5.5€",
+  rating: 4.5
+)
+
+componentNN = Component.create!(
+  element_type: "Small Round Plastic Button",
+  supplier: "Trim-Factory",
+  name: "Elegant white button",
+  reference: "WB852",
+  description: "Small round white plastic",
+  color: "Bright white",
+  composition: "Plastic",
+  unit: "Unit",
+  unit_price: "0.09€",
+  rating: 4
+)
+
+componentOO = Component.create!(
+  element_type: "Brand trim",
+  supplier: "Trim-Factory",
+  name: "Show brand white",
+  reference: "SBW423",
+  description: "Small light rectangular patch",
+  color: "White",
+  composition: "Polyester",
+  unit: "Unit",
+  unit_price: "0.005€",
+  rating: 4
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe5.id,
+  component_id: componentMM.id,
+  quantity: 0.15,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe5.id,
+  component_id: componentNN.id,
+  quantity: 5,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe4.id,
+  component_id: componentOO.id,
+  quantity: 1,
+)
