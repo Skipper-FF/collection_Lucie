@@ -13,7 +13,7 @@ class FamiliesController < ApplicationController
   end
 
   def create
-    @family = Family.new(cloth_params)
+    @family = Family.new(family_params)
     if @family.save
       redirect_to new_family_path(@family)
     else

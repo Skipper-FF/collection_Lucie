@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="form-design">
+    <h2>Quelle est la famille du produit à ajouter ?</h2>
+    <%= form_tag new_season_clothe_path(@season), method: :get do %>
+    <%= select_tag :family, options_from_collection_for_select(@families, :id, :name),
+                            as: :radio_buttons,
+                            collection_wrapper_tag: 'div',
+                            collection_wrapper_class: 'category-wrapper',
+                            item_wrapper_class: 'category-item',
+                            input_html: {class: 'category-selector'},
+                            collection: @families %>
+    <%= submit_tag "Search", class: "btn btn-green-flash" %>
+    <% end %>
+  </div>
+</div>
