@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   resources :seasons do
     resources :clothes
   end
+
+  resources :families, only: [:new, :create, :edit, :update, :destroy]
   resources :patterns, only: [:new, :create, :edit, :update, :destroy]
+
 end
