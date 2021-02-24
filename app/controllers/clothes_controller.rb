@@ -10,6 +10,7 @@ class ClothesController < ApplicationController
 
   def new
     @clothe = Clothe.new
+    @season = Season.find(params[:season_id])
   end
 
   def create
