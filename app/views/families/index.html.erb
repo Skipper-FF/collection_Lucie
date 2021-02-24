@@ -1,0 +1,10 @@
+<h1>All families of your collection:</h1>
+
+<ul>
+  <% @families.each do |family| %>
+    <li><%= link_to family.name, family_path(family) %></li>
+  <% end %>
+</ul>
+
+<hr>
+<%= link_to "Add a new family to your collection", new_family_path %>
