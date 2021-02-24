@@ -1,7 +1,11 @@
 class ClothesController < ApplicationController
   def index
-    @clothes = Clothe.all
     @season = Season.find(params[:season_id])
+    if params[:query].present?
+      @clothes = Clothe.search_by_name_and_reference(params[:query])
+    else
+      @clothes = Clothe.all
+    end
   end
 
   def show

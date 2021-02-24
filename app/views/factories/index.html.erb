@@ -1,0 +1,10 @@
+<h1>All factories you work with:</h1>
+
+<ul>
+  <% @factories.each do |factory| %>
+    <li><%= link_to factory.name, factory_path(factory) %></li>
+  <% end %>
+</ul>
+
+<hr>
+<%= link_to "Add a new factory", new_factory_path %>
