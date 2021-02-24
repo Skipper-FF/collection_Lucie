@@ -1,9 +1,16 @@
 <div class="container">
-<h1>Ajouter un nouveau Modèle</h1>
-  <%= simple_form_for(@pattern) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :family_id, collection: @families %>
-    <%= f.submit "Créer le modèle", class: "btn-green-flash btn-small" %>
+  <div class="form-design">
+    <h2>Ajouter un nouveau Modèle</h2>
+    <%= simple_form_for(@pattern) do |f| %>
+      <%= f.input :name, label: "Nom du modèle" %>
+      <%= f.input :description, label: "Description du modèle" %>
+      <%= f.input :family_id, as: :radio_buttons,
+                              collection_wrapper_tag: 'div',
+                              collection_wrapper_class: 'category-wrapper',
+                              item_wrapper_class: 'category-item',
+                              input_html: {class: 'category-selector'},
+                              collection: @families %>
+      <%= f.submit "Créer le modèle", class: " btn btn-green-flash" %>
     <% end %>
+  </div>
 </div>
