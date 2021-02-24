@@ -1,6 +1,7 @@
 class ClothesController < ApplicationController
   def index
     @clothes = Clothe.all
+    @season = Season.find(params[:season_id])
   end
 
   def show
@@ -10,21 +11,37 @@ class ClothesController < ApplicationController
 
   def new
     @clothe = Clothe.new
+    @clothe.family = Family.find(params[:family])
+    @patterns = @clothe.family.patterns
     @season = Season.find(params[:season_id])
+    @families = Family.all
   end
 
   def create
-    @clothe = Clothe.new(cloth_params)
+    @clothe = Clothe.new(clothe_params)
+    @clothe.family = Family.find(params[:clothe][:family_id])
+    @patterns = @clothe.family.patterns
+
+    @season = Season.find(params[:season_id])
+    @clothe.season = @season
     if @clothe.save
-      redirect_to season_clothe_path(@clothe.season, @clothe)
+      redirect_to season_clothes_path(@clothe.season)
     else
+      raise
       render "new"
     end
   end
 
+  def add
+    @families = Family.all
+    @clothe = Clothe.new
+    @season = Season.find(params[:season_id])
+    @clothe.season = @season
+  end
+
   private
 
-  def cloth_params
+  def clothe_params
     params.require(:clothe).permit(:factory_id, :season_id, :pattern_id, :name, :reference, :quantity, :confection_cost, :total_cost, :selling_price)
   end
 end
