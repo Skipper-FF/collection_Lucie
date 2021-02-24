@@ -26,37 +26,67 @@
           <li><a href="#">Analyses</a></li>
         </div>
       </ul>
-
-      <!-- <p id="collapseOne" class="collapse">AW 21</p> -->
     </div>
   </div>
 
-<div>
-  <h2>Collection</h2>
-  <%= form_tag season_clothes_path(@season), method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a reference"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-</div>
+
+  <div class="container-navbar d-flex flex-column border-bottom">
+
+    <div class="navbar-show-bottom d-flex">
+      <div>
+        <h1>Collection < AW21</h1>
+      </div>
+    </div>
+
+    <div class="navbar-show-bottom d-flex justify-content-around">
+      <div class="filter">
+        <%= form_tag season_clothes_path(@season), method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Trouver une référence"
+          %>
+          <%= submit_tag "", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <div class="dropdown filter">
+        <button class="btn-filter btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Genre
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><%= link_to "Homme"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "Femme"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "Enfant"%></a>
+        </div>
+      </div>
+      <div class="dropdown filter">
+        <button class="btn-filter btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Type de vêtement
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><%= link_to "Haut"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "Bas"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "Sous-vêtement"%></a>
+        </div>
+      </div>
+      <div class="dropdown filter">
+        <button class="btn-filter btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Taille
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><%= link_to "XXS"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "XS"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "S"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "M"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "L"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "XL"%></a>
+          <a class="dropdown-item" href="#"><%= link_to "XXL"%></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-
-
-<i class="fas fa-cogs"></i>
-<!-- </div>
-<form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-  <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
-</form>
-</div>
-</div> -->
 
 
 
