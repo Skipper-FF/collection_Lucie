@@ -1,0 +1,17 @@
+<h1>Update a Factory</h1>
+<%= simple_form_for @factory do |f| %>
+  <%= f.input :name %><br>
+
+  <%= f.input :address %><br>
+
+  <%= f.input :speciality %><br>
+
+  <%= f.input :production_capacity, input_html: { min: '0' } %><br>
+
+  <%= f.input :moq, input_html: { min: '0' } %><br>
+
+  <%= f.input :rating, input_html: { min: '0' }  %><br>
+
+  <%= f.submit "Submit Updated Factory" %>
+<% end %>
+
