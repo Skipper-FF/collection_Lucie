@@ -93,16 +93,6 @@ ActiveRecord::Schema.define(version: 2021_02_22_164334) do
     t.index ["component_id"], name: "index_technical_details_on_component_id"
   end
 
-  create_table "technical_details", force: :cascade do |t|
-    t.bigint "clothe_id", null: false
-    t.bigint "component_id", null: false
-    t.integer "quantity"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["clothe_id"], name: "index_technical_details_on_clothe_id"
-    t.index ["component_id"], name: "index_technical_details_on_component_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
