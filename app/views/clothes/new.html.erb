@@ -1,11 +1,17 @@
 <div class="container">
+  <div class="form-design">
   <h1>Ajouter un nouveau <%= @clothe.family.name.downcase[0...-1] %> au plan de collection <%= @season.name %></h1>
   <div class="form">
     <%= simple_form_for [ @season, @clothe ] do |f| %>
       <%= f.input :name %>
       <%= f.input :reference %>
       <%= f.input :family_id, input_html: {value: @clothe.family.id, class: "hidden"}, wrapper_html: { class: "hidden"} %>
-      <%= f.input :pattern, collection: @patterns %>
+      <%= f.input :pattern, as: :radio_buttons,
+                            collection_wrapper_tag: 'div',
+                            collection_wrapper_class: 'category-wrapper',
+                            item_wrapper_class: 'category-item',
+                            input_html: {class: 'category-selector'},
+                            collection: @patterns %>
 
       <%= f.input :quantity, as: :integer %>
       <%= f.input :factory_id, as: :integer %>
@@ -18,4 +24,5 @@
     <% end %>
   </div>
   <%= link_to "See all clothes", season_clothes_path %>
+  </div>
 </div>
