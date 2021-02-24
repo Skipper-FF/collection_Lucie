@@ -1,0 +1,9 @@
+<div class="container">
+<h1>Ajouter un nouveau Modèle</h1>
+  <%= simple_form_for(@pattern) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :family_id, collection: @families %>
+    <%= f.submit "Créer le modèle", class: "btn-green-flash btn-small" %>
+    <% end %>
+</div>
