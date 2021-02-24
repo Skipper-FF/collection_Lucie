@@ -1,6 +1,6 @@
 class ClothesController < ApplicationController
   def index
-    @clothes = Clothe.all
+    @clothes = Clothe.search_by_name_and_reference(params[:query])
   end
 
   def show
