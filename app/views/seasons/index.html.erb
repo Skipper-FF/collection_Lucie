@@ -1,15 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>All Seasons</h1>
-      <ul class="list-group">
+      <h1>Saisons</h1>
+      <div class="cards">
         <% @seasons.each do |season| %>
-          <li class="list-group-item">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560258018-c7db7645254e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80)">
             <%= link_to season.name, season_path(season) %>
-          </li>
+          </div>
         <% end %>
-      </ul>
-      <%= link_to "Add a new Season", new_season_path, class: 'btn btn-primary' %>
+      </div>
+      <%= link_to "Ajouter une saison", new_season_path, class: 'btn btn-primary' %>
     </div>
   </div>
 </div>
+
