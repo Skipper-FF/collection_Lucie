@@ -13,6 +13,19 @@
                             input_html: {class: 'category-selector'},
                             collection: @patterns %>
 
+      <%= f.simple_fields_for :technical_details do |form| %>
+
+        <%= form.input :component, collection: @main_fabric %>
+        <%= form.input :quantity %>
+
+      <% end %>
+      <%= f.simple_fields_for :technical_details do |form| %>
+
+        <%= form.input :component, collection: @components %>
+        <%= form.input :quantity %>
+
+      <% end %>
+
       <%= f.input :quantity, as: :integer %>
       <%= f.input :factory_id, as: :integer %>
 
