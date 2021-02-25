@@ -21,7 +21,7 @@
       <% end %>
       <%= f.simple_fields_for :technical_details do |form| %>
 
-        <%= form.input :component, collection: @components %>
+        <%= form.input :component, collection: @secondary_fabric %>
         <%= form.input :quantity %>
 
       <% end %>

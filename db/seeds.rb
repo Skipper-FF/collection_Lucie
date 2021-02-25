@@ -5,14 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+TechnicalDetail.destroy_all
 Component.destroy_all
+Clothe.destroy_all
 Pattern.destroy_all
 Family.destroy_all
-User.destroy_all
 Season.destroy_all
+User.destroy_all
 Factory.destroy_all
-Clothe.destroy_all
-TechnicalDetail.destroy_all
+
 
 # ========= elts communs ===
 

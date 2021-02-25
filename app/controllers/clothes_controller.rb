@@ -20,9 +20,10 @@ class ClothesController < ApplicationController
     @season = Season.find(params[:season_id])
     @families = Family.all
     @components = Component.all
-    @main_fabric = Component.where(element_type: "Zip")
+    @main_fabric = Component.where(element_type: "Main fabric")
+    @secondary_fabric = Component.where(element_type: "Secondary fabric")
     @clothe.technical_details.build
-    @family = @clothe.family    
+    @family = @clothe.family
   end
 
   def create
