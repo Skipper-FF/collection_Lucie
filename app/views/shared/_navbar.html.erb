@@ -6,14 +6,18 @@
   </div>
 
   <div class="navbar-show-bottom d-flex justify-content-around">
-    <div class="filter">
+    <div class="filter d-flex">
+      <div>
       <%= form_tag season_clothes_path(@season), method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
           placeholder: "Trouver une référence"
         %>
-        <%= submit_tag "", class: "btn btn-primary" %>
+      </div>
+      <div>
+        <%= submit_tag "Chercher", class: "btn btn-primary" %>
+      </div>
       <% end %>
     </div>
     <div class="dropdown filter">
