@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_104821) do
+
+ActiveRecord::Schema.define(version: 2021_02_25_115218) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,12 +61,13 @@ ActiveRecord::Schema.define(version: 2021_02_25_104821) do
   end
 
   create_table "factory_families", force: :cascade do |t|
-    t.bigint "factories_id", null: false
-    t.bigint "families_id", null: false
+
+    t.bigint "factory_id", null: false
+    t.bigint "family_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["factories_id"], name: "index_factory_families_on_factories_id"
-    t.index ["families_id"], name: "index_factory_families_on_families_id"
+    t.index ["factory_id"], name: "index_factory_families_on_factory_id"
+    t.index ["family_id"], name: "index_factory_families_on_family_id"
   end
 
   create_table "families", force: :cascade do |t|
@@ -117,8 +120,10 @@ ActiveRecord::Schema.define(version: 2021_02_25_104821) do
   add_foreign_key "clothes", "factories"
   add_foreign_key "clothes", "patterns"
   add_foreign_key "clothes", "seasons"
-  add_foreign_key "factory_families", "factories", column: "factories_id"
-  add_foreign_key "factory_families", "families", column: "families_id"
+
+  add_foreign_key "factory_families", "factories"
+  add_foreign_key "factory_families", "families"
+
   add_foreign_key "patterns", "families"
   add_foreign_key "seasons", "users"
   add_foreign_key "technical_details", "clothes"

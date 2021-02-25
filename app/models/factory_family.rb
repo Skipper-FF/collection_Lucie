@@ -1,4 +1,4 @@
 class FactoryFamily < ApplicationRecord
-  belongs_to :factories
-  belongs_to :families
+  belongs_to :factory
+  belongs_to :family
 end

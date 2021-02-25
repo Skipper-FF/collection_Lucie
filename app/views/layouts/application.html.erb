@@ -12,12 +12,12 @@
   </head>
 
   <body>
-    <div class="main-container">
-      <%= render "shared/sidebar"%>
-      <div class="main-content">
-        <%= render "shared/navbar"%>
-        <%= yield %>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>
+
+<%#= render "shared/sidebar" unless params[:action] == "home" %>
+
+<%#= render "shared/navbar" unless params[:action] == "home" %>
+        
+

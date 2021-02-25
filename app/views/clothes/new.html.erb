@@ -13,8 +13,22 @@
                             input_html: {class: 'category-selector'},
                             collection: @patterns %>
 
+      <%= f.simple_fields_for :technical_details do |form| %>
+
+        <%= form.input :component, collection: @main_fabric, label: "Tissu principal" %>
+        <%= form.input :quantity %>
+
+      <% end %>
+      <%= f.simple_fields_for :technical_details do |form| %>
+
+        <%= form.input :component, collection: @secondary_fabric, label: "Tissu secondaire" %>
+        <%= form.input :quantity %>
+
+      <% end %>
+
       <%= f.input :quantity, as: :integer %>
-      <%= f.input :factory_id, as: :integer %>
+      <%= f.input :factory_id, collection: @family.factories %>
+
 
       <%= f.input :confection_cost, as: :integer %>
       <%= f.input :total_cost, as: :integer %>
