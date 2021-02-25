@@ -154,7 +154,7 @@ clothe1 = Clothe.create!(
 )
 
 component1 = Component.create!(
-  element_type: "Main fabrics",
+  element_type: "Main fabric",
   supplier: "Reda",
   name: "Cotton",
   reference: "WX82",
@@ -167,7 +167,7 @@ component1 = Component.create!(
 )
   
 component2 = Component.create!(
-  element_type: "Secondary fabrics",
+  element_type: "Secondary fabric",
   supplier: "Reda",
   name: "Polyester",
   reference: "PL24",
@@ -180,7 +180,7 @@ component2 = Component.create!(
 )
 
 component3 = Component.create!(
-  element_type: "Zip",
+  element_type: "Trim",
   supplier: "YKK",
   name: "Funky",
   reference: "MTL-wht",
@@ -193,7 +193,7 @@ component3 = Component.create!(
 )
 
 component4 = Component.create!(
-  element_type: "Hooded Cord",
+  element_type: "Trim",
   supplier: "Arta",
   name: "Corda",
   reference: "CTN-wht",
@@ -272,7 +272,7 @@ clothe2 = Clothe.create!(
 )
 
 component1b = Component.create!(
-  element_type: "Main fabrics",
+  element_type: "Main fabric",
   supplier: "Reda",
   name: "Cotton",
   reference: "HWX28",
@@ -285,7 +285,7 @@ component1b = Component.create!(
 )
   
 component2b = Component.create!(
-  element_type: "Secondary fabrics",
+  element_type: "Secondary fabric",
   supplier: "Reda",
   name: "Polyester",
   reference: "W-PL24",
@@ -299,7 +299,7 @@ component2b = Component.create!(
 
 
 component3b = Component.create!(
-  element_type: "Zip",
+  element_type: "Trim",
   supplier: "YKK",
   name: "Funky",
   reference: "MTL-wht",
@@ -312,7 +312,7 @@ component3b = Component.create!(
 )
 
 component4b = Component.create!(
-  element_type: "Cord",
+  element_type: "Trim",
   supplier: "Arta",
   name: "Corda",
   reference: "CTN-wht",
@@ -390,7 +390,7 @@ clothe3 = Clothe.create!(
 )
 
 componentAA = Component.create!(
-  element_type: "Main fabrics",
+  element_type: "Main fabric",
   supplier: "Reda",
   name: "Cotton",
   reference: "JKS789",
@@ -403,7 +403,7 @@ componentAA = Component.create!(
 )
 
 componentBB = Component.create!(
-  element_type: "Secondary fabrics",
+  element_type: "Secondary fabric",
   supplier: "Reda",
   name: "Cotton",
   reference: "KW21",
@@ -416,7 +416,7 @@ componentBB = Component.create!(
 )
 
 componentCC = Component.create!(
-  element_type: "Zip",
+  element_type: "Trim",
   supplier: "YKK",
   name: "Flying",
   reference: "LM-blk",
@@ -487,7 +487,7 @@ clothe4 = Clothe.create!(
 )
 
 componentZZ = Component.create!(
-  element_type: "Main fabrics",
+  element_type: "Main fabric",
   supplier: "Reda",
   name: "Polyester",
   reference: "ERT287",
@@ -500,7 +500,7 @@ componentZZ = Component.create!(
 )
 
 componentYY = Component.create!(
-  element_type: "Secondary fabrics",
+  element_type: "Secondary fabric",
   supplier: "Reda",
   name: "Polyester",
   reference: "TLB741",
@@ -513,7 +513,7 @@ componentYY = Component.create!(
 )
 
 componentXX = Component.create!(
-  element_type: "Belt",
+  element_type: "Trim",
   supplier: "Reda",
   name: "Wizz",
   reference: "LB-brwn",
@@ -526,7 +526,7 @@ componentXX = Component.create!(
 )
 
 componentWW = Component.create!(
-  element_type: "Large Round Plastic Button",
+  element_type: "Trim",
   supplier: "Trim-Factory",
   name: "Round brown",
   reference: "BB159",
@@ -603,7 +603,7 @@ clothe5 = Clothe.create!(
 )
 
 componentMM = Component.create!(
-  element_type: "Main fabrics",
+  element_type: "Main fabric",
   supplier: "Reda",
   name: "Regular cotton shirt",
   reference: "WSH580",
@@ -616,7 +616,7 @@ componentMM = Component.create!(
 )
 
 componentNN = Component.create!(
-  element_type: "Small Round Plastic Button",
+  element_type: "Trim",
   supplier: "Trim-Factory",
   name: "Elegant white button",
   reference: "WB852",
