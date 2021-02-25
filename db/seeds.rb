@@ -107,6 +107,30 @@ factory5 = Factory.create!(
   rating: 4
 )
 
+factoryfamily1 = FactoryFamily.create!(
+  factory_id: factory1.id,
+  family_id: family1.id
+)
+
+factoryfamily2 = FactoryFamily.create!(
+  factory_id: factory2.id,
+  family_id: family1.id
+)
+
+factoryfamily3 = FactoryFamily.create!(
+  factory_id: factory3.id,
+  family_id: family2.id
+)
+
+factoryfamily4 = FactoryFamily.create!(
+  factory_id: factory4.id,
+  family_id: family3.id
+)
+
+factoryfamily5 = FactoryFamily.create!(
+  factory_id: factory5.id,
+  family_id: family4.id
+)
 
 # =========== Cloth example nb 1  =====
 
