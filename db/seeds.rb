@@ -264,7 +264,7 @@ clothe2 = Clothe.create!(
   factory_id: factory2.id,
   season_id: season2.id,
   pattern_id: pattern2.id,
-  name: "Hot Longsleeve sweatshirt",
+  name: "Hot sweatshirt",
   reference: "LSW1",
   quantity: 10000,
   confection_cost: 12,
