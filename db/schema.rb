@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2021_02_25_115218) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +59,6 @@ ActiveRecord::Schema.define(version: 2021_02_25_115218) do
   end
 
   create_table "factory_families", force: :cascade do |t|
-
     t.bigint "factory_id", null: false
     t.bigint "family_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -120,10 +117,8 @@ ActiveRecord::Schema.define(version: 2021_02_25_115218) do
   add_foreign_key "clothes", "factories"
   add_foreign_key "clothes", "patterns"
   add_foreign_key "clothes", "seasons"
-
   add_foreign_key "factory_families", "factories"
   add_foreign_key "factory_families", "families"
-
   add_foreign_key "patterns", "families"
   add_foreign_key "seasons", "users"
   add_foreign_key "technical_details", "clothes"
