@@ -6,16 +6,6 @@
   background-color: $caribbean; /* Black */
 }
 
-.search-form-control {
-  position: relative;
-}
-
-.search-form-control .btn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
-}
 
 .search-form-control .form-control {
   height: 3.5rem;
@@ -36,10 +26,7 @@
   margin-left: 20px;
 }
 
-// .title-tissu {
-//   margin-bottom: 30px;
-//   margin-left: -2px;
-// }
+
 
 .element-collection{
   li {
@@ -55,12 +42,7 @@
   }
 }
 
-// .menu {
-//   ul {
-//     margin-left: -20px;
-//     margin-top: 7px;
-//   }
-// }
+
 
 ul {
   li {
@@ -115,21 +97,19 @@ h4 {
 
 
 .navbar-show-bottom {
-  // margin-left: 134px;
   width: 1159px;
   height: 80px;
 }
 
 .filter {
   padding: 10px;
+
 }
 
-.container-navbar {
-}
 
 .filter {
 .btn-filter {
-  width: 180px;
+  width: 220px;
   height: 40px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -137,11 +117,12 @@ h4 {
 
 .chemin-collection {
   margin-top: 20px;
-  margin-left: 40px;
+  margin-left: 87px;
 }
 
 
-
-
+.title-tissu {
+  margin-bottom: 25px;
+}
 
 
