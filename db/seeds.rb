@@ -62,6 +62,10 @@ family4 = Family.create!(
   name: "SHIRTS"
 )
 
+family5 = Family.create!(
+  name: "BLAZERS"
+)
+
 factory1 = Factory.create!(
   name: "RGT Textiles",
   address: "Porto (Portugal)",
@@ -108,6 +112,16 @@ factory5 = Factory.create!(
   rating: 4
 )
 
+factory6 = Factory.create!(
+  name: "SEWPORT",
+  address: "Florence (Italia)",
+  speciality: "Blazers, Suits",
+  production_capacity: 20000,
+  moq: "3000",
+  rating: 4.5
+)
+
+
 factoryfamily1 = FactoryFamily.create!(
   factory_id: factory1.id,
   family_id: family1.id
@@ -131,6 +145,11 @@ factoryfamily4 = FactoryFamily.create!(
 factoryfamily5 = FactoryFamily.create!(
   factory_id: factory5.id,
   family_id: family4.id
+)
+
+factoryfamily6 = FactoryFamily.create!(
+  factory_id: factory6.id,
+  family_id: family5.id
 )
 
 # =========== Cloth example nb 1  =====
@@ -611,7 +630,7 @@ componentMM = Component.create!(
   reference: "WSH580",
   description: "Elegant fabrics",
   color: "White",
-  composition: "95% polyecottonster, 5% elasthane",
+  composition: "95% cotton, 5% elasthane",
   unit: "Weight",
   unit_price: "5.5€",
   rating: 4.5
@@ -662,3 +681,79 @@ TechnicalDetail.create!(
 )
 
 
+# =========== Cloth example nb 6  =====
+
+pattern6 = Pattern.create!(
+  name: "Summer Blazer",
+  description: "",
+  family_id: family5.id,
+)
+
+clothe6 = Clothe.create!(
+  factory_id: factory6.id,
+  season_id: season1.id,
+  pattern_id: pattern6.id,
+  name: "Elegant summer blazer",
+  reference: "LSB486",
+  quantity: 8000,
+  confection_cost: 20,
+  total_cost: 16000,
+  selling_price: 120
+)
+
+componentCC = Component.create!(
+  element_type: "Main fabric",
+  supplier: "Reda",
+  name: "Poly visc",
+  reference: "WSH580",
+  description: "Elegant gray fabric",
+  color: "Light gray",
+  composition: "79% Polyester, 21% Viscose.",
+  unit: "Weight",
+  unit_price: "6€",
+  rating: 4.5
+)
+
+componentDD = Component.create!(
+  element_type: "Trim",
+  supplier: "Trim-Factory",
+  name: "Elegant dark gray button",
+  reference: "DGB951",
+  description: "Medium-sized round dark grey plastic",
+  color: "Dark gray",
+  composition: "Plastic",
+  unit: "Unit",
+  unit_price: "0.05€",
+  rating: 4
+)
+
+componentEE = Component.create!(
+  element_type: "Brand trim",
+  supplier: "Trim-Factory",
+  name: "Show brand gray",
+  reference: "SBG426",
+  description: "Small rectangular patch",
+  color: "Gray",
+  composition: "Polyester",
+  unit: "Unit",
+  unit_price: "0.005€",
+  rating: 4
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe6.id,
+  component_id: componentCC.id,
+  quantity: 0.25,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe6.id,
+  component_id: componentDD.id,
+  quantity: 2,
+)
+
+TechnicalDetail.create!(
+  clothe_id: clothe6.id,
+  component_id: componentEE.id,
+  quantity: 1,
+)
