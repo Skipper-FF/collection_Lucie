@@ -1,0 +1,40 @@
+<div class="container-navbar d-flex flex-column border-bottom">
+  <div class="navbar-show-bottom d-flex">
+    <div>
+      <h1 class="chemin-collection" >Collection < <%= @season.name %></h1>
+    </div>
+  </div>
+
+  <div class="navbar-show-bottom d-flex justify-content-around">
+    <div class="filter">
+      <%= form_tag season_clothes_path(@season), method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Trouver une référence"
+        %>
+        <%= submit_tag "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="dropdown filter">
+      <button class="btn-filter btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Type vêtement
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#"><%= link_to "Haut"%></a>
+        <a class="dropdown-item" href="#"><%= link_to "Bas"%></a>
+        <a class="dropdown-item" href="#"><%= link_to "Sous-vêtement"%></a>
+      </div>
+    </div>
+    <div class="dropdown filter">
+      <button class="btn-filter btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Usine
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#"><%= link_to "Haut"%></a>
+        <a class="dropdown-item" href="#"><%= link_to "Bas"%></a>
+        <a class="dropdown-item" href="#"><%= link_to "Sous-vêtement"%></a>
+      </div>
+    </div>
+  </div>
+</div>
