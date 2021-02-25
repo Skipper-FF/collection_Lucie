@@ -15,13 +15,13 @@
 
       <%= f.simple_fields_for :technical_details do |form| %>
 
-        <%= form.input :component, collection: @main_fabric %>
+        <%= form.input :component, collection: @main_fabric, label: "Tissu principal" %>
         <%= form.input :quantity %>
 
       <% end %>
       <%= f.simple_fields_for :technical_details do |form| %>
 
-        <%= form.input :component, collection: @secondary_fabric %>
+        <%= form.input :component, collection: @secondary_fabric, label: "Tissu secondaire" %>
         <%= form.input :quantity %>
 
       <% end %>
