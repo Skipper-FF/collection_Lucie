@@ -31,9 +31,6 @@ class ClothesController < ApplicationController
     @clothe.family = Family.find(params[:clothe][:family_id])
     @patterns = @clothe.family.patterns
     @components = Component.all
-
-
-
     @season = Season.find(params[:season_id])
     @clothe.season = @season
     raise
