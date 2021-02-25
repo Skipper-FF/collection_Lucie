@@ -13,9 +13,9 @@
 
   <body>
     <div class="main-container">
-      <%= render "shared/sidebar"%>
+      <%= render "shared/sidebar" unless params[:action] == "home" %>
       <div class="main-content">
-        <%= render "shared/navbar"%>
+        <%= render "shared/navbar" unless params[:action] == "home" %>
         <%= yield %>
       </div>
     </div>
