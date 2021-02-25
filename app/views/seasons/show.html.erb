@@ -1,3 +1,17 @@
-<h1><%= @season.name %></h1>
 
 
+<% @clothes.each do |clothe| %>
+  <div class="card-group d-flex">
+    <div class="card-trip">
+      <img src="http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <p><strong><%= clothe.name %></strong></ps>
+          <p>reference <strong><%= clothe.reference %></strong></p>
+          <p><%= clothe.components[0].color %></p>
+        </div>
+        <h2 class="card-trip-pricing">PRI <%= clothe.confection_cost %>€</h2>
+      </div>
+    </div>
+  </div>
+<% end %>

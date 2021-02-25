@@ -5,6 +5,7 @@ class Clothe < ApplicationRecord
   has_one :family, through: :pattern
 
   has_many :technical_details
+  accepts_nested_attributes_for :technical_details ## Important pour le formulaire de création de clothes. Permet de nester le fomulaire de création de technical_details
   has_many :components, through: :technical_details
 
 
