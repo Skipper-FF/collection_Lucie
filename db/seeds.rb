@@ -146,7 +146,7 @@ clothe1 = Clothe.create!(
   factory_id: factory1.id,
   season_id: season1.id,
   pattern_id: pattern1.id,
-  name: "Cool Sleeveless sweatshirt",
+  name: "Cool sweatshirt",
   reference: "SLSW2",
   quantity: 5000,
   confection_cost: 7,
@@ -166,7 +166,7 @@ component1 = Component.create!(
   unit_price: "8€",
   rating: 4
 )
-  
+
 component2 = Component.create!(
   element_type: "Secondary fabric",
   supplier: "Reda",
@@ -284,7 +284,7 @@ component1b = Component.create!(
   unit_price: "10€",
   rating: 4
 )
-  
+
 component2b = Component.create!(
   element_type: "Secondary fabric",
   supplier: "Reda",
@@ -389,6 +389,7 @@ clothe3 = Clothe.create!(
   total_cost: 135000,
   selling_price: 35
 )
+
 
 componentAA = Component.create!(
   element_type: "Main fabric",
@@ -659,3 +660,5 @@ TechnicalDetail.create!(
   component_id: componentOO.id,
   quantity: 1,
 )
+
+
