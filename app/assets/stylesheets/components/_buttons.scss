@@ -24,3 +24,24 @@
         opacity: 0.8;
     }
 }
+
+
+.btn-add-component {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    padding: 8px;
+    text-align: center;
+    width: 20%;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid $caribbean;
+    }
+    i {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+      margin: 0px;
+    }
+  }

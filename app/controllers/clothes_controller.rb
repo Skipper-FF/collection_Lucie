@@ -22,6 +22,8 @@ class ClothesController < ApplicationController
     @components = Component.all
     @main_fabric = Component.where(element_type: "Main fabric")
     @secondary_fabric = Component.where(element_type: "Secondary fabric")
+    @trim = Component.where(element_type: "Trim")
+    @brand_trim = Component.where(element_type: "Brand trim")
     @clothe.technical_details.build
     @family = @clothe.family
   end
@@ -33,13 +35,20 @@ class ClothesController < ApplicationController
     @components = Component.all
     @season = Season.find(params[:season_id])
     @clothe.season = @season
-    raise
     if @clothe.save
-      @technical_detail = TechnicalDetail.create(
-        clothe_id: @clothe.id,
-        component_id: technical_details_params[:technical_details_attributes]["0"][:component],
-        quantity: technical_details_params[:technical_details_attributes]["0"][:quantity]
-      )
+      @technical_details = technical_details_params[:technical_details_attributes].values
+      @technical_details.each_with_index do |detail, index|
+        TechnicalDetail.create(
+          clothe_id: @clothe.id,
+          component_id: technical_details_params[:technical_details_attributes][(index).to_s][:component],
+          quantity: technical_details_params[:technical_details_attributes][(index).to_s][:quantity]
+        )
+      end
+      # @technical_detail = TechnicalDetail.create(
+      #   clothe_id: @clothe.id,
+      #   component_id: technical_details_params[:technical_details_attributes]["0"][:component],
+      #   quantity: technical_details_params[:technical_details_attributes]["0"][:quantity]
+      # )
       redirect_to season_clothes_path(@clothe.season)
     else
       render "new"
