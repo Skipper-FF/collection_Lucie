@@ -19,12 +19,15 @@ class ClothesController < ApplicationController
     @patterns = @clothe.family.patterns
     @season = Season.find(params[:season_id])
     @families = Family.all
+    @family = @clothe.family    
   end
 
   def create
     @clothe = Clothe.new(clothe_params)
     @clothe.family = Family.find(params[:clothe][:family_id])
     @patterns = @clothe.family.patterns
+
+
 
     @season = Season.find(params[:season_id])
     @clothe.season = @season
