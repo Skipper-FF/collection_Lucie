@@ -22,7 +22,7 @@
             <%= form.input :component, collection: @main_fabric, label: "Main fabric" %>
           </div>
           <div class="form-component">
-            <%= form.input :quantity %>
+            <%= form.input :quantity, input_html: { min: '0' } %>
           </div>
         </div>
 
@@ -35,7 +35,7 @@
             <%= form.input :component, collection: @secondary_fabric, label: "Secondary fabric" %>
           </div>
           <div class="form-component">
-            <%= form.input :quantity %>
+            <%= form.input :quantity, input_html: { min: '0' } %>
           </div>
         </div>
       <% end %>
@@ -54,7 +54,7 @@
             <%= form.input :component, collection: @trim, label: "Trim" %>
           </div>
           <div class="form-component">
-            <%= form.input :quantity %>
+            <%= form.input :quantity, input_html: { min: '0' } %>
           </div>
         </div>
       <% end %>
@@ -73,7 +73,7 @@
             <%= form.input :component, collection: @brand_trim, label: "Brand trim" %>
           </div>
           <div class="form-component">
-            <%= form.input :quantity %>
+            <%= form.input :quantity, input_html: { min: '0' } %>
           </div>
         </div>
       <% end %>
@@ -87,12 +87,12 @@
 
       <h2>Information de production</h2>
 
-      <%= f.input :quantity, as: :integer %>
+      <%= f.input :quantity, as: :integer, input_html: { min: '0' } %>
       <%= f.input :factory_id, collection: @family.factories %>
 
 
-      <%= f.input :confection_cost, as: :integer %>
-      <%= f.input :selling_price, as: :integer %>
+      <%= f.input :confection_cost, as: :integer, input_html: { min: '0' } %>
+      <%= f.input :selling_price, as: :integer, input_html: { min: '0' } %>
 
       <%= f.submit "Ajouter un produit", class: 'btn btn-green-flash btn-small' %>
     <% end %>
