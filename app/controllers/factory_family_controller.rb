@@ -1,0 +1,2 @@
+class FactoryFamilyController < ApplicationController
+end

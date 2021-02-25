@@ -65,7 +65,7 @@ factory1 = Factory.create!(
   name: "RGT Textiles",
   address: "Porto (Portugal)",
   speciality: "Sportswear",
-  production_capacity: "10 000/month",
+  production_capacity: 10000,
   moq: "100",
   rating: 4
 )
@@ -74,7 +74,7 @@ factory2 = Factory.create!(
   name: "AAC-Textiles",
   address: "Lisbonne (Portugal)",
   speciality: "Sportswear",
-  production_capacity: "7 000/month",
+  production_capacity: 7000,
   moq: "150",
   rating: 3.5
 )
@@ -84,7 +84,7 @@ factory3 = Factory.create!(
   name: "BFIELD",
   address: "Łódź (Poland)",
   speciality: "Jeans",
-  production_capacity: "10 000/month",
+  production_capacity: 10000,
   moq: "1000",
   rating: 4
 )
@@ -93,7 +93,7 @@ factory4 = Factory.create!(
   name: "M-Corp",
   address: "Łask (Poland)",
   speciality: "Coats",
-  production_capacity: "5 000/month",
+  production_capacity: 5000,
   moq: "500",
   rating: 4.5
 )
@@ -102,7 +102,7 @@ factory5 = Factory.create!(
   name: "Baltic SC",
   address: "Kaunas (Lithuania)",
   speciality: "Shirts",
-  production_capacity: "15 000/month",
+  production_capacity: 15000,
   moq: "1000",
   rating: 4
 )
@@ -355,7 +355,7 @@ pattern3 = Pattern.create!(
 
 clothe3 = Clothe.create!(
   factory_id: factory3.id,
-  season_id: season1.id,
+  season_id: season2.id,
   pattern_id: pattern3.id,
   name: "Hot and thick jeans",
   reference: "RJ430",
