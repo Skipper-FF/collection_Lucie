@@ -27,7 +27,8 @@
       <% end %>
 
       <%= f.input :quantity, as: :integer %>
-      <%= f.input :factory_id, as: :integer %>
+      <%= f.input :factory_id, collection: @family.factories %>
+
 
       <%= f.input :confection_cost, as: :integer %>
       <%= f.input :total_cost, as: :integer %>

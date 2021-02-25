@@ -4,7 +4,7 @@ class ClothesController < ApplicationController
     if params[:query].present?
       @clothes = Clothe.search_by_name_and_reference(params[:query])
     else
-      @clothes = Clothe.all
+      @clothes = @season.clothes
     end
   end
 
@@ -22,6 +22,7 @@ class ClothesController < ApplicationController
     @components = Component.all
     @main_fabric = Component.where(element_type: "Zip")
     @clothe.technical_details.build
+    @family = @clothe.family    
   end
 
   def create
@@ -29,6 +30,8 @@ class ClothesController < ApplicationController
     @clothe.family = Family.find(params[:clothe][:family_id])
     @patterns = @clothe.family.patterns
     @components = Component.all
+
+
 
     @season = Season.find(params[:season_id])
     @clothe.season = @season
