@@ -4,7 +4,7 @@ class ClothesController < ApplicationController
     if params[:query].present?
       @clothes = Clothe.search_by_name_and_reference(params[:query])
     else
-      @clothes = Clothe.all
+      @clothes = @season.clothes
     end
   end
 
