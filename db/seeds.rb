@@ -181,7 +181,7 @@ clothe1 = Clothe.create!(
 component1 = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Cotton",
+  name: "Toile 100% coton sergé beige",
   reference: "WX82",
   description: "Fleece cotton",
   color: "white",
@@ -207,7 +207,7 @@ component2 = Component.create!(
 component3 = Component.create!(
   element_type: "Trim",
   supplier: "YKK",
-  name: "Funky",
+  name: "Zipper 15cm metal",
   reference: "MTL-wht",
   description: "Trendy zip",
   color: "Bright inox",
@@ -220,7 +220,7 @@ component3 = Component.create!(
 component4 = Component.create!(
   element_type: "Trim",
   supplier: "Arta",
-  name: "Corda",
+  name: "Cordlock",
   reference: "CTN-wht",
   description: "Smooth cord",
   color: "White",
@@ -233,7 +233,7 @@ component4 = Component.create!(
 component5 = Component.create!(
   element_type: "Brand trim",
   supplier: "Trim-Factory",
-  name: "Little Tease",
+  name: "Zip 10cm nylon",
   reference: "BRD456",
   description: "Rectangular patch",
   color: "Black",
@@ -299,7 +299,7 @@ clothe2 = Clothe.create!(
 component1b = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Cotton",
+  name: "Toile 100% coton sergé bleu",
   reference: "HWX28",
   description: "Hot and fleece cotton",
   color: "Dark gray",
@@ -312,7 +312,7 @@ component1b = Component.create!(
 component2b = Component.create!(
   element_type: "Secondary fabric",
   supplier: "Reda",
-  name: "Polyester",
+  name: "Mech noir",
   reference: "W-PL24",
   description: "Technical fabrics",
   color: "Gray",
@@ -326,7 +326,7 @@ component2b = Component.create!(
 component3b = Component.create!(
   element_type: "Trim",
   supplier: "YKK",
-  name: "Funky",
+  name: "Zip 15cm metal black",
   reference: "MTL-wht",
   description: "Trendy zip",
   color: "Bright inox",
@@ -339,7 +339,7 @@ component3b = Component.create!(
 component4b = Component.create!(
   element_type: "Trim",
   supplier: "Arta",
-  name: "Corda",
+  name: "Button 9mm",
   reference: "CTN-wht",
   description: "Smooth cord",
   color: "White",
@@ -352,7 +352,7 @@ component4b = Component.create!(
 component5b = Component.create!(
   element_type: "Brand trim",
   supplier: "Trim-Factory",
-  name: "Little Tease",
+  name: "Button 11mm black",
   reference: "BRD456",
   description: "Rectangular patch",
   color: "Black",
@@ -418,7 +418,7 @@ clothe3 = Clothe.create!(
 componentAA = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Cotton",
+  name: "Toile denim 100% coton selvedge 14oz brute",
   reference: "JKS789",
   description: "Thick cotton",
   color: "Blue denim",
@@ -431,7 +431,7 @@ componentAA = Component.create!(
 componentBB = Component.create!(
   element_type: "Secondary fabric",
   supplier: "Reda",
-  name: "Cotton",
+  name: "Coton noir",
   reference: "KW21",
   description: "Light fabrics",
   color: "Dark Gray",
@@ -444,7 +444,7 @@ componentBB = Component.create!(
 componentCC = Component.create!(
   element_type: "Trim",
   supplier: "YKK",
-  name: "Flying",
+  name: "Zipper 15cm taupe",
   reference: "LM-blk",
   description: "Small zip",
   color: "Golden inox",
@@ -457,7 +457,7 @@ componentCC = Component.create!(
 componentDD = Component.create!(
   element_type: "Brand trim",
   supplier: "Trim-Factory",
-  name: "Show brand",
+  name: "Etiquette taille",
   reference: "SB651",
   description: "Small patch",
   color: "Brown",
@@ -515,7 +515,7 @@ clothe4 = Clothe.create!(
 componentZZ = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Polyester",
+  name: "Toile denim 100% coton selvedge 14oz noire",
   reference: "ERT287",
   description: "Light waterproof fabrics",
   color: "Light brown",
@@ -567,7 +567,7 @@ componentWW = Component.create!(
 componentVV = Component.create!(
   element_type: "Brand trim",
   supplier: "Trim-Factory",
-  name: "Show brand lite",
+  name: "Etiquette marque",
   reference: "SB651",
   description: "Rectangular patch",
   color: "Brown",
@@ -631,7 +631,7 @@ clothe5 = Clothe.create!(
 componentMM = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Regular cotton shirt",
+  name: "Jersey 100% mérinos rayé bleu/blanc",
   reference: "WSH580",
   description: "Elegant fabrics",
   color: "White",
@@ -709,7 +709,7 @@ clothe6 = Clothe.create!(
 componentCC = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Poly visc",
+  name: "Toile Komatsu 100% polyester déperlante",
   reference: "WSH580",
   description: "Elegant gray fabric",
   color: "Light gray",
