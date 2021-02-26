@@ -26,7 +26,7 @@
       </li>
       <li class="nav-item">
         <% if user_signed_in? %>
-          <%= link_to "Connexion", seasons_path, class: "btn-green-flash btn-small" %>
+          <%= link_to "Dashboard", seasons_path, class: "btn-green-flash btn-small" %>
         <% else %>
           <%= link_to "Connexion", new_user_registration_path, class: "btn-green-flash btn-small" %>
         <% end %>
