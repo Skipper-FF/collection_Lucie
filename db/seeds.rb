@@ -27,6 +27,7 @@ user1 = User.create!(
   
   
 file = URI.open('https://images.unsplash.com/photo-1560258018-c7db7645254e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1189&q=80')
+file2 = URI.open('https://images.unsplash.com/photo-1560258018-c7db7645254e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1189&q=80')
 
 season1 = Season.new(
   name: "Spring Summer 2021",
@@ -44,7 +45,7 @@ season2 = Season.new(
   beginning_date: Date.new(2021,07,01),
   ending_date: Date.new(2022,01,01),
 )
-season2.photo.attach(io: file, filename: 'autumn.png', content_type: 'image/png')
+season2.photo.attach(io: file2, filename: 'autumn.png', content_type: 'image/png')
 season2.user = user1
 season2.save
 p season2
