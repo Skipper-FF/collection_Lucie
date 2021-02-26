@@ -36,7 +36,7 @@ season1 = Season.new(
 )
 season1.photo.attach(io: file, filename: 'spring.png', content_type: 'image/png')
 season1.user = user1
-season1.save
+season1.save!
 p season1
 
 
@@ -47,7 +47,7 @@ season2 = Season.new(
 )
 season2.photo.attach(io: file2, filename: 'autumn.png', content_type: 'image/png')
 season2.user = user1
-season2.save
+season2.save!
 p season2
 
 
