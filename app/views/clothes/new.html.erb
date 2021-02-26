@@ -29,19 +29,23 @@
       <% end %>
 
       <h4>Secondary fabrics</h4>
-      <%= f.simple_fields_for :technical_details do |form| %>
-        <div class="form-components">
-          <div class="form-component">
-            <%= form.input :component, collection: @secondary_fabric, label: "Secondary fabric" %>
-          </div>
-          <div class="form-component">
-            <%= form.input :quantity, input_html: { min: '0' } %>
-          </div>
+      <div id="secondary-forms">
+        <div id="form-add-secondary-fabric">
+          <%= f.simple_fields_for :technical_details do |form| %>
+            <div class="form-components">
+              <div class="form-component">
+                <%= form.input :component, collection: @secondary_fabric, label: "Secondary fabric" %>
+              </div>
+              <div class="form-component">
+                <%= form.input :quantity, input_html: { min: '0' } %>
+              </div>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
 
       <div class="add-component">
-        <div class="btn-add-component" id="add_secondary-fabric">
+        <div class="btn-add-component" id="add-secondary-fabric">
         <p>Ajouter un tissu secondaire supplémentaire</p>
         <i class="fas fa-plus-circle"></i>
         </div>
