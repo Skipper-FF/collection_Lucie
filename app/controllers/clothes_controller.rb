@@ -49,7 +49,7 @@ class ClothesController < ApplicationController
       #   component_id: technical_details_params[:technical_details_attributes]["0"][:component],
       #   quantity: technical_details_params[:technical_details_attributes]["0"][:quantity]
       # )
-      redirect_to season_clothes_path(@clothe.season)
+      redirect_to season_path(@season)
     else
       render "new"
     end
