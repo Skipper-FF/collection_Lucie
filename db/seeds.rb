@@ -42,7 +42,7 @@ p season1
 season2 = Season.new(
   name: "Autumn Winter 2021",
   beginning_date: Date.new(2021,07,01),
-  ending_date: Date.new(2022,01,01),
+  ending_date: Date.new(2022,01,01)
 )
 season2.photo.attach(io: file, filename: 'autumn.png', content_type: 'image/png')
 season2.user = user1
