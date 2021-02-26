@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "logo-collection.jpg" %>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
       <a href="#" class="tab-underlined active">Comment ça fonctionne</a>
     </li>
     <li>
-      <a href="#" class="tab-underlined">Clients</a>
+      <a href="#" class="tab-underlined">Ils nous font confiance</a>
     </li>
     <li>
       <a href="#" class="tab-underlined">Nos offres</a>
@@ -25,7 +25,11 @@
         <%= link_to "Demander une démo", "#", class: "btn-green-flash btn-small" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Connexion", "#", class: "btn-green-flash btn-small" %>
+        <% if user_signed_in? %>
+          <%= link_to "Dashboard", seasons_path, class: "btn-green-flash btn-small" %>
+        <% else %>
+          <%= link_to "Connexion", new_user_registration_path, class: "btn-green-flash btn-small" %>
+        <% end %>
       </li>
     </ul>
   </div>
