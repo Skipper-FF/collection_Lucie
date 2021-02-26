@@ -11,9 +11,9 @@ TechnicalDetail.destroy_all
 Component.destroy_all
 Clothe.destroy_all
 Pattern.destroy_all
-Family.destroy_all
 Season.destroy_all
 User.destroy_all
+Family.destroy_all
 Factory.destroy_all
 
 
