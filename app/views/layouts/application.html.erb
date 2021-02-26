@@ -13,7 +13,7 @@
 
   <body>
     <div class="main-container">
-      <%= render "shared/sidebar" unless params[:action] == "home" %>
+      <%= render "shared/sidebar" unless params[:action] == "home" || params[:controller] == "devise/sessions" || params[:controller] == "devise/registrations" %>
       <div class="main-content">
         <%= render "shared/homepage_navbar" if params[:action] == "home" %>
         <%= render "shared/navbar" if params[:action] == "show" && params[:controller] == "seasons" %>
