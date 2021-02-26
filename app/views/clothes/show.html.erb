@@ -1,10 +1,7 @@
 <div class="container">
   <div class="d-flex">
-    <div>
-      <img class="img-clothe" src="http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg" />
-    </div>
     <div class="info-clothe">
-      <h1><strong><%= @clothe.name  %></strong></h1>
+      <h3>Reference <strong><%=  @clothe.name %></strong></h3>
       <h3>Reference <strong><%=  @clothe.reference %></strong></h3>
       <h3>Quantité <strong><%=@clothe.quantity %></strong></h3>
       <h3>Prix de vente <strong><%=@clothe.selling_price %></strong></h3>
@@ -12,5 +9,7 @@
       <h3>Coût total <strong><%=@clothe.total_cost %></strong></h3>
       <h3>Usine <strong><%=@clothe.factory.name %></strong></h3>
       <h3>Saison <strong><%=@clothe.season.name %></strong></h3>
+    </div>
+    <img class="img-clothe" src="http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg" />
   </div>
 </div>
