@@ -25,9 +25,9 @@ user1 = User.create!(
   )
   p user1
   
-  
-file = URI.open('https://images.unsplash.com/photo-1560258018-c7db7645254e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1189&q=80')
-file2 = URI.open('https://images.unsplash.com/photo-1560258018-c7db7645254e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1189&q=80')
+
+file = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614333978/COLLECTION-APP%20IMAGES/SS21_ap54ss.jpg')
+file2 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614334437/COLLECTION-APP%20IMAGES/AW21_wwalor.jpg')
 
 season1 = Season.new(
   name: "Spring Summer 2021",
