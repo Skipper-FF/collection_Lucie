@@ -1,28 +1,21 @@
-<div class="main-container">
-  <%= render "shared/sidebar"%>
-  <div class="main-content">
-    <%= render "shared/navbar"%>
-
-    <div class="all-card">
-    <div class="card-group d-flex">
-    <% @clothes.each do |clothe| %>
-      <%= link_to season_clothe_url(@season, clothe) do %>
-        <div class="card-group d-flex">
-          <div class="card-trip">
-            <img src="http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg" />
-            <div class="card-trip-infos">
-              <div>
-                <p><strong><%= clothe.name %></strong></p>
-                <p>reference <strong><%= clothe.reference %></strong></p>
-                <p><%= clothe.components[0].color %></p>
-              </div>
-              <h2 class="card-trip-pricing">PRI <%= clothe.confection_cost %>€</h2>
+<div class="all-card">
+  <div class="card-group d-flex">
+  <% @clothes.each do |clothe| %>
+    <%= link_to season_clothe_url(@season, clothe) do %>
+      <div class="card-group d-flex">
+        <div class="card-trip">
+          <img src="http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <p><strong><%= clothe.name %></strong></p>
+              <p>reference <strong><%= clothe.reference %></strong></p>
+              <p><%= clothe.components[0].color %></p>
             </div>
+            <h2 class="card-trip-pricing">PRI <%= clothe.confection_cost %>€</h2>
           </div>
         </div>
-      <% end %>
+      </div>
     <% end %>
-    </div>
-    </div>
+  <% end %>
   </div>
 </div>

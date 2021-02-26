@@ -1,21 +1,28 @@
 .img-clothe{
   width: 335px;
   height: 430px;
-  margin-top: 110px;
+  margin-top:100px;
   border: 1px solid #c9c9c9;
   text-align: center;
-  margin-left: -30px;
+  margin-right: 300px;
 }
 
 .info-clothe {
   width: 635px;
   height: 431px;
   margin-top: 110px;
-  margin-left: 71px;
+  margin-left: 150px;
   h1 {
     margin-bottom: 30px;
   }
   h3 {
     margin-top: 15px;
   }
+}
+.info-clothe h3 {
+  font-size: 20px;
+}
+
+#text-align-name {
+  justify-content: center;
 }
