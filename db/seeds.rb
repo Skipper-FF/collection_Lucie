@@ -1,3 +1,5 @@
+require "open-uri"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -20,27 +22,29 @@ Factory.destroy_all
 user1 = User.create!(
   email: "jean@gmail.com",
   password: "jean12345",
-)
-p user1
-
+  )
+  p user1
+  
+  
+file = URI.open('https://images.unsplash.com/photo-1560258018-c7db7645254e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1189&q=80')
 
 season1 = Season.new(
-  name: "SS21",
+  name: "Spring Summer 2021",
   beginning_date: Date.new(2021,02,01),
-  ending_date: Date.new(2021,06,30),
+  ending_date: Date.new(2021,06,30)
 )
-
+season1.photo.attach(io: file, filename: 'spring.png', content_type: 'image/png')
 season1.user = user1
 season1.save
 p season1
 
 
 season2 = Season.new(
-  name: "AW21",
+  name: "Autumn Winter 2021",
   beginning_date: Date.new(2021,07,01),
   ending_date: Date.new(2022,01,01),
 )
-
+season2.photo.attach(io: file, filename: 'autumn.png', content_type: 'image/png')
 season2.user = user1
 season2.save
 p season2
