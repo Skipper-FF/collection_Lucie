@@ -35,6 +35,7 @@ class ClothesController < ApplicationController
     @components = Component.all
     @season = Season.find(params[:season_id])
     @clothe.season = @season
+    raise
     if @clothe.save
       @technical_details = technical_details_params[:technical_details_attributes].values
       @technical_details.each_with_index do |detail, index|
