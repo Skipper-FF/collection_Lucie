@@ -1,9 +1,9 @@
 .sidenav {
   height: 100vh;
   position: sticky;
-  width: 18%;
+  width: 17%;
   top: 0;
-  background-color: $caribbean; /* Black */
+  background-color: $caribbean;
 }
 
 
@@ -22,7 +22,7 @@
 
 
 .menu {
-  margin-top: 150px;
+  margin-top: 57px;
   margin-left: 20px;
 }
 
@@ -51,7 +51,9 @@ ul {
 }
 
 .element-collection {
-  display: block;
+  margin-top: -18px;
+  margin-left: 18px;
+  margin-bottom: 28px;
 }
 
 a {
@@ -97,7 +99,7 @@ h4 {
 
 
 .navbar-show-bottom {
-  width: 1159px;
+  width: 100%;
   height: 80px;
 }
 
@@ -109,8 +111,8 @@ h4 {
 
 .filter {
 .btn-filter {
-  width: 220px;
-  height: 40px;
+  width: 200px;
+  height: 38px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 }
@@ -123,6 +125,107 @@ h4 {
 
 .title-tissu {
   margin-bottom: 25px;
+  font-size: 25px;
 }
+
+.element-bar {
+  margin-bottom:5px;
+}
+
+
+
+
+.footer-sidebar {
+  height: 266px;
+  padding-top: 85px;
+}
+
+
+.back-collection {
+  height: 50px;
+  border-bottom: 0.5px solid #e4e4e4;
+}
+
+.link-season {
+  margin-left: 18px;
+  font-weight: oblique;
+}
+
+.profil-parametres {
+
+}
+
+.name-profil {
+  margin-top: 25px;
+  p {
+    margin-left: 10px;
+    color:#e4e4e4;
+  }
+}
+
+.setting {
+  p {
+    color:#e4e4e4;
+  }
+}
+
+
+.profil-footer {
+  display: flex;
+  align-items: center;
+  width: 215px;
+}
+
+.avatar-large {
+  margin: 10px;
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+
+
+.profil-footer {
+  border-bottom: 0.5px solid #e4e4e4;
+  height: 75px;
+}
+
+/* .parametre {
+  margin-left: 57px;
+  margin-top: 16px;
+}
+ */
+.parametre:hover {
+  font-weight: bold;
+}
+
+
+.link-season:hover {
+  font-weight: bold;
+}
+
+.icone-setting {
+  font-size: 18px;
+}
+
+.icone-setting:hover {
+  font-weight: bold;
+}
+
+.setting {
+  margin-left: 18px;
+  margin-top: 16px;
+}
+
+.parametre {
+  margin-left: 5px;
+}
+
+
+.logo-sidebar {
+  height: 86px;;
+  width: 214px;
+  margin-top: 8px;
+}
+
 
 
