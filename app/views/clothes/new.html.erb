@@ -59,45 +59,81 @@
       </div>
 
       <div class="add-component">
-        <div class="btn-add-component" id="add-secondary-fabric">
-        <p>Ajouter un tissu secondaire supplémentaire</p>
-        <i class="fas fa-plus-circle"></i>
+        <div class="btn-add-component" id="add-component" data-target="#secondary-form-template">
+          <p>Ajouter un tissu secondaire supplémentaire</p>
+          <i class="fas fa-plus-circle"></i>
         </div>
       </div>
 
       <h4>Trims</h4>
-      <%= f.simple_fields_for :technical_details do |form| %>
-        <div class="form-components">
-          <div class="form-component">
-            <%= form.input :component, collection: @trim, label: "Trim" %>
-          </div>
-          <div class="form-component">
-            <%= form.input :quantity, input_html: { min: '0' } %>
-          </div>
+      <div id="trim-forms">
+        <div id="form-add-trim">
+          <%= f.simple_fields_for :technical_details do |form| %>
+            <div class="form-components">
+              <div class="form-component">
+                <%= form.input :component, collection: @trim, label: "Trim" %>
+              </div>
+              <div class="form-component">
+                <%= form.input :quantity, input_html: { min: '0' } %>
+              </div>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+        <template id="trim-form-template">
+          <div id="form-add-trim">
+            <%= f.simple_fields_for :technical_details do |form| %>
+              <div class="form-components">
+                <div class="form-component">
+                  <%= form.input :component, collection: @trim, label: "Trim" %>
+                </div>
+                <div class="form-component">
+                  <%= form.input :quantity, input_html: { min: '0' } %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </template>
+      </div>
 
       <div class="add-component">
-        <div class="btn-add-component" id="add-trim">
+        <div class="btn-add-component" id="add-component" data-target="#trim-form-template">
           <p>Ajouter un trim supplémentaire</p>
           <i class="fas fa-plus-circle"></i>
         </div>
       </div>
 
       <h4>Brand Trims</h4>
-      <%= f.simple_fields_for :technical_details do |form| %>
-        <div class="form-components">
-          <div class="form-component">
-            <%= form.input :component, collection: @brand_trim, label: "Brand trim" %>
-          </div>
-          <div class="form-component">
-            <%= form.input :quantity, input_html: { min: '0' } %>
-          </div>
+      <div id="trim-forms">
+        <div id="form-add-brand-trim">
+          <%= f.simple_fields_for :technical_details do |form| %>
+            <div class="form-components">
+              <div class="form-component">
+                <%= form.input :component, collection: @brand_trim, label: "Brand trim" %>
+              </div>
+              <div class="form-component">
+                <%= form.input :quantity, input_html: { min: '0' } %>
+              </div>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+        <template id="brand-trim-form-template">
+          <div id="form-add-brand-trim">
+            <%= f.simple_fields_for :technical_details do |form| %>
+              <div class="form-components">
+                <div class="form-component">
+                  <%= form.input :component, collection: @brand_trim, label: "Brand trim" %>
+                </div>
+                <div class="form-component">
+                  <%= form.input :quantity, input_html: { min: '0' } %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </template>
+      </div>
 
       <div class="add-component">
-        <div class="btn-add-component" id="add-brand-trim">
+        <div class="btn-add-component" id="add-component" data-target="#brand-trim-form-template">
           <p>Ajouter un brand trim supplémentaire</p>
           <i class="fas fa-plus-circle"></i>
         </div>
