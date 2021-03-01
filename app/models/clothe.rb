@@ -14,4 +14,22 @@ class Clothe < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+
+    # private
+    # calcul du coût de revient total du vêtement en fctn des quantités à produire
+    def total_production_cost
+      total_cost * quantity
+    end
+
+    # calcul du C.A. total du vêtement en fctn des quantités produites
+    def turnover
+      selling_price * quantity
+    end
+
+    # calcul du taux de marge unitaire du vêtement 
+    # ATTN ICI LE CALCUL N EST PAS SUR LE H.T.
+    def margin_rate
+      margin = selling_price - total_cost
+      margin_rate = ( margin / total_cost ).to_f
+    end
 end
