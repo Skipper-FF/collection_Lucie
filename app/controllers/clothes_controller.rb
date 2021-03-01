@@ -35,6 +35,7 @@ class ClothesController < ApplicationController
     @components = Component.all
     @season = Season.find(params[:season_id])
     @clothe.season = @season
+    @clothe.total_cost = @clothe.confection_cost # faire que total_cost = confection_cost
     if @clothe.save
       @technical_details = technical_details_params[:technical_details_attributes].values
       @technical_details.each_with_index do |detail, index|
@@ -49,7 +50,7 @@ class ClothesController < ApplicationController
       #   component_id: technical_details_params[:technical_details_attributes]["0"][:component],
       #   quantity: technical_details_params[:technical_details_attributes]["0"][:quantity]
       # )
-      redirect_to season_path(@season)
+      redirect_to season_clothe_path(@season, @clothe) # plutôt renvoyer vers la SHOW de clothe
     else
       render "new"
     end

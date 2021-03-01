@@ -174,7 +174,7 @@ clothe1 = Clothe.create!(
   reference: "SLSW2",
   quantity: 5000,
   confection_cost: 7,
-  total_cost: 35000,
+  total_cost: 7,
   selling_price: 34
 )
 
@@ -292,7 +292,7 @@ clothe2 = Clothe.create!(
   reference: "LSW1",
   quantity: 10000,
   confection_cost: 12,
-  total_cost: 120000,
+  total_cost: 12,
   selling_price: 45
 )
 
@@ -410,7 +410,7 @@ clothe3 = Clothe.create!(
   reference: "RJ430",
   quantity: 15000,
   confection_cost: 9,
-  total_cost: 135000,
+  total_cost: 9,
   selling_price: 35
 )
 
@@ -508,7 +508,7 @@ clothe4 = Clothe.create!(
   reference: "LTRC520",
   quantity: 8000,
   confection_cost: 12,
-  total_cost: 96000,
+  total_cost: 12,
   selling_price: 79
 )
 
@@ -624,7 +624,7 @@ clothe5 = Clothe.create!(
   reference: "LSH023",
   quantity: 10000,
   confection_cost: 7,
-  total_cost: 70000,
+  total_cost: 7,
   selling_price: 34
 )
 
@@ -702,7 +702,7 @@ clothe6 = Clothe.create!(
   reference: "LSB486",
   quantity: 8000,
   confection_cost: 20,
-  total_cost: 16000,
+  total_cost: 20,
   selling_price: 120
 )
 
