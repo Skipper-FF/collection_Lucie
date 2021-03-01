@@ -40,9 +40,13 @@
   </div>
 
   <div class="footer-sidebar">
+  
+  <% if @season %>
     <div class="back-collection">
       <p class="link-season"><%= link_to "Retour aux saisons", seasons_path(@season)%></p>
     </div>
+  <% end %>
+  
     <div class="profil-parametres">
       <div class="profil-footer">
         <div class="d-flex">
