@@ -1,9 +1,12 @@
+.container-navbar {
+  position: sticky;
+}
+
 .form{
   position: relative;
 }
 
 .fas {
-  position: absolute;
   right: 20px;
   top: 10px;
 }
@@ -12,5 +15,24 @@
 .chemin-collection {
   margin-top: 20px;
   margin-left: 70px;
+}
+
+.search-bar {
+  background-color: #0000005e;
+  border-radius: 0px;
+  border: none;
+}
+
+.search-bar:hover {
+  background-color: #000000ba;
+}
+
+.search-bar:active {
+  background-color: #000000ba;
+}
+
+
+.search-bouton {
+  width: 225px;
 }
 
