@@ -8,7 +8,6 @@ class Clothe < ApplicationRecord
   accepts_nested_attributes_for :technical_details ## Important pour le formulaire de création de clothes. Permet de nester le fomulaire de création de technical_details
   has_many :components, through: :technical_details
 
-
   include PgSearch::Model
   pg_search_scope :search_by_name_and_reference,
     against: [ :name, :reference],
