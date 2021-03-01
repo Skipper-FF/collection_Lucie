@@ -38,11 +38,11 @@ class ClothesController < ApplicationController
     @clothe.total_cost = @clothe.confection_cost # faire que total_cost = confection_cost
     if @clothe.save
       @technical_details = technical_details_params[:technical_details_attributes].values
-      @technical_details.each_with_index do |detail, index|
+      @technical_details.each do |detail|
         TechnicalDetail.create(
           clothe_id: @clothe.id,
-          component_id: technical_details_params[:technical_details_attributes][(index).to_s][:component],
-          quantity: technical_details_params[:technical_details_attributes][(index).to_s][:quantity]
+          component_id: detail[:component],
+          quantity: detail[:quantity]
         )
       end
       # @technical_detail = TechnicalDetail.create(
