@@ -43,7 +43,11 @@
   
   <% if @season %>
     <div class="back-collection">
+
+      <p class="link-season"><%= link_to "Retour à la collection", seasons_path(@season)%></p>
+
       <p class="link-season"><%= link_to "Retour aux saisons", seasons_path(@season)%></p>
+
     </div>
   <% end %>
   
