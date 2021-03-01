@@ -34,3 +34,4 @@ class Clothe < ApplicationRecord
   end
 
 end
+
