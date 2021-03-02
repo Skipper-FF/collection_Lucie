@@ -1,6 +1,6 @@
 <div class="container">
   <div class="form-design">
-  <h1>Ajouter un(e) <%= @clothe.family.name.downcase[0...-1] %> au plan de collection <%= @season.name %></h1>
+  <h1>Ajouter un vêtement au plan de collection <%= @season.name %></h1>
   <div class="form">
     <%= simple_form_for [ @season, @clothe ] do |f| %>
       <h2>Informations générales</h2>
@@ -139,7 +139,9 @@
       <h2>Information de production</h2>
 
       <%= f.input :quantity, as: :integer, input_html: { min: '0' } %>
-      <%= f.input :factory_id, collection: @clothe.family.factories %>
+      <div id="factory-fieldset">
+        <%= render 'factories_input' %>
+      </div>
 
 
       <%= f.input :confection_cost, as: :integer, input_html: { min: '0' } %>
