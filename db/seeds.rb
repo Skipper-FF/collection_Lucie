@@ -50,7 +50,7 @@ season2.user = user1
 season2.save!
 p season2
 
-
+# IL FAUDRA MODIF LES IMG DS CLOUDINARY 
 fileF1 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693043/sweatshirt_zrvx0j.jpg')
 fileF2 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614692608/DESSIN-MCA104-CHINO_SLIN_PANT-DEVANT_1_f8ywc8.jpg')
 fileF3 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693165/coat_female_tqblnz.jpg')
@@ -58,11 +58,10 @@ fileF4 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693272
 fileF5 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693375/blazers_v0kpkg.jpg')
 
 family1 = Family.create!(
-  name: "SWEATS"
+  name: "PULLS"
 )
-family1.photo.attach(io: fileF1, filename: 'sweats.png', content_type: 'image/png')
+family1.photo.attach(io: fileF1, filename: 'pulls.png', content_type: 'image/png')
 family1.save!
-
 
 family2 = Family.create!(
   name: "JEANS"
@@ -71,21 +70,21 @@ family2.photo.attach(io: fileF2, filename: 'jeans.png', content_type: 'image/png
 family2.save!
 
 family3 = Family.create!(
-  name: "COATS"
+  name: "MANTEAUX"
 )
-family3.photo.attach(io: fileF3, filename: 'coats.png', content_type: 'image/png')
+family3.photo.attach(io: fileF3, filename: 'manteau.png', content_type: 'image/png')
 family3.save!
 
 family4 = Family.create!(
-  name: "SHIRTS"
+  name: "CHEMISES"
 )
-family4.photo.attach(io: fileF4, filename: 'shirts.png', content_type: 'image/png')
+family4.photo.attach(io: fileF4, filename: 'chemises.png', content_type: 'image/png')
 family4.save!
 
 family5 = Family.create!(
-  name: "BLAZERS"
+  name: "T-SHIRTS"
 )
-family5.photo.attach(io: fileF5, filename: 'blazers.png', content_type: 'image/png')
+family5.photo.attach(io: fileF5, filename: 'tshirts.png', content_type: 'image/png')
 family5.save!
 
 factory1 = Factory.create!(
@@ -177,7 +176,7 @@ factoryfamily6 = FactoryFamily.create!(
 # =========== Clothe example nb 1  =====
 
 pattern1 = Pattern.create!(
-  name: "Sleeveless sweatshirt",
+  name: "Sleeveless pullover",
   description: "",
   family_id: family1.id,
 )
@@ -187,7 +186,7 @@ clothe1 = Clothe.create!(
   factory_id: factory1.id,
   season_id: season1.id,
   pattern_id: pattern1.id,
-  name: "Cool sweatshirt",
+  name: "Cool pullover",
   reference: "SLSW2",
   quantity: 5000,
   confection_cost: 7,
@@ -295,7 +294,7 @@ TechnicalDetail.create!(
 # =========== Clothe example nb 2 =====
 
 pattern2 = Pattern.create!(
-  name: "Longsleeve sweatshirt",
+  name: "Pullover manches longues",
   description: "",
   family_id: family1.id,
 )
@@ -305,7 +304,7 @@ clothe2 = Clothe.create!(
   factory_id: factory2.id,
   season_id: season2.id,
   pattern_id: pattern2.id,
-  name: "Hot sweatshirt",
+  name: "Hot pullover",
   reference: "LSW1",
   quantity: 10000,
   confection_cost: 12,
@@ -512,7 +511,7 @@ TechnicalDetail.create!(
 # =========== Clothe example nb 4  =====
 
 pattern4 = Pattern.create!(
-  name: "Trench coat",
+  name: "Manteau",
   description: "",
   family_id: family3.id,
 )
@@ -521,7 +520,7 @@ clothe4 = Clothe.create!(
   factory_id: factory4.id,
   season_id: season1.id,
   pattern_id: pattern4.id,
-  name: "Light trench coat",
+  name: "Manteau léger",
   reference: "LTRC520",
   quantity: 8000,
   confection_cost: 12,
@@ -637,7 +636,7 @@ clothe5 = Clothe.create!(
   factory_id: factory5.id,
   season_id: season1.id,
   pattern_id: pattern5.id,
-  name: "Summer shirt",
+  name: "Chemise d'été",
   reference: "LSH023",
   quantity: 10000,
   confection_cost: 7,
@@ -715,7 +714,7 @@ clothe6 = Clothe.create!(
   factory_id: factory6.id,
   season_id: season1.id,
   pattern_id: pattern6.id,
-  name: "Elegant blazer",
+  name: "Tshirt élégant",
   reference: "LSB486",
   quantity: 8000,
   confection_cost: 20,

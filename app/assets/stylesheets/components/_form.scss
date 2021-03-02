@@ -135,14 +135,22 @@
 
 .family-item {
   background: white;
-  padding: 5px 10px;
-  margin-top: 50px;
   border-radius: 3px;
   border: 1px solid rgba(0,0,0,0.1);
   box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
   align-items: center;
-  display: flex;
-  flex-direction: column;
+  label {
+    padding: 5px 10px;
+    border: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.family-font {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .family-item img {
@@ -151,8 +159,13 @@
   object-fit: contain;
   height: 150px;
   width: 150%;
+  margin-bottom: 15px;
 }
 
 .form-check-label {
   display: inline-block;
+}
+
+.family-selector:checked + label {
+  border: 3px solid $green;
 }
