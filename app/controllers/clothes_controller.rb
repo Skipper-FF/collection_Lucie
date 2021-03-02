@@ -15,8 +15,8 @@ class ClothesController < ApplicationController
 
   def new
     @clothe = Clothe.new
-    @clothe.family = Family.find(params[:family])
     @patterns = Pattern.all
+    @factories = Factory.all
     @season = Season.find(params[:season_id])
     @families = Family.all
     @components = Component.all
@@ -25,7 +25,6 @@ class ClothesController < ApplicationController
     @trim = Component.where(element_type: "Trim")
     @brand_trim = Component.where(element_type: "Brand trim")
     @clothe.technical_details.build
-    @family = @clothe.family
   end
 
   def create
