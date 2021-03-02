@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :families, only: [:index, :new, :create, :edit, :update, :destroy]
-  resources :patterns, only: [:new, :create, :edit, :update, :destroy]
+  resources :patterns, only: [:index, :new, :create, :edit, :update, :destroy]
 
   
   resources :factories, only: [:index, :new, :create, :edit, :update, :destroy]

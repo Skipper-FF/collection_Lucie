@@ -16,7 +16,7 @@ class ClothesController < ApplicationController
   def new
     @clothe = Clothe.new
     @clothe.family = Family.find(params[:family])
-    @patterns = @clothe.family.patterns
+    @patterns = Pattern.all
     @season = Season.find(params[:season_id])
     @families = Family.all
     @components = Component.all
@@ -30,7 +30,7 @@ class ClothesController < ApplicationController
 
   def create
     @clothe = Clothe.new(clothe_params)
-    @clothe.family = Family.find(params[:clothe][:family_id])
+    @clothe.family = Family.find(params[:clothe][:family])
     @patterns = @clothe.family.patterns
     @components = Component.all
     @season = Season.find(params[:season_id])
