@@ -3,21 +3,24 @@
   <h1>Ajouter un vêtement au plan de collection <%= @season.name %></h1>
   <div class="form">
     <%= simple_form_for [ @season, @clothe ] do |f| %>
-      <div class="step-one">
+      <div class="form-step active" id="step-one">
         <h2>Quelle est la famille du produit à ajouter ?</h2>
         <%= f.input :family, collection: Family.all, as: :radio_buttons %>
+        <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-two"}} %>
       </div>
 
-      <div class="step-two">
+      <div class="form-step" id="step-two">
         <h2>Informations générales</h2>
         <%= f.input :name %>
         <%= f.input :reference %>
-          <div id="pattern-fieldset">
-            <%= render 'patterns_input' %>
-          </div>
+        <div id="pattern-fieldset">
+          <%= render 'patterns_input' %>
+        </div>
+        <%= link_to "Précédent", "#", class: "go-to-step", html: {data: {target: "step-one"}} %>
+        <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-three"}} %>
       </div>
 
-      <div class="step-three">    
+      <div class="form-step" id="step-three">    
         <h2>Composition</h2>
         <h4>Main fabrics</h4>
         <%= f.simple_fields_for :technical_details do |form| %>
@@ -30,10 +33,12 @@
             </div>
           </div>
         <% end %>
+        <%= link_to "Précédent", "#", class: "go-to-step", html: {data: {target: "step-two"}} %>
+        <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-four"}} %>
       </div>
 
 
-      <div class="step-four">
+      <div class="form-step" id="step-four">
         <h4>Secondary fabrics</h4>
         <div id="secondary-forms">
           <div id="form-add-secondary-fabric">
@@ -70,9 +75,11 @@
             <i class="fas fa-plus-circle"></i>
           </div>
         </div>
+        <%= link_to "Précédent", "#", class: "go-to-step", html: {data: {target: "step-three"}} %>
+        <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-five"}} %>
       </div>
 
-      <div class="step-five">
+      <div class="form-step" id="step-five">
         <h4>Trims</h4>
         <div id="trim-forms">
           <div id="form-add-trim">
@@ -109,9 +116,11 @@
             <i class="fas fa-plus-circle"></i>
           </div>
         </div>
+        <%= link_to "Précédent", "#", class: "go-to-step", html: {data: {target: "step-four"}} %>
+        <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-six"}} %>
       </div>
 
-      <div class="step-six">
+      <div class="form-step" id="step-six">
         <h4>Brand Trims</h4>
         <div id="trim-forms">
           <div id="form-add-brand-trim">
@@ -148,9 +157,11 @@
             <i class="fas fa-plus-circle"></i>
           </div>
         </div>
+        <%= link_to "Précédent", "#", class: "go-to-step", html: {data: {target: "step-five"}} %>
+        <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-seven"}} %>
       </div>
 
-      <div class="step-seven"></div>
+      <div class="form-step" id="step-seven"></div>
         <h2>Information de production</h2>
         <%= f.input :quantity, as: :integer, input_html: { min: '0' } %>
         <div id="factory-fieldset">
@@ -158,6 +169,7 @@
         </div>
         <%= f.input :confection_cost, as: :integer, input_html: { min: '0' } %>
         <%= f.input :selling_price, as: :integer, input_html: { min: '0' } %>
+        <%= link_to "Précédent", "#", class: "go-to-step", html: {data: {target: "step-six"}} %>
         <%= f.submit "Ajouter un produit", class: 'btn btn-green-flash btn-small' %>
       </div>
     <% end %> 
