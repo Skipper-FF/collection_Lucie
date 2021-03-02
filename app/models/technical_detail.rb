@@ -18,6 +18,12 @@ class TechnicalDetail < ApplicationRecord
     # save clothe
     clothe.save 
   end
-     
+  
+
+  #def compute_clothe_production_cost
+  #  clothe_prod_cost = clothe.total_cost * clothe.quantity
+    # clothe.save
+  #end
+
 
 end
