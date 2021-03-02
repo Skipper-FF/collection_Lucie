@@ -6,14 +6,11 @@
       <h2>Informations générales</h2>
       <%= f.input :name %>
       <%= f.input :reference %>
-      <%= f.input :family_id, input_html: {value: @clothe.family.id, class: "hidden"}, wrapper_html: { class: "hidden"} %>
-      <%= f.input :pattern, as: :radio_buttons,
-                            collection_wrapper_tag: 'div',
-                            collection_wrapper_class: 'category-wrapper',
-                            item_wrapper_class: 'category-item',
-                            input_html: {class: 'category-selector'},
-                            collection: @patterns %>
-
+      <%= f.input :family, collection: Family.all, as: :radio_buttons %>
+      <div id="pattern-fieldset">
+        <%= render 'patterns_input' %>
+      </div>
+     
       <h2>Composition</h2>
       <h4>Main fabrics</h4>
       <%= f.simple_fields_for :technical_details do |form| %>
@@ -142,7 +139,7 @@
       <h2>Information de production</h2>
 
       <%= f.input :quantity, as: :integer, input_html: { min: '0' } %>
-      <%= f.input :factory_id, collection: @family.factories %>
+      <%= f.input :factory_id, collection: @clothe.family.factories %>
 
 
       <%= f.input :confection_cost, as: :integer, input_html: { min: '0' } %>
