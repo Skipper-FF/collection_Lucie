@@ -42,7 +42,7 @@
     color: black;
   }
   &.active a{
-    color: #05a4ca;
+    color: $persian-green;
     font-weight: bold;
   }
 }
@@ -64,6 +64,7 @@ a:hover {
   text-decoration: none;
   color: black;
 }
+
 
 h3{
   i {
@@ -131,7 +132,7 @@ h4 {
 }
 
 .name-sidebar {
-  color: #05a4ca;
+  color: $persian-green;
   margin-top: 8px;
 }
 
