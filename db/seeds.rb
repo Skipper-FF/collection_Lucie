@@ -51,25 +51,42 @@ season2.save!
 p season2
 
 
+fileF1 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693043/sweatshirt_zrvx0j.jpg')
+fileF2 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614692608/DESSIN-MCA104-CHINO_SLIN_PANT-DEVANT_1_f8ywc8.jpg')
+fileF3 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693165/coat_female_tqblnz.jpg')
+fileF4 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693272/shirts_h7ce9k.jpg')
+fileF5 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693375/blazers_v0kpkg.jpg')
+
 family1 = Family.create!(
   name: "SWEATS"
 )
+family1.photo.attach(io: fileF1, filename: 'sweats.png', content_type: 'image/png')
+family1.save!
+
 
 family2 = Family.create!(
   name: "JEANS"
 )
+family2.photo.attach(io: fileF2, filename: 'jeans.png', content_type: 'image/png')
+family2.save!
 
 family3 = Family.create!(
   name: "COATS"
 )
+family3.photo.attach(io: fileF3, filename: 'coats.png', content_type: 'image/png')
+family3.save!
 
 family4 = Family.create!(
   name: "SHIRTS"
 )
+family4.photo.attach(io: fileF4, filename: 'shirts.png', content_type: 'image/png')
+family4.save!
 
 family5 = Family.create!(
   name: "BLAZERS"
 )
+family5.photo.attach(io: fileF5, filename: 'blazers.png', content_type: 'image/png')
+family5.save!
 
 factory1 = Factory.create!(
   name: "RGT Textiles",
@@ -157,7 +174,7 @@ factoryfamily6 = FactoryFamily.create!(
   family_id: family5.id
 )
 
-# =========== Cloth example nb 1  =====
+# =========== Clothe example nb 1  =====
 
 pattern1 = Pattern.create!(
   name: "Sleeveless sweatshirt",
@@ -275,7 +292,7 @@ TechnicalDetail.create!(
 )
 
 
-# =========== Cloth example nb 2 =====
+# =========== Clothe example nb 2 =====
 
 pattern2 = Pattern.create!(
   name: "Longsleeve sweatshirt",
@@ -394,7 +411,7 @@ TechnicalDetail.create!(
 )
 
 
-# =========== Cloth example nb 3  =====
+# =========== Clothe example nb 3  =====
 
 pattern3 = Pattern.create!(
   name: "Regular jeans",
@@ -492,7 +509,7 @@ TechnicalDetail.create!(
 )
 
 
-# =========== Cloth example nb 4  =====
+# =========== Clothe example nb 4  =====
 
 pattern4 = Pattern.create!(
   name: "Trench coat",
@@ -608,7 +625,7 @@ TechnicalDetail.create!(
 )
 
 
-# =========== Cloth example nb 5  =====
+# =========== Clothe example nb 5  =====
 
 pattern5 = Pattern.create!(
   name: "Shirt",
@@ -686,7 +703,7 @@ TechnicalDetail.create!(
 )
 
 
-# =========== Cloth example nb 6  =====
+# =========== Clothe example nb 6  =====
 
 pattern6 = Pattern.create!(
   name: "Summer Blazer",

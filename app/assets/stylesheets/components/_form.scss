@@ -111,3 +111,48 @@
     background-color: #62DDF5;
     border-color: #62DDF5;
   }
+
+/*MODIFS SUR LES CHECKBOXES DES FAMILIES (élts de l'ancienne page Add) */
+
+.my-class {
+  position: absolute;
+  transform: scale(0);
+}
+
+.my-class + label {
+  cursor: pointer;
+}
+
+.my-class:checked + label {
+
+}
+
+.family-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+}
+
+.family-item {
+  background: white;
+  padding: 5px 10px;
+  margin-top: 50px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.family-item img {
+  vertical-align: middle;
+  border-style: none;
+  object-fit: contain;
+  height: 150px;
+  width: 150%;
+}
+
+.form-check-label {
+  display: inline-block;
+}
