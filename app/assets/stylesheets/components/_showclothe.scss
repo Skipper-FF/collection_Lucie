@@ -1,26 +1,14 @@
 .img-clothe{
-  width: 335px;
-  height: 430px;
-  margin-top:100px;
+  width: 250px;
+  height: 350px;
   border: 1px solid #c9c9c9;
   text-align: center;
-  margin-right: 200px;
 }
 
 .info-clothe {
-  width: 635px;
   height: 431px;
-  margin-top: 110px;
-  margin-left: 150px;
-  h1 {
-    margin-bottom: 30px;
-  }
-  h3 {
-    margin-top: 15px;
-  }
-}
-.info-clothe h3 {
-  font-size: 20px;
+  padding-left: 30px;
+  line-height: 3;
 }
 
 #text-align-name {
@@ -33,6 +21,56 @@
 }
 
 .title-name {
-  margin-left: 160px;
-  font-size: 40px;
+  font-size: 30px;
+}
+.show-clothe {
+  display: flex;
+
+
+}
+.main-cloth-infos {
+  display: flex;
+}
+
+.info-right {
+  line-height: 3;
+  margin-left: 30px;
+}
+
+table{
+  border-collapse: collapse
+}
+
+td{
+  border: 1px solid black;
+  padding: 10px;
+}
+.show-right {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 22px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.widget {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 22px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.widget-1{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 22px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.widget-2{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 22px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.clothe-details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
 }

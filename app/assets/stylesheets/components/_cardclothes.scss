@@ -58,7 +58,7 @@
 .all-card {
   padding: 25px;
   padding-top: 10px;
-
+  justify-content: center;
 }
 
 
@@ -106,4 +106,10 @@
   color: white;
   font-size: 160px;
   text-align: center;
+}
+
+
+.card-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }

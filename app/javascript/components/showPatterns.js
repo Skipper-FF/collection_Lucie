@@ -6,7 +6,7 @@ const showPatterns = () => {
             .then((data) => {
               const container = document.querySelector(containerId);
               container.innerHTML = data.html;
-            })
+            });
     } 
 
     const familyFields = document.querySelectorAll('input[name="clothe[family]"]');
