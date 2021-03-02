@@ -3,43 +3,39 @@
   <h1>Ajouter un vêtement au plan de collection <%= @season.name %></h1>
   <div class="form">
     <%= simple_form_for [ @season, @clothe ] do |f| %>
-      <h2>Informations générales</h2>
-      <%= f.input :name %>
-      <%= f.input :reference %>
-      <%= f.input :family, collection: Family.all, as: :radio_buttons %>
-      <div id="pattern-fieldset">
-        <%= render 'patterns_input' %>
+      <div class="step-one">
+        <h2>Quelle est la famille du produit à ajouter ?</h2>
+        <%= f.input :family, collection: Family.all, as: :radio_buttons %>
       </div>
-     
-      <h2>Composition</h2>
-      <h4>Main fabrics</h4>
-      <%= f.simple_fields_for :technical_details do |form| %>
-        <div class="form-components">
-          <div class="form-component">
-            <%= form.input :component, collection: @main_fabric, label: "Main fabric" %>
-          </div>
-          <div class="form-component">
-            <%= form.input :quantity, input_html: { min: '0' } %>
-          </div>
-        </div>
 
-      <% end %>
+      <div class="step-two">
+        <h2>Informations générales</h2>
+        <%= f.input :name %>
+        <%= f.input :reference %>
+          <div id="pattern-fieldset">
+            <%= render 'patterns_input' %>
+          </div>
+      </div>
 
-      <h4>Secondary fabrics</h4>
-      <div id="secondary-forms">
-        <div id="form-add-secondary-fabric">
-          <%= f.simple_fields_for :technical_details do |form| %>
-            <div class="form-components">
-              <div class="form-component">
-                <%= form.input :component, collection: @secondary_fabric, label: "Secondary fabric" %>
-              </div>
-              <div class="form-component">
-                <%= form.input :quantity, input_html: { min: '0' } %>
-              </div>
+      <div class="step-three">    
+        <h2>Composition</h2>
+        <h4>Main fabrics</h4>
+        <%= f.simple_fields_for :technical_details do |form| %>
+          <div class="form-components">
+            <div class="form-component">
+              <%= form.input :component, collection: @main_fabric, label: "Main fabric" %>
             </div>
-          <% end %>
-        </div>
-        <template id="secondary-form-template">
+            <div class="form-component">
+              <%= form.input :quantity, input_html: { min: '0' } %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+
+      <div class="step-four">
+        <h4>Secondary fabrics</h4>
+        <div id="secondary-forms">
           <div id="form-add-secondary-fabric">
             <%= f.simple_fields_for :technical_details do |form| %>
               <div class="form-components">
@@ -52,31 +48,33 @@
               </div>
             <% end %>
           </div>
-        </template>
-      </div>
-
-      <div class="add-component">
-        <div class="btn-add-component" id="add-component" data-target="#secondary-form-template">
-          <p>Ajouter un tissu secondaire supplémentaire</p>
-          <i class="fas fa-plus-circle"></i>
-        </div>
-      </div>
-
-      <h4>Trims</h4>
-      <div id="trim-forms">
-        <div id="form-add-trim">
-          <%= f.simple_fields_for :technical_details do |form| %>
-            <div class="form-components">
-              <div class="form-component">
-                <%= form.input :component, collection: @trim, label: "Trim" %>
-              </div>
-              <div class="form-component">
-                <%= form.input :quantity, input_html: { min: '0' } %>
-              </div>
+          <template id="secondary-form-template">
+            <div id="form-add-secondary-fabric">
+              <%= f.simple_fields_for :technical_details do |form| %>
+                <div class="form-components">
+                  <div class="form-component">
+                    <%= form.input :component, collection: @secondary_fabric, label: "Secondary fabric" %>
+                  </div>
+                  <div class="form-component">
+                    <%= form.input :quantity, input_html: { min: '0' } %>
+                  </div>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </template>
         </div>
-        <template id="trim-form-template">
+
+        <div class="add-component">
+          <div class="btn-add-component" id="add-component" data-target="#secondary-form-template">
+            <p>Ajouter un tissu secondaire supplémentaire</p>
+            <i class="fas fa-plus-circle"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-five">
+        <h4>Trims</h4>
+        <div id="trim-forms">
           <div id="form-add-trim">
             <%= f.simple_fields_for :technical_details do |form| %>
               <div class="form-components">
@@ -89,31 +87,33 @@
               </div>
             <% end %>
           </div>
-        </template>
-      </div>
-
-      <div class="add-component">
-        <div class="btn-add-component" id="add-component" data-target="#trim-form-template">
-          <p>Ajouter un trim supplémentaire</p>
-          <i class="fas fa-plus-circle"></i>
-        </div>
-      </div>
-
-      <h4>Brand Trims</h4>
-      <div id="trim-forms">
-        <div id="form-add-brand-trim">
-          <%= f.simple_fields_for :technical_details do |form| %>
-            <div class="form-components">
-              <div class="form-component">
-                <%= form.input :component, collection: @brand_trim, label: "Brand trim" %>
-              </div>
-              <div class="form-component">
-                <%= form.input :quantity, input_html: { min: '0' } %>
-              </div>
+          <template id="trim-form-template">
+            <div id="form-add-trim">
+              <%= f.simple_fields_for :technical_details do |form| %>
+                <div class="form-components">
+                  <div class="form-component">
+                    <%= form.input :component, collection: @trim, label: "Trim" %>
+                  </div>
+                  <div class="form-component">
+                    <%= form.input :quantity, input_html: { min: '0' } %>
+                  </div>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </template>
         </div>
-        <template id="brand-trim-form-template">
+
+        <div class="add-component">
+          <div class="btn-add-component" id="add-component" data-target="#trim-form-template">
+            <p>Ajouter un trim supplémentaire</p>
+            <i class="fas fa-plus-circle"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-six">
+        <h4>Brand Trims</h4>
+        <div id="trim-forms">
           <div id="form-add-brand-trim">
             <%= f.simple_fields_for :technical_details do |form| %>
               <div class="form-components">
@@ -126,29 +126,41 @@
               </div>
             <% end %>
           </div>
-        </template>
-      </div>
+          <template id="brand-trim-form-template">
+            <div id="form-add-brand-trim">
+              <%= f.simple_fields_for :technical_details do |form| %>
+                <div class="form-components">
+                  <div class="form-component">
+                    <%= form.input :component, collection: @brand_trim, label: "Brand trim" %>
+                  </div>
+                  <div class="form-component">
+                    <%= form.input :quantity, input_html: { min: '0' } %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </template>
+        </div>
 
-      <div class="add-component">
-        <div class="btn-add-component" id="add-component" data-target="#brand-trim-form-template">
-          <p>Ajouter un brand trim supplémentaire</p>
-          <i class="fas fa-plus-circle"></i>
+        <div class="add-component">
+          <div class="btn-add-component" id="add-component" data-target="#brand-trim-form-template">
+            <p>Ajouter un brand trim supplémentaire</p>
+            <i class="fas fa-plus-circle"></i>
+          </div>
         </div>
       </div>
 
-      <h2>Information de production</h2>
-
-      <%= f.input :quantity, as: :integer, input_html: { min: '0' } %>
-      <div id="factory-fieldset">
-        <%= render 'factories_input' %>
+      <div class="step-seven"></div>
+        <h2>Information de production</h2>
+        <%= f.input :quantity, as: :integer, input_html: { min: '0' } %>
+        <div id="factory-fieldset">
+          <%= render 'factories_input' %>
+        </div>
+        <%= f.input :confection_cost, as: :integer, input_html: { min: '0' } %>
+        <%= f.input :selling_price, as: :integer, input_html: { min: '0' } %>
+        <%= f.submit "Ajouter un produit", class: 'btn btn-green-flash btn-small' %>
       </div>
-
-
-      <%= f.input :confection_cost, as: :integer, input_html: { min: '0' } %>
-      <%= f.input :selling_price, as: :integer, input_html: { min: '0' } %>
-
-      <%= f.submit "Ajouter un produit", class: 'btn btn-green-flash btn-small' %>
-    <% end %>
+    <% end %> 
   </div>
   <%= link_to "See all clothes", season_clothes_path %>
   </div>
