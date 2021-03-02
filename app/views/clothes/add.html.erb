@@ -1,15 +1,18 @@
 <div class="container">
   <div class="form-design">
     <h2>Quelle est la famille du produit à ajouter ?</h2>
-    <%= form_tag new_season_clothe_path(@season), method: :get do %>
-    <%= select_tag :family, options_from_collection_for_select(@families, :id, :name),
-                            as: :radio_buttons,
-                            collection_wrapper_tag: 'div',
-                            collection_wrapper_class: 'category-wrapper',
-                            item_wrapper_class: 'category-item',
-                            input_html: {class: 'category-selector'},
-                            collection: @families %>
-    <%= submit_tag "Search", class: "btn btn-green-flash" %>
-    <% end %>
+    <fieldset class="form-group radio_buttons required family_family">
+      <legend class="col-form-label pt-0">RAYONS <abbr title="required">*</abbr></legend>
+      <div class="family-wrapper">
+        <input type="hidden" name="family[family]" value="">
+        <% @families.each_with_index do |family| %>
+          <div class="family-item">
+            <input class="form-check-input radio_buttons required family-selector my-class" type="radio" value="<%= family.id %>" name="family[family]" id="family_family_<%= family.id %>">
+            <%= cl_image_tag(family.photo.key) %>
+            <label class="form-check-label collection_radio_buttons" for="family_family_<%= family.id %>"> <%= family.name %> </label>
+          </div>
+        <% end %>
+      </div>
+    </fieldset>
   </div>
 </div>

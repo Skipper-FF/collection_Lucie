@@ -5,7 +5,11 @@ class SeasonsController < ApplicationController
 
 	def show
 	  @season = Season.find(params[:id])
-	  @clothes = @season.clothes
+	 if params[:query].present?
+      @clothes = Clothe.search_by_name_and_reference(params[:query])
+    else
+      @clothes = @season.clothes
+    end
 	end
 
 	def new

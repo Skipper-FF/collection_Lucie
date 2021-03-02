@@ -4,4 +4,5 @@ class Family < ApplicationRecord
     has_many :factories, through: :factory_families
 
     validates :name, uniqueness: true, presence: true
+    has_one_attached :photo
 end

@@ -4,6 +4,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 230px;
   margin: 20px;
+  border-radius: 8px;
   h2 {
     width: 60px;
   }
@@ -17,13 +18,14 @@
   height: 200px;
   width: 100%;
   object-fit: contain;
-  border-bottom: 1px solid #a5a5a5;
 }
 
-.card-trip h2 {
+.card-trip {
+  h3 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  text-color: $persian-green;
+}
 }
 
 .card-trip p {
@@ -46,12 +48,17 @@
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 14px;
-    color: black;
+    color: #8c8c8c;
+  }
+  h4 {
+    color: $persian-green;
   }
 }
 
 .all-card {
   padding: 25px;
+  padding-top: 10px;
+  justify-content: center;
 }
 
 
@@ -60,15 +67,18 @@
 }
 
 #text-add {
-  width: 200px;
   text-align: center;
+  color: white;
+  font-size: 18px;
 }
 
 
 
 #card-add-shadow {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(1, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: $persian-green;
 }
+
 #card-add-shadow:hover {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -77,7 +87,6 @@
   height: 200px;
   width: 100%;
   object-fit: contain;
-  border-bottom: 1px solid white;
   filter: opacity(0.4);
 }
 
@@ -87,4 +96,20 @@
 }
 
 
+.info-card-clothe {
+  strong {
+    color: $persian-green;
+  }
+}
 
+.plus-card-icone {
+  color: white;
+  font-size: 160px;
+  text-align: center;
+}
+
+
+.card-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
