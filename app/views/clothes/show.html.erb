@@ -2,29 +2,51 @@
   <div id="btn-back">
     <%= link_to "Retour à la collection", season_path(@season), class: 'btn btn-light'%>
   </div>
-  <div class="d-flex">
-    <div class="info-clothe">
-
-      <h3><strong><%=  @clothe.name %></strong></h3>
-      <h3>Référence : <strong><%=  @clothe.reference %></strong></h3>
-      <h3>Saison : <strong><%=@clothe.season.name %></strong></h3>
-      <h3>Usine : <strong><%=@clothe.factory.name %></strong></h3>
-      <h3>Coût total unitaire : <strong><%=@clothe.total_cost %> €</strong></h3>
-      <h3>Quantité à produire : <strong><%=@clothe.quantity %></strong></h3>
-      <h3>Prix de vente unitaire (TTC) : <strong><%=@clothe.selling_price %> €</strong></h3>
-  </div>
-
-    <div>
-    <img class="img-clothe" src="http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg" />
+  <h3><strong class="title-name"><%=  @clothe.name %></strong></h3>
+  <div class="show-clothe">
+    <div class="info-left">
+      <div class="main-cloth-infos">
+        <%= image_tag "http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg", class: "img-clothe" %>
+        <div class="info-clothe">
+          <div class="widget">
+            <div>Reference <strong><%=  @clothe.reference %></strong></div>
+            <div>Quantité <strong><%=@clothe.quantity %></strong></div>
+          </div>
+          <div class="widget-1">
+            <div>Prix de vente <strong><%=@clothe.selling_price %></strong></div>
+            <div>Coût unitaire <strong><%=@clothe.confection_cost %></strong></div>
+          </div>
+          <div class="widget-2">
+            <div>Coût total <strong><%=@clothe.total_cost %></strong></div>
+            <div>Saison <strong><%=@clothe.season.name %></strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="cloth-grid">
+          <caption>composition</caption>
+       <div class="clothe-details-grid">
+        
+          <p>Tissu principale</p>
+          <p>Tissu secondaire</p>
+          <p>Trims</p>
+        
+          <p>jeans</p>
+          <p>denin</p>
+          <p>métal</p>
+       </div>
+      </div>
     </div>
-  </div>
-
-  
-  <div class="d-flex">
-    <div class="info-clothe">
-      <h3>Coût total de production : <strong><%=@clothe.total_production_cost %> €</strong> </h3>
-      <h3>Chiffre d'affaires (estimé) : <strong><%=@clothe.turnover %> €</strong></h3>
-      <h3>Taux de marge unitaire : <strong><%=@clothe.margin_rate %> %</strong></h3>
+    <div class="info-right">
+      <div class="show-right">
+        <div>Saison: <strong><%=@clothe.season.name %></strong></div>
+        <div>Usine: <strong><%=@clothe.factory.name %></strong></div>
+        <div>Coût total unitaire: <strong><%=@clothe.total_cost %> €</strong></div>
+        <div>Quantité à produire: <strong><%=@clothe.quantity %></strong></div>
+        <div>Prix de vente unitaire (TTC): <strong><%=@clothe.selling_price %> €</strong></div>
+        <div>Coût total de production : <strong><%=@clothe.total_production_cost %> €</strong> </div>
+        <div>Chiffre d'affaires (estimé) : <strong><%=@clothe.turnover %> €</strong></div>
+        <div>Taux de marge unitaire : <strong><%=@clothe.margin_rate %> %</strong></div>
+      </div>
     </div>
   </div>
 </div>
