@@ -9,7 +9,7 @@
           <%= render 'families_input' %>
         </div>
         <%= f.input :family, collection: Family.all, as: :radio_buttons %>
-        <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-two"}} %>
+        <%= link_to "Suivant", "#", class: "go-to-step", :data => { :target => "step-two"} %>
       </div>
 
       <div class="form-step" id="step-two">
