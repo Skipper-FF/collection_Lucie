@@ -1,75 +1,48 @@
 
 
 <div class="sidenav">
-  <div>
-    <img src="https://i.ibb.co/936X0by/IMG-8517.jpg" class="logo-sidebar">
+  <div class="picture-avatar">
+    <img src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_1280.png" class="logo-top">
+    <p class="name-sidebar">Pierre Dupont<p>
+    <p class="fonction-sidebar">Responsable de collection</p>
   </div>
 
-  <div class="menu">
-    <div class="d-flex">
-<!--       <h3><i class="fas fa-database"></i></h3> -->
-      <h3 class="title-tissu" ><%= link_to "Tissutheque"%></h3>
-    </div>
-    <div class="element-collection">
-      <div class="element-bar d-flex">
-        <li><a href="#">Voir la tissutheque</a></li>
-      </div>
-      <div class="element-bar d-flex">
-        <li><a href="#">Ajouter un tissu</a></li>
-      </div>
-    </div>
+  <ul class="menu">
+    <li class="element-menu">
+      <%= link_to "Tissutheque", "#" %>
+    </li>
+    <li>
+      <%= link_to "Suivi de collection", "#" %>
+      <ul class="collection-list">
+        <% @all_seasons.each do |season| %>
+          <li class="element-collection <%= "active" if params[:controller] == "seasons" && season.id == params[:id].to_i %>">
+            <%= link_to season.name, season_path(season) %>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+    <li class="element-menu">
+      <%= link_to "Suivi de production", "#" %>
+    </li>
+    <li class="element-menu">
+      <%= link_to "Analyse", "#" %>
+    </li>
+    <li class="element-menu">
+      <%= link_to "Paramètres", "#" %>
+    </li>
+  </ul>
 
-    <div class="element-bar d-flex">
-<!--       <h3><i class="fas fa-chevron-right"></i></h3> -->
-      <h3 class="title-tissu" href="#" data-toggle="collapse" data-target="#collapseOne">Collection</h3>
-    </div>
-    <div class="element-collection">
-      <div class="element-bar d-flex">
-<!--         <h4><i class="fas fa-search"></i></h4> -->
-        <li><a href="#"><%= link_to "Suivi de collection", seasons_path(@season)%></a></li>
-      </div>
-      <div class="element-bar d-flex">
-<!--         <h4><i class="fas fa-cog"></i></h4> -->
-        <li><a href="#">Suivi de production</a></li>
-      </div>
-      <div class="element-bar d-flex">
-<!--         <h4><i class="fas fa-chart-line"></i></h4> -->
-        <li><a href="#">Analyses</a></li>
-      </div>
-    </div>
-  </div>
 
   <div class="footer-sidebar">
-  
-  <% if @season %>
-    <div class="back-collection">
-
-      <p class="link-season"><%= link_to "Retour à la collection", seasons_path(@season)%></p>
-
-      <p class="link-season"><%= link_to "Retour aux saisons", seasons_path(@season)%></p>
-
+    <div class="logo-footer">
+      <img class="logo-sidebar" src="/assets/logo-collection-8a049a3d4e2f8c7ca8acafa79d3b91113bd143a22dcc853a018a60f730021b9e.jpg">
     </div>
-  <% end %>
-  
-    <div class="profil-parametres">
-      <div class="profil-footer">
-        <div class="d-flex">
-          <img src='https://thumbs.dreamstime.com/z/simple-smiling-emoticon-vector-simple-emoticon-smiley-face-yellow-smiling-emoticon-black-eyes-mouth-vector-illustration-103660510.jpg' class="avatar-large" />
-          <div class="name-profil">
-            <p><strong>Pierre Paul</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="setting d-flex">
-        <p class="icone-setting"><i class="fas fa-cog"></i></p>
-        <p class="parametre"><%= link_to "Paramètres" %></p>
-      </div>
+    <div class="upadate-plan">
+      <p class="info-update">Upgrade your plan</p>
     </div>
   </div>
+
 </div>
-
-
 
 
 

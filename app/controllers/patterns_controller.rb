@@ -1,5 +1,15 @@
 class PatternsController < ApplicationController
 
+    def index
+        # Find l'instance de la famille qui correspond aux params de id
+        family = Family.find(params[:id])
+        @patterns = family.patterns
+
+        respond_to do |format|
+            format.json {render json: { html: render_to_string(partial: "clothes/patterns_input", formats: :html ) }}
+          end
+    end
+
     def new
         @pattern = Pattern.new
         @families = Family.all

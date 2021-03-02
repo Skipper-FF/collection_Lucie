@@ -1,0 +1,14 @@
+<%#= simple_form_for [ @season, @clothe ] do |f| %>
+    <%#= f.input :factory_id, collection: Factory.all, as: :radio_buttons %>
+<%# end %>
+
+<fieldset class="form-group radio_buttons required clothe_factory_id">
+    <legend class="col-form-label pt-0">Factory <abbr title="required">*</abbr></legend>
+    <input type="hidden" name="clothe[factory_id]" value="">
+    <% @factories.each do |factory| %>
+        <div class="form-check">
+            <input class="form-check-input radio_buttons required" type="radio" value="<%= factory.id %>" name="clothe[factory_id]" id="clothe_factory_id_<%= factory.id %>">
+            <label class="form-check-label collection_radio_buttons" for="clothe_factory_id_<%= factory.id %>"><%= factory.name %></label>
+        </div>
+    <% end %>
+</fieldset>

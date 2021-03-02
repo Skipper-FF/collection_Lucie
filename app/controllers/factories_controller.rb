@@ -1,6 +1,12 @@
 class FactoriesController < ApplicationController
 	def index
-		@factories = Factory.all
+		# Find l'instance de la famille qui correspond aux params de id
+		family = Family.find(params[:id])
+		@factories = family.factories
+
+		respond_to do |format|
+			format.json {render json: { html: render_to_string(partial: "clothes/factories_input", formats: :html ) }}
+		end
 	end
 	
 	def show

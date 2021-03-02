@@ -1,4 +1,4 @@
-const addSecondaryFabric = () => {  
+const addComponent = () => {  
     // Method to replace content of for and id tag in template (see new.html.erb file for clothes)
     const insertForAndIdTag = (index, field) => {
       return `clothe_technical_details_attributes_${index}_${field}`;
@@ -42,6 +42,6 @@ const addSecondaryFabric = () => {
     });
 }
 
-export { addSecondaryFabric };
+export { addComponent };
 
 
