@@ -50,7 +50,7 @@ season2.user = user1
 season2.save!
 p season2
 
-
+# IL FAUDRA MODIF LES IMG DS CLOUDINARY 
 fileF1 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693043/sweatshirt_zrvx0j.jpg')
 fileF2 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614692608/DESSIN-MCA104-CHINO_SLIN_PANT-DEVANT_1_f8ywc8.jpg')
 fileF3 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693165/coat_female_tqblnz.jpg')
