@@ -2,6 +2,9 @@
   position: sticky;
 }
 
+.main-content {
+  background-color: #e5e5e5a3;
+}
 .form{
   position: relative;
 }
@@ -18,9 +21,11 @@
 }
 
 .search-bar {
-  background-color: #0000005e;
-  border-radius: 0px;
+  background-color: #ffffff;
+  border-radius: 10px;
   border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: #05a4ca;
 }
 
 .search-bar:hover {
@@ -34,5 +39,81 @@
 
 .search-bouton {
   width: 225px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.back-arrow a {
+  background-color: white;
+  margin-left: 47px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 30px;
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.back-arrow {
+  margin-top: 22px;
+}
+
+.chemin-collection {
+  margin-top: 20px;
+  margin-left: 46px;
+}
+
+#type-filtre {
+  width: 110px;
+  height: 46px;
+}
+
+#matiere-filtre {
+  height: 46px;
+  width: 183px;
+}
+
+#usine-filtre {
+  height: 46px;
+  width: 100px;
+}
+
+.search-bouton {
+  width: 291px;
+  border: none;
+  border-radius: 10px;
+  height: 46px;
+  position: relative;
+}
+
+.bouton-recherche {
+  position: absolute;
+  margin-left: -98px;
+  margin-top: 5px;
+  background-color: #0680c71c;
+  height: 36px;
+  box-shadow: none;
+}
+
+.filter .btn-filter {
+  height: 46px;
+}
+
+.filter {
+  padding: 10px;
+}
+
+
+.filtre-bar-all {
+  margin-left: 37px;
+}
+
+.border-bottom {
+  border:none;
+}
+
+
+.navbar-show-bottom {
+  width: 100%;
 }
 
