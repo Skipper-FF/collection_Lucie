@@ -29,12 +29,12 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { addComponent } from '../components/addComponent';
 import { showPatterns } from '../components/showPatterns';
-// import { showFactories } from '../components/showFactories';
+import { formSteps } from '../components/formSteps';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   addComponent();
   showPatterns();
-  // showFactories();
+  formSteps();
 });
