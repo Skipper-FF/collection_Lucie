@@ -7,9 +7,9 @@ const formSteps = () => {
             const clickOnStep = document.getElementById(event.currentTarget.dataset.target);
             console.log(clickOnStep);
             const newActiveClass = clickOnStep.classList.add('active');
-            newActiveClass.style.display = "";
+            clickOnStep.style.display = "";
             const formerActiveClass = clickOnStep.previousElementSibling.classList.remove('active');
-            formerActiveClass.style.display = "none";
+            clickOnStep.previousElementSibling.style.display = "none";
         });
     });
 }
