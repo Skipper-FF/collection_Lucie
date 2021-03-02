@@ -1,0 +1,15 @@
+<!--    <h2>Quelle est la famille du produit à ajouter ?</h2>    -->
+    <fieldset class="form-group radio_buttons required family_family">
+      <div class="family-wrapper">
+        <input type="hidden" name="family[family]" value="">
+        <% @families.each_with_index do |family| %>
+          <div class="family-item">
+            <input class="form-check-input radio_buttons required family-selector my-class" type="radio" value="<%= family.id %>" name="family[family]" id="family_family_<%= family.id %>">
+            <label class="form-check-label collection_radio_buttons" for="family_family_<%= family.id %>">
+                <%= cl_image_tag(family.photo.key) %>
+                <p class="family-font"><%= family.name %></p>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    </fieldset>

@@ -5,7 +5,9 @@
     <%= simple_form_for [ @season, @clothe ] do |f| %>
       <div class="step-one">
         <h2>Quelle est la famille du produit à ajouter ?</h2>
-        <%= f.input :family, collection: Family.all, as: :radio_buttons %>
+        <div id="family-fieldset">
+          <%= render 'families_input' %>
+        </div>
       </div>
 
       <div class="step-two">
