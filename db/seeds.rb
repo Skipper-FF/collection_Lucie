@@ -24,7 +24,7 @@ user1 = User.create!(
   password: "jean12345",
   )
   p user1
-  
+
 
 file = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614333978/COLLECTION-APP%20IMAGES/SS21_ap54ss.jpg')
 file2 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614334437/COLLECTION-APP%20IMAGES/AW21_wwalor.jpg')
