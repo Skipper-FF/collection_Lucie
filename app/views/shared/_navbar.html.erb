@@ -14,7 +14,7 @@
   <div class="navbar-show-bottom filtre-bar-all d-flex"> <!-- justify-content-around -->
     <div class="filter d-flex">
       <div >
-      <%= form_tag season_clothes_path(@season), method: :get do %>
+      <%= form_tag season_path(@season), method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "search-bouton form-control",

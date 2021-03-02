@@ -25,12 +25,10 @@
   border-radius: 10px;
   border: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  color: #05a4ca;
+  color: $persian-green;
 }
 
-.search-bar:hover {
-  background-color: #000000ba;
-}
+
 
 .search-bar:active {
   background-color: #000000ba;
@@ -56,6 +54,10 @@
 
 .back-arrow {
   margin-top: 22px;
+}
+
+.back-arrow a:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .chemin-collection {
@@ -90,7 +92,7 @@
   position: absolute;
   margin-left: -98px;
   margin-top: 5px;
-  background-color: #0680c71c;
+  background-color: #2a9d8f38;
   height: 36px;
   box-shadow: none;
 }
