@@ -6,7 +6,7 @@
       <div class="form-step active" id="step-one">
         <h2>Quelle est la famille du produit à ajouter ?</h2>
         <%= f.input :family, collection: Family.all, as: :radio_buttons %>
-        <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-two"}} %>
+        <%= link_to "Suivant", "#", class: "go-to-step", :data => { :target => "step-two"} %>
       </div>
 
       <div class="form-step" id="step-two">
