@@ -206,21 +206,21 @@ component1 = Component.create!(
   description: "Fleece cotton",
   color: "Beige",
   composition: "100% cotton",
-  unit: "Weight",
-  unit_price: "8€",
+  unit: "mètre",
+  unit_price: "12€",
   rating: 4
 )
 
 component2 = Component.create!(
   element_type: "Secondary fabric",
-  supplier: "Reda",
+  supplier: "Climashield",
   name: "Isolant",
   reference: "PL24",
   description: "Technical fabrics",
   color: "Gray",
   composition: "90% polyester, 10% elasthane",
-  unit: "Length",
-  unit_price: "5€",
+  unit: "kg",
+  unit_price: "35€",
   rating: 4.5
 )
 
@@ -232,7 +232,7 @@ component3 = Component.create!(
   description: "Trendy zip",
   color: "Bright inox",
   composition: "Inox",
-  unit: "Unit",
+  unit: "pièce",
   unit_price: "2.5€",
   rating: 4
 )
@@ -256,10 +256,10 @@ component5 = Component.create!(
   name: "Flocage Le Wagon",
   reference: "BRD456",
   description: "Rectangular patch",
-  color: "Black",
+  color: "Red",
   composition: "Leather",
-  unit: "Unit",
-  unit_price: "0.25€",
+  unit: "pièce",
+  unit_price: "3€",
   rating: 4
 )
 
@@ -324,8 +324,8 @@ component1b = Component.create!(
   description: "Hot and fleece cotton",
   color: "Bleu foncé",
   composition: "100% cotton",
-  unit: "Weight",
-  unit_price: "10€",
+  unit: "mètre",
+  unit_price: "12€",
   rating: 4
 )
 
@@ -337,7 +337,7 @@ component2b = Component.create!(
   description: "Technical fabrics",
   color: "Gray",
   composition: "90% polyester, 10% elasthane",
-  unit: "Length",
+  unit: "mètre",
   unit_price: "5€",
   rating: 4
 )
@@ -351,7 +351,7 @@ component3b = Component.create!(
   description: "Trendy zip",
   color: "Bright inox",
   composition: "Inox",
-  unit: "Unit",
+  unit: "pièce",
   unit_price: "2.5€",
   rating: 4
 )
@@ -364,7 +364,7 @@ component4b = Component.create!(
   description: "Smooth cord",
   color: "White",
   composition: "Cotton",
-  unit: "Unit",
+  unit: "pièce",
   unit_price: "0.5€",
   rating: 4
 )
@@ -377,7 +377,7 @@ component5b = Component.create!(
   description: "Rectangular patch",
   color: "Black",
   composition: "Leather",
-  unit: "Unit",
+  unit: "pièce",
   unit_price: "0.25€",
   rating: 4
 )
@@ -443,8 +443,8 @@ componentAA = Component.create!(
   description: "Thick cotton",
   color: "Denim brut",
   composition: "95% cotton, 5% elasthane",
-  unit: "Weight",
-  unit_price: "7€",
+  unit: "mètre",
+  unit_price: "18€",
   rating: 4.5
 )
 
@@ -456,8 +456,8 @@ componentBB = Component.create!(
   description: "Light fabrics",
   color: "Dark Gray",
   composition: "100% cotton",
-  unit: "Length",
-  unit_price: "3€",
+  unit: "mètre",
+  unit_price: "8€",
   rating: 4
 )
 
@@ -469,7 +469,7 @@ componentCC = Component.create!(
   description: "Small zip",
   color: "Golden inox",
   composition: "Inox",
-  unit: "Unit",
+  unit: "pièce",
   unit_price: "1€",
   rating: 4
 )
@@ -482,7 +482,7 @@ componentDD = Component.create!(
   description: "Small patch",
   color: "Brown",
   composition: "Leather",
-  unit: "Unit",
+  unit: "pièce",
   unit_price: "0.15€",
   rating: 4
 )
@@ -540,8 +540,8 @@ componentZZ = Component.create!(
   description: "Light waterproof fabrics",
   color: "Noir",
   composition: "95% polyester, 5% elasthane",
-  unit: "Weight",
-  unit_price: "7.5€",
+  unit: "mètre",
+  unit_price: "15€",
   rating: 4
 )
 
@@ -553,8 +553,8 @@ componentYY = Component.create!(
   description: "Light fabrics",
   color: "Light Gray",
   composition: "100% polyester",
-  unit: "Length",
-  unit_price: "2€",
+  unit: "mètre",
+  unit_price: "3€",
   rating: 4
 )
 
@@ -579,8 +579,8 @@ componentWW = Component.create!(
   description: "Bright large round brown plastic",
   color: "Dark Brown",
   composition: "Plastic",
-  unit: "Unit",
-  unit_price: "0.1€",
+  unit: "pièce",
+  unit_price: "0.9€",
   rating: 4
 )
 
@@ -592,8 +592,8 @@ componentVV = Component.create!(
   description: "Rectangular patch",
   color: "Brown",
   composition: "Polyester",
-  unit: "Unit",
-  unit_price: "0.05€",
+  unit: "pièce",
+  unit_price: "0.25€",
   rating: 4
 )
 
@@ -656,8 +656,8 @@ componentMM = Component.create!(
   description: "Elegant fabrics",
   color: "Bleu Marine",
   composition: "95% cotton, 5% elasthane",
-  unit: "Weight",
-  unit_price: "5.5€",
+  unit: "kg",
+  unit_price: "25€",
   rating: 4.5
 )
 
@@ -669,7 +669,7 @@ componentNN = Component.create!(
   description: "Small round white plastic",
   color: "Bright white",
   composition: "Plastic",
-  unit: "Unit",
+  unit: "pièce",
   unit_price: "0.09€",
   rating: 4
 )
@@ -682,8 +682,8 @@ componentOO = Component.create!(
   description: "Small light rectangular patch",
   color: "White",
   composition: "Polyester",
-  unit: "Unit",
-  unit_price: "0.005€",
+  unit: "pièce",
+  unit_price: "2.25€",
   rating: 4
 )
 
@@ -734,8 +734,8 @@ componentCC = Component.create!(
   description: "Elegant gray fabric",
   color: "Noir",
   composition: "79% Polyester, 21% Viscose.",
-  unit: "Weight",
-  unit_price: "6€",
+  unit: "kg",
+  unit_price: "29€",
   rating: 4.5
 )
 
@@ -747,8 +747,8 @@ componentDD = Component.create!(
   description: "Medium-sized round dark grey plastic",
   color: "Dark gray",
   composition: "Plastic",
-  unit: "Unit",
-  unit_price: "0.05€",
+  unit: "pièce",
+  unit_price: "0.15€",
   rating: 4
 )
 
@@ -760,8 +760,8 @@ componentEE = Component.create!(
   description: "Small rectangular patch",
   color: "Gray",
   composition: "Polyester",
-  unit: "Unit",
-  unit_price: "0.005€",
+  unit: "pièce",
+  unit_price: "4.25€",
   rating: 4
 )
 

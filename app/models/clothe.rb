@@ -38,5 +38,17 @@ class Clothe < ApplicationRecord
     self.components.select{|component| component.element_type == "Main fabric"}.first
   end
 
+  def secondary_fabrics
+    self.components.select{|component| component.element_type == "Secondary fabric"}
+  end
+
+  def trims
+    self.components.select{|component| component.element_type == "Trim"}
+  end
+
+  def brand_trims
+    components.select{|component| component.element_type == "Brand trim"}
+  end
+
 end
 
