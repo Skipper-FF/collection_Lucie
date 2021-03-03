@@ -169,3 +169,10 @@
 .family-selector:checked + label {
   border: 3px solid $green;
 }
+
+.form-step {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
