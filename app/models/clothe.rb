@@ -33,5 +33,9 @@ class Clothe < ApplicationRecord
     margin_rate = ( margin / total_cost ).to_f
   end
 
+  def main_fabric
+    self.components.select{|component| component.element_type == "Main fabric"}.first
+  end
+
 end
 
