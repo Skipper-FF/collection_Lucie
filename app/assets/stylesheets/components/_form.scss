@@ -170,6 +170,12 @@
   border: 3px solid $green;
 }
 
+.form-step {
+  display: none;
+  &.active {
+    display: block;
+  }
+
 .box {
   display: flex;
   justify-content: space-around;
@@ -202,4 +208,3 @@
 .box-pattern {
   display: flex;
   justify-content: space-around;
-}
