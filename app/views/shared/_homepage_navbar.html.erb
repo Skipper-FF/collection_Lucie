@@ -22,7 +22,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Demander une démo", "#", class: "btn-green-flash btn-small" %>
+        <% if user_signed_in? %>
+        <% else %>
+          <%= link_to "Demander une démo", "#", class: "btn-green-flash btn-small" %>
+        <% end %>
       </li>
       <li class="nav-item">
         <% if user_signed_in? %>
