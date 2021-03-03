@@ -10,7 +10,7 @@ class TechnicalDetail < ApplicationRecord
     component = self.component
     compoUI = component.unit_price.to_f
     # multiplier par sa propre qté (self)
-    price = compoUI * self.quantity
+    price = (compoUI * self.quantity).to_f
     # récup l'instance associée de clothe
     # incrémenter cette instance du prix total
     clothe = self.clothe

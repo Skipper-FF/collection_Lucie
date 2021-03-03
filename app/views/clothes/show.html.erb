@@ -27,25 +27,26 @@
     <div class="show-right">
       <div class="info-clothe">
         <div class="widget">
-          <span class="total-widget">Coût total unitaire<span>
-          <h3><strong>12 €</strong></h3>
-          <span class="total-widget">140 000 € en cout total de production unitaire</span >
+          <span class="total-widget"><strong>Coût total unitaire</strong>  <span>
+          <h3><strong> <%= @clothe.total_cost %> €</strong></h3>
+          <span class="total-widget"> <strong><%= number_with_delimiter(@clothe.total_production_cost, delimiter: " ") %> €</strong>  de coût total de production unitaire</span >
         </div>
         <div class="widget">
-          <span class="total-widget">Quantité</span>
-          <h3><strong>1000</strong></h3>
-          <span class="total-widget">produit par AAC Textile</span >
+          <span class="total-widget"><strong>Quantité</strong>  </span>
+          <h3><strong> <%= @clothe.quantity %> </strong></h3>
+          <span class="total-widget">produites par AAC Textile</span >
         </div>
         <div class="widget">
-          <span class="total-widget">Prix de vente</span>
-          <h3><strong>45 €</strong></h3>
-          <span class="total-widget">450 000 € de chiffre d’affraire éstimé</span>
+          <span class="total-widget"><strong>Prix de vente</strong>  </span>
+          <h3><strong><%= @clothe.selling_price %> €</strong></h3>
+          <span class="total-widget"> <strong><%= number_with_delimiter(@clothe.turnover, delimiter: " ") %> €</strong>  de chiffre d’affaires estimé pour ce vêtement</span>
         </div>
         <div class="widget">
-          <span class="total-widget">Taux de marge</span >
-          <h3><strong>2,2 %</strong></h3>
+          <span class="total-widget"> <strong>Taux de marge</strong>  </span >
+          <h3><strong><%= @clothe.margin_rate %> %</strong></h3>
           </div>
         </div>
       </div>
     </div>
 </div>
+<%= console %>
