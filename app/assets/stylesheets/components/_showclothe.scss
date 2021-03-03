@@ -30,6 +30,9 @@
 }
 .main-cloth-infos {
   display: flex;
+  & img {
+    height: 278px;
+  }
 }
 
 .info-right {
@@ -73,6 +76,16 @@ strong {
   color: #2A9D8F
 }
 .main-cloth-main-infos {
-  padding-left: 25px;
+  padding-left: 18px;
 
+}
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #2A9D8F;
+  transition: background 0.3s ease;
+}
+.button-show {
+  padding-left: 300px;
 }
