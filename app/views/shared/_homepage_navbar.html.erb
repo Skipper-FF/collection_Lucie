@@ -23,15 +23,12 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <% if user_signed_in? %>
-        <% else %>
-          <%= link_to "Demander une démo", "#", class: "btn-green-flash btn-small" %>
+          <%= link_to "Mon compte", "#" %>
         <% end %>
       </li>
       <li class="nav-item">
-        <% if user_signed_in? %>
-          <%= link_to "Dashboard", seasons_path, class: "btn-green-flash btn-small" %>
-        <% else %>
-          <%= link_to "Connexion", new_user_registration_path, class: "btn-green-flash btn-small" %>
+        <% if !user_signed_in? %>
+          <%= link_to "Connexion", new_user_session_path, class: "btn-green-flash btn-small" %>
         <% end %>
       </li>
     </ul>
