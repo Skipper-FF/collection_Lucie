@@ -725,10 +725,10 @@ clothe6 = Clothe.create!(
 componentCC = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Toile Komatsu 100% polyester déperlante",
+  name: "Jersey 100% coton noir",
   reference: "WSH580",
   description: "Elegant gray fabric",
-  color: "Gris souris",
+  color: "Noir",
   composition: "79% Polyester, 21% Viscose.",
   unit: "Weight",
   unit_price: "6€",
