@@ -176,9 +176,9 @@ factoryfamily6 = FactoryFamily.create!(
 # =========== Clothe example nb 1  =====
 
 pattern1 = Pattern.create!(
-  name: "Sleeveless pullover",
+  name: "T-shirt poche poitrine",
   description: "",
-  family_id: family1.id,
+  family_id: family5.id,
 )
 
 
@@ -200,7 +200,7 @@ component1 = Component.create!(
   name: "Toile 100% coton sergé beige",
   reference: "WX82",
   description: "Fleece cotton",
-  color: "white",
+  color: "Beige",
   composition: "100% cotton",
   unit: "Weight",
   unit_price: "8€",
@@ -210,7 +210,7 @@ component1 = Component.create!(
 component2 = Component.create!(
   element_type: "Secondary fabric",
   supplier: "Reda",
-  name: "Polyester",
+  name: "Isolant",
   reference: "PL24",
   description: "Technical fabrics",
   color: "Gray",
@@ -249,7 +249,7 @@ component4 = Component.create!(
 component5 = Component.create!(
   element_type: "Brand trim",
   supplier: "Trim-Factory",
-  name: "Zip 10cm nylon",
+  name: "Flocage Le Wagon",
   reference: "BRD456",
   description: "Rectangular patch",
   color: "Black",
@@ -315,10 +315,10 @@ clothe2 = Clothe.create!(
 component1b = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Toile 100% coton sergé bleu",
+  name: "Toile 100% coton sergé bleu foncé",
   reference: "HWX28",
   description: "Hot and fleece cotton",
-  color: "Dark gray",
+  color: "Bleu foncé",
   composition: "100% cotton",
   unit: "Weight",
   unit_price: "10€",
@@ -368,7 +368,7 @@ component4b = Component.create!(
 component5b = Component.create!(
   element_type: "Brand trim",
   supplier: "Trim-Factory",
-  name: "Button 11mm black",
+  name: "Etiquette de composition",
   reference: "BRD456",
   description: "Rectangular patch",
   color: "Black",
@@ -437,7 +437,7 @@ componentAA = Component.create!(
   name: "Toile denim 100% coton selvedge 14oz brute",
   reference: "JKS789",
   description: "Thick cotton",
-  color: "Blue denim",
+  color: "Denim brut",
   composition: "95% cotton, 5% elasthane",
   unit: "Weight",
   unit_price: "7€",
@@ -534,7 +534,7 @@ componentZZ = Component.create!(
   name: "Toile denim 100% coton selvedge 14oz noire",
   reference: "ERT287",
   description: "Light waterproof fabrics",
-  color: "Light brown",
+  color: "Noir",
   composition: "95% polyester, 5% elasthane",
   unit: "Weight",
   unit_price: "7.5€",
@@ -544,7 +544,7 @@ componentZZ = Component.create!(
 componentYY = Component.create!(
   element_type: "Secondary fabric",
   supplier: "Reda",
-  name: "Polyester",
+  name: "Mech blanc",
   reference: "TLB741",
   description: "Light fabrics",
   color: "Light Gray",
@@ -557,7 +557,7 @@ componentYY = Component.create!(
 componentXX = Component.create!(
   element_type: "Trim",
   supplier: "Reda",
-  name: "Wizz",
+  name: "Zipper 20cm YKK noir",
   reference: "LB-brwn",
   description: "Trench belt",
   color: "Light brown",
@@ -570,7 +570,7 @@ componentXX = Component.create!(
 componentWW = Component.create!(
   element_type: "Trim",
   supplier: "Trim-Factory",
-  name: "Round brown",
+  name: "Zipper 20cm YKK marine",
   reference: "BB159",
   description: "Bright large round brown plastic",
   color: "Dark Brown",
@@ -647,10 +647,10 @@ clothe5 = Clothe.create!(
 componentMM = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Jersey 100% mérinos rayé bleu/blanc",
+  name: "Jersey 100% coton bleu marine",
   reference: "WSH580",
   description: "Elegant fabrics",
-  color: "White",
+  color: "Bleu Marine",
   composition: "95% cotton, 5% elasthane",
   unit: "Weight",
   unit_price: "5.5€",
@@ -660,7 +660,7 @@ componentMM = Component.create!(
 componentNN = Component.create!(
   element_type: "Trim",
   supplier: "Trim-Factory",
-  name: "Elegant white button",
+  name: "Bouton 9mm Blanc",
   reference: "WB852",
   description: "Small round white plastic",
   color: "Bright white",
@@ -673,7 +673,7 @@ componentNN = Component.create!(
 componentOO = Component.create!(
   element_type: "Brand trim",
   supplier: "Trim-Factory",
-  name: "Show brand white",
+  name: "Label rouge Le Wagon",
   reference: "SBW423",
   description: "Small light rectangular patch",
   color: "White",
@@ -705,7 +705,7 @@ TechnicalDetail.create!(
 # =========== Clothe example nb 6  =====
 
 pattern6 = Pattern.create!(
-  name: "Summer Blazer",
+  name: "T-shirt col rond",
   description: "",
   family_id: family5.id,
 )
@@ -725,10 +725,10 @@ clothe6 = Clothe.create!(
 componentCC = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Toile Komatsu 100% polyester déperlante",
+  name: "Jersey 100% coton noir",
   reference: "WSH580",
   description: "Elegant gray fabric",
-  color: "Light gray",
+  color: "Noir",
   composition: "79% Polyester, 21% Viscose.",
   unit: "Weight",
   unit_price: "6€",
@@ -738,7 +738,7 @@ componentCC = Component.create!(
 componentDD = Component.create!(
   element_type: "Trim",
   supplier: "Trim-Factory",
-  name: "Elegant dark gray button",
+  name: "Bouton Gris 9mm",
   reference: "DGB951",
   description: "Medium-sized round dark grey plastic",
   color: "Dark gray",
@@ -751,7 +751,7 @@ componentDD = Component.create!(
 componentEE = Component.create!(
   element_type: "Brand trim",
   supplier: "Trim-Factory",
-  name: "Show brand gray",
+  name: "Broderie le Wagon",
   reference: "SBG426",
   description: "Small rectangular patch",
   color: "Gray",

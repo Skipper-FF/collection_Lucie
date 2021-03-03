@@ -5,7 +5,8 @@
   <div class="show-clothe">
     <div class="info-left">
       <div class="main-cloth-infos">
-        <%= image_tag "http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg", class: "img-clothe" %>
+        <%#= image_tag "http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg", class: "img-clothe" %>
+        <%= cl_image_tag(@clothe.family.photo.key) %>
         <div class="main-cloth-main-infos">
           <h3><strong class="title-name"><%=  @clothe.name %></strong></h3>
           <p>Saison Autumn Winter 2021

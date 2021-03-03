@@ -77,8 +77,8 @@ strong {
 }
 .main-cloth-main-infos {
   padding-left: 18px;
-
 }
+
 .btn-flat {
   color: white;
   padding: 8px 24px;
@@ -89,3 +89,18 @@ strong {
 .button-show {
   padding-left: 300px;
 }
+
+.cloth-color {
+  color: #2A9D8F;
+  border: 1px solid #4A4A4A;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: normal;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  }
+
+.photo-clothes-show {
+  height: 278px;
+}
+
