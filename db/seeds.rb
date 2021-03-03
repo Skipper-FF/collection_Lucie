@@ -176,9 +176,9 @@ factoryfamily6 = FactoryFamily.create!(
 # =========== Clothe example nb 1  =====
 
 pattern1 = Pattern.create!(
-  name: "Sleeveless pullover",
+  name: "T-shirt poche poitrine",
   description: "",
-  family_id: family1.id,
+  family_id: family5.id,
 )
 
 
@@ -705,7 +705,7 @@ TechnicalDetail.create!(
 # =========== Clothe example nb 6  =====
 
 pattern6 = Pattern.create!(
-  name: "Summer Blazer",
+  name: "T-shirt col rond",
   description: "",
   family_id: family5.id,
 )
