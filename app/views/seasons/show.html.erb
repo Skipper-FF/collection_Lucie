@@ -20,7 +20,8 @@
       <%= link_to season_clothe_url(@season, clothe) do %>
         <div class="card-group d-flex">
           <div class="card-trip">
-            <img src="http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg" />
+            <%# <img src="http://tothefit.com//img/cms/Dessins%20Claire%20ALVERNHE/DESSIN%20HOMME/CASUAL/DESSIN-MCA104-CHINO%20SLIN%20PANT-DEVANT.jpg" /> %>
+            <%= cl_image_tag(clothe.family.photo.key) %>
             <div class="card-trip-infos">
               <div class="info-card-clothe">
                 <p><strong><%= clothe.name %></strong></p>
