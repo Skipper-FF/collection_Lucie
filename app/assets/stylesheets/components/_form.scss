@@ -5,9 +5,14 @@
     border-radius: 3px;
     border: 1px solid rgba(0,0,0,0.1);
     box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
+    h1 {
+      font-size: 28px;
+      color: $persian-green;
+      font-weight: 600;
+    }
     h2 {
-      font-size: 25px;
-      font-weight: bold;
+      font-size: 24px;
+      font-weight: 500;
       margin-bottom: 30px;
       text-align: center;
     }
@@ -79,7 +84,8 @@
   }
   
   .category-selector:checked + label {
-    color: $caribbean !important;
+    color: $persian-green !important;
+    border: 2px solid $persian-green;
   }
   
   
@@ -167,7 +173,7 @@
 }
 
 .family-selector:checked + label {
-  border: 3px solid $green;
+  border: 3px solid $persian-green;
 }
 
 .form-step {
@@ -188,12 +194,12 @@
 
 .box-next {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .box-previous-next {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .new_clothe input {

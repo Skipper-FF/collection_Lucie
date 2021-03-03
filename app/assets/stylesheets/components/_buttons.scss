@@ -18,8 +18,9 @@
 }
 
 .btn-small {
-    padding: 8px;
+    padding: 8px 16px 8px 16px;
     margin-left: 16px;
+    margin-right: 16px;
     &:hover {
         opacity: 0.8;
     }
@@ -31,6 +32,7 @@
     border-radius: 3px;
     box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
     padding: 8px;
+    margin: 16px;
     text-align: center;
     width: 20%;
     cursor: pointer;

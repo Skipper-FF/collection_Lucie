@@ -10,7 +10,7 @@
             <%#= f.input :family, as: :radio_buttons, collection: Family.all %>
           </div>
           <div class="box-next">
-            <%= link_to "Suivant", "#", class: "go-to-step", :data => { :target => "step-two"} %>
+            <%= link_to "Suivant", "#", class: "go-to-step btn-green-flash btn-small", :data => { :target => "step-two"} %>
           </div>
         </div>
 
@@ -26,8 +26,8 @@
             </div>
           </div>
           <div class="box-previous-next">
-            <%= link_to "Précédent", "#", class: "go-to-step", data: {target: "step-one"} %>
-            <%= link_to "Suivant", "#", class: "go-to-step", data: {target: "step-three"} %>
+            <%= link_to "Précédent", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-one"} %>
+            <%= link_to "Suivant", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-three"} %>
           </div>
         </div>
 
@@ -45,8 +45,8 @@
             </div>
           <% end %>
           <div class="box-previous-next">
-            <%= link_to "Précédent", "#", class: "go-to-step", data: {target: "step-two"} %>
-            <%= link_to "Suivant", "#", class: "go-to-step", data: {target: "step-four"} %>
+            <%= link_to "Précédent", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-two"} %>
+            <%= link_to "Suivant", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-four"} %>
           </div> 
         </div>
 
@@ -89,8 +89,8 @@
             </div>
           </div>
           <div class="box-previous-next">
-            <%= link_to "Précédent", "#", class: "go-to-step", data: {target: "step-three"} %>
-            <%= link_to "Suivant", "#", class: "go-to-step", data: {target: "step-five"} %>
+            <%= link_to "Précédent", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-three"} %>
+            <%= link_to "Suivant", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-five"} %>
           </div>
         </div>
 
@@ -132,8 +132,8 @@
             </div>
           </div>
           <div class="box-previous-next">
-            <%= link_to "Précédent", "#", class: "go-to-step", data: {target: "step-four"} %>
-            <%= link_to "Suivant", "#", class: "go-to-step", data: {target: "step-six"} %>
+            <%= link_to "Précédent", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-four"} %>
+            <%= link_to "Suivant", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-six"} %>
           </div>
         </div>
 
@@ -175,8 +175,8 @@
             </div>
           </div>
           <div class="box-previous-next">
-            <%= link_to "Précédent", "#", class: "go-to-step", data: {target: "step-five"} %>
-            <%= link_to "Suivant", "#", class: "go-to-step", data: {target: "step-seven"} %>
+            <%= link_to "Précédent", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-five"} %>
+            <%= link_to "Suivant", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-seven"} %>
           </div>
         </div>
 
@@ -189,12 +189,11 @@
           <%= f.input :confection_cost, as: :integer, input_html: { min: '0' } %>
           <%= f.input :selling_price, as: :integer, input_html: { min: '0' } %>
           <div class="box-previous-next">
-            <%= link_to "Précédent", "#", class: "go-to-step", data: {target: "step-six"} %>
+            <%= link_to "Précédent", "#", class: "go-to-step btn-green-flash btn-small", data: {target: "step-six"} %>
           </div>
           <%= f.submit "Ajouter un produit", class: 'btn btn-green-flash btn-small' %>
         </div>
       <% end %> 
     </div>
   </div>
-  <%= link_to "See all clothes", season_clothes_path %>
 </div>
