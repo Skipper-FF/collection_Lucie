@@ -8,18 +8,26 @@
         <div id="family-fieldset">
           <%= render 'families_input' %>
         </div>
+        <div class="box-next">
         <%= link_to "Suivant", "#", class: "go-to-step", :data => { :target => "step-two"} %>
+        </div>
       </div>
 
-      <div class="form-step" id="step-two">
+      <div class="form-step " id="step-two">
         <h2>Informations générales</h2>
-        <%= f.input :name %>
-        <%= f.input :reference %>
-        <div id="pattern-fieldset">
-          <%= render 'patterns_input' %>
+        <div class="box">
+          <%= f.input :name %>
+          <%= f.input :reference %>
         </div>
+        <div class="box-pattern">
+          <div id="pattern-fieldset">
+            <%= render 'patterns_input' %>
+          </div>
+        </div>
+        <div class="box-previous-next">
         <%= link_to "Précédent", "#", class: "go-to-step", html: {data: {target: "step-one"}} %>
         <%= link_to "Suivant", "#", class: "go-to-step", html: {data: {target: "step-three"}} %>
+        </div>
       </div>
 
       <div class="form-step" id="step-three">    
