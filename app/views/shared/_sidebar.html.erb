@@ -8,11 +8,15 @@
   </div>
 
   <ul class="menu">
-    <li class="element-menu">
+    <li class="element-menu d-flex">
+      <i class="fas fa-database"></i>
       <%= link_to "Tissutheque", "#" %>
     </li>
     <li>
-      <%= link_to "Suivi de collection", "#" %>
+      <div class="tissu-background">
+        <i class="fas fa-bars"></i>
+        <%= link_to "Suivi de collection", "#", class: "suivi-title" %>
+      </div>
       <ul class="collection-list">
         <% @all_seasons.each do |season| %>
           <li class="element-collection <%= "active" if params[:controller] == "seasons" && season.id == params[:id].to_i %>">
@@ -22,12 +26,15 @@
       </ul>
     </li>
     <li class="element-menu">
+      <i class="fas fa-tshirt"></i>
       <%= link_to "Suivi de production", "#" %>
     </li>
     <li class="element-menu">
+      <i class="fas fa-chart-bar"></i>
       <%= link_to "Analyse", "#" %>
     </li>
     <li class="element-menu">
+      <i class="fas fa-cog"></i>
       <%= link_to "Paramètres", "#" %>
     </li>
   </ul>
