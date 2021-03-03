@@ -18,12 +18,16 @@ Factory.destroy_all
 
 
 # ========= elts communs ===
-
+fileU1 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614790038/avatarU1_elu75q.jpg')
 user1 = User.create!(
-  email: "jean@gmail.com",
-  password: "jean12345",
+  email: "lucie@gmail.com",
+  first_name: "Lucie",
+  last_name: "Dupont",
+  password: "lucie12345",
   )
-  p user1
+user1.photo.attach(io: fileU1, filename: 'avatar.png', content_type: 'image/png')
+user1.save!
+p user1
 
 
 file = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614333978/COLLECTION-APP%20IMAGES/SS21_ap54ss.jpg')
@@ -50,7 +54,7 @@ season2.user = user1
 season2.save!
 p season2
 
-# IL FAUDRA MODIF LES IMG DS CLOUDINARY 
+# IL FAUDRA MODIF LES IMG DS CLOUDINARY
 fileF1 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759846/pattern-pull_gd3iry.jpg')
 fileF2 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759854/pattern-pantalon_mgqlav.jpg')
 fileF3 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759859/pattern-manteau_edc2op.jpg')

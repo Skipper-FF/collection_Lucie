@@ -2,8 +2,12 @@
 
 <div class="sidenav">
   <div class="picture-avatar">
-    <img src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_1280.png" class="logo-top">
-    <p class="name-sidebar">Pierre Dupont<p>
+    <img class="picture-profil-side dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/dp07cstgb/image/upload/v1614790038/avatarU1_elu75q.jpg" class="logo-top">
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><%= link_to "Mon compte", "#", class: "suivi-title" %></a>
+          <a class="dropdown-item" href="#"><%= link_to "Deconnexion", destroy_user_session_path, class: "suivi-title" %></a>
+        </div>
+    <p class="name-sidebar">Lucie Dupont<p>
     <p class="fonction-sidebar">Responsable de collection</p>
   </div>
 
