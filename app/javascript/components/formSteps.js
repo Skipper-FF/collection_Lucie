@@ -5,7 +5,7 @@ const formSteps = () => {
     goToSteps.forEach( (step) => {
         step.addEventListener( 'click', (event) => {
             event.preventDefault();
-            const currentStep = step.parentElement;
+            const currentStep = step.parentElement.parentElement;
             currentStep.classList.remove('active');
             const nextStep = document.getElementById(event.currentTarget.dataset.target);
             nextStep.classList.add('active');
