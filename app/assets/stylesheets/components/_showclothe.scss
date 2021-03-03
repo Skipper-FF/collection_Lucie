@@ -30,6 +30,9 @@
 }
 .main-cloth-infos {
   display: flex;
+  & img {
+    height: 278px;
+  }
 }
 
 .info-right {
@@ -75,4 +78,18 @@ strong {
 .main-cloth-main-infos {
   padding-left: 25px;
 
+}
+.cloth-color {
+  color: #2A9D8F;
+  border: 1px solid #4A4A4A;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: normal;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  }
+
+
+.photo-clothes-show {
+  height: 278px;
 }
