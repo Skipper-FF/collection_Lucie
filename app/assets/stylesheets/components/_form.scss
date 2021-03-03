@@ -203,7 +203,10 @@
 
 .radio_buttons label {
   border-radius: 8px;
-  margin-bottom: 16px;
+//  margin-bottom: 16px;
+p {
+  margin-bottom: 0px;
+}
 }
 
 .box-pattern {
