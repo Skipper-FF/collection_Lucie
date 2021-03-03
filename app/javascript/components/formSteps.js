@@ -4,12 +4,11 @@ const formSteps = () => {
     console.log(goToSteps);
     goToSteps.forEach( (step) => {
         step.addEventListener( 'click', (event) => {
-            const clickOnStep = document.getElementById(event.currentTarget.dataset.target);
-            console.log(clickOnStep);
-            const newActiveClass = clickOnStep.classList.add('active');
-            clickOnStep.style.display = "";
-            const formerActiveClass = clickOnStep.previousElementSibling.classList.remove('active');
-            clickOnStep.previousElementSibling.style.display = "none";
+            event.preventDefault();
+            const currentStep = step.parentElement;
+            currentStep.classList.remove('active');
+            const nextStep = document.getElementById(event.currentTarget.dataset.target);
+            nextStep.classList.add('active');
         });
     });
 }
