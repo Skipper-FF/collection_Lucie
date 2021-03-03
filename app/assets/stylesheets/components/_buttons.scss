@@ -9,6 +9,16 @@
     }
 }
 
+.btn-light {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.02);
+  color: rgba(0,0,0,0.5);
+  text-decoration: none;
+  &:hover {
+      text-decoration: none;
+  }
+}
+
 .btn-call-to-action {
     padding: 16px 32px;
     font-size: 20px;

@@ -76,9 +76,20 @@ strong {
   color: #2A9D8F
 }
 .main-cloth-main-infos {
-  padding-left: 25px;
-
+  padding-left: 18px;
 }
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #2A9D8F;
+  transition: background 0.3s ease;
+}
+.button-show {
+  padding-left: 300px;
+}
+
 .cloth-color {
   color: #2A9D8F;
   border: 1px solid #4A4A4A;
@@ -89,7 +100,7 @@ strong {
   transition: opacity 0.3s ease;
   }
 
-
 .photo-clothes-show {
   height: 278px;
 }
+
