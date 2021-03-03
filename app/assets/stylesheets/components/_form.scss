@@ -1,20 +1,16 @@
 .form-design {
     background: white;
     padding: 10px 20px;
-    margin-top: 50px;
+    margin-top: 40px;
     border-radius: 3px;
     border: 1px solid rgba(0,0,0,0.1);
     box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
-    h1 {
-      font-size: 28px;
-      color: $persian-green;
-      font-weight: 600;
-    }
     h2 {
       font-size: 24px;
       font-weight: 500;
       margin-bottom: 30px;
-      text-align: center;
+      text-align: left;
+      color: $persian-green;
     }
     .btn {
       width: 100%;
@@ -27,13 +23,16 @@
     margin-top: 32px;
   }
   h4 {
-    margin-top: 24px;
-    text-align: center;
+    margin-bottom: 16px;
+    text-align: left;
     font-size: 20px;
     color: rgba(0,0,0,0.6);
   }
-  p {
-    text-align: center;
+  h6 {
+    text-align: left;
+    font-size: 16px;
+    color: rgba(0,0,0,0.5);
+    margin: 0px;
   }
 }
 
@@ -194,12 +193,12 @@
 
 .box-next {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .box-previous-next {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .new_clothe input {
