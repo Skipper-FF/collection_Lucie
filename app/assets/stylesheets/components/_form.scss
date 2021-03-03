@@ -218,3 +218,17 @@ p {
   display: flex;
   justify-content: space-around;
 }
+
+.clothe_name label {
+  position: absolute;
+  top: 45px;
+  left: 40px;
+  background-color: white;
+}
+
+.clothe_reference label {
+  position: absolute;
+  top: 45px;
+  right: 345px;
+  background-color: white;
+}
