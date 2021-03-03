@@ -175,4 +175,36 @@
   &.active {
     display: block;
   }
+
+.box {
+  display: flex;
+  justify-content: space-around;
 }
+
+.box div {
+  width: 45%;
+}
+
+.box-next {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.box-previous-next {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new_clothe input {
+  border-radius: 8px;
+  height: 50px;
+}
+
+.radio_buttons label {
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.box-pattern {
+  display: flex;
+  justify-content: space-around;
