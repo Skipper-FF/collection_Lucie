@@ -51,16 +51,16 @@ season2.save!
 p season2
 
 # IL FAUDRA MODIF LES IMG DS CLOUDINARY 
-fileF1 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693043/sweatshirt_zrvx0j.jpg')
-fileF2 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614692608/DESSIN-MCA104-CHINO_SLIN_PANT-DEVANT_1_f8ywc8.jpg')
-fileF3 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693165/coat_female_tqblnz.jpg')
-fileF4 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693272/shirts_h7ce9k.jpg')
-fileF5 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614693375/blazers_v0kpkg.jpg')
+fileF1 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759846/pattern-pull_gd3iry.jpg')
+fileF2 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759854/pattern-pantalon_mgqlav.jpg')
+fileF3 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759859/pattern-manteau_edc2op.jpg')
+fileF4 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759865/pattern-chemise_dtpgyb.jpg')
+fileF5 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759840/pattern-tshirt2_mmsvjm.jpg')
 
 family1 = Family.create!(
   name: "PULLS"
 )
-family1.photo.attach(io: fileF1, filename: 'pulls.png', content_type: 'image/png')
+family1.photo.attach(io: fileF1, filename: 'pull.png', content_type: 'image/png')
 family1.save!
 
 family2 = Family.create!(
@@ -78,13 +78,13 @@ family3.save!
 family4 = Family.create!(
   name: "CHEMISES"
 )
-family4.photo.attach(io: fileF4, filename: 'chemises.png', content_type: 'image/png')
+family4.photo.attach(io: fileF4, filename: 'chemise.png', content_type: 'image/png')
 family4.save!
 
 family5 = Family.create!(
   name: "T-SHIRTS"
 )
-family5.photo.attach(io: fileF5, filename: 'tshirts.png', content_type: 'image/png')
+family5.photo.attach(io: fileF5, filename: 'tshirt.png', content_type: 'image/png')
 family5.save!
 
 factory1 = Factory.create!(
