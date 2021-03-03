@@ -8,7 +8,6 @@
         <div id="family-fieldset">
           <%= render 'families_input' %>
         </div>
-        <%= f.input :family, collection: Family.all, as: :radio_buttons %>
         <%= link_to "Suivant", "#", class: "go-to-step", :data => { :target => "step-two"} %>
       </div>
 
