@@ -29,8 +29,9 @@ class Clothe < ApplicationRecord
   # calcul du taux de marge unitaire du vêtement 
   # ATTN ICI LE CALCUL N EST PAS SUR LE H.T.
   def margin_rate
-    margin = selling_price - total_cost
-    margin_rate = ( margin / total_cost ).to_f
+    selling_price_ht = selling_price / 1.2
+    margin = selling_price_ht - total_cost
+    margin_rate = (( margin / selling_price_ht ) * 100 ).to_f.round(1)
   end
 
   def main_fabric
