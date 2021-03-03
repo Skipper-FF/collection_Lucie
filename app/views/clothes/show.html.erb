@@ -31,7 +31,7 @@
     <div class="show-right">
       <div class="info-clothe">
         <div class="widget">
-          <span class="total-widget"><strong>Coût total unitaire HT</strong>  <span>
+          <span class="total-widget"><strong>Prix de revient unitaire HT</strong>  <span>
           <h3><strong> <%= @clothe.total_cost %> €</strong></h3>
           <span class="total-widget"> <strong><%= number_with_delimiter(@clothe.total_production_cost, delimiter: " ") %> €</strong>  de coût total de production unitaire</span >
         </div>
@@ -55,5 +55,7 @@
         </div>
       </div>
     </div>
+    <%= render 'costs_details' %>
+    <%= render 'compositions' %>
 </div>
 <%= console %>

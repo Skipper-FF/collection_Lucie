@@ -1,0 +1,72 @@
+<table>
+  <thead>
+  <tr>
+    <th colspan="5">Décomposition du prix de revient</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Composant</td>
+      <td>Nom</td>
+      <td>Prix unitaire en €</td>
+      <td>Consommation / pièce</td>
+      <td>Coût HT / pièce</td>
+    </tr>
+    <tr>
+      <td>Tissu principal</td>
+      <td><%= @clothe.main_fabric.name %></td>
+      <td><%= @clothe.main_fabric.unit_price %> / <%= @clothe.main_fabric.unit %></td>
+        <% @clothe.technical_details.each do |technical_detail| %>
+          <% if technical_detail.component_id == @clothe.main_fabric.id %>
+            <td><%= technical_detail.quantity %></td>
+            <td><%= ( @clothe.main_fabric.unit_price.to_f * technical_detail.quantity.to_f ) %> €</td>
+          <% end %>
+        <% end %>
+    </tr>
+    <tr>
+      <% @clothe.secondary_fabrics.each do |fabric| %>
+        <td>Tissus secondaire</td>
+        <td><%= fabric.name %></td>
+        <td><%= fabric.unit_price %> / <%= fabric.unit %></td>
+          <% @clothe.technical_details.each do |technical_detail| %>
+            <% if technical_detail.component_id == fabric.id %>
+            <td><%= technical_detail.quantity %></td>
+            <td><%= ( fabric.unit_price.to_f * technical_detail.quantity.to_f ) %> €</td>
+            <% end %>
+          <% end %>
+      <% end %>
+    </tr>
+    <tr>
+      <% @clothe.trims.each do |trim| %>
+        <td>Composants</td>
+        <td><%= trim.name %></td>
+        <td><%= trim.unit_price %> / <%= trim.unit %></td>
+          <% @clothe.technical_details.each do |technical_detail| %>
+            <% if technical_detail.component_id == trim.id %>
+            <td><%= technical_detail.quantity %></td>
+            <td><%= ( trim.unit_price.to_f * technical_detail.quantity.to_f ) %> €</td>
+            <% end %>
+          <% end %>
+      <% end %>
+    </tr>
+    <tr>
+      <% @clothe.brand_trims.each do |trim| %>
+        <td>Composants de marque</td>
+        <td><%= trim.name %></td>
+        <td><%= trim.unit_price %> / <%= trim.unit %></td>
+          <% @clothe.technical_details.each do |technical_detail| %>
+            <% if technical_detail.component_id == trim.id %>
+            <td><%= technical_detail.quantity %></td>
+            <td><%= ( trim.unit_price.to_f * technical_detail.quantity.to_f ) %> €</td>
+            <% end %>
+          <% end %>
+      <% end %>
+    </tr>
+    <tr>
+      <td>Confection</td>
+    </tr>
+    <tr>
+      <td>Prix total</td>
+    </tr>
+  </tbody>
+</table>

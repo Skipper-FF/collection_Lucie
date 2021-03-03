@@ -1,0 +1,40 @@
+<table>
+  <thead>
+  <tr>
+    <th colspan="5">Compositions</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Composant</td>
+      <td>Nom</td>
+      <td>Composition</td>
+    </tr>
+    <tr>
+      <td>Tissu principal</td>
+      <td><%= @clothe.main_fabric.name %></td>
+      <td><%= @clothe.main_fabric.composition %></td>
+    </tr>
+    <tr>
+      <% @clothe.secondary_fabrics.each do |fabric| %>
+        <td>Tissus secondaire</td>
+        <td><%= fabric.name %></td>
+        <td><%= fabric.composition %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @clothe.trims.each do |trim| %>
+        <td>Composants</td>
+        <td><%= trim.name %></td>
+        <td><%= trim.composition %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @clothe.brand_trims.each do |trim| %>
+        <td>Composants de marque</td>
+        <td><%= trim.name %></td>
+        <td><%= trim.composition %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
