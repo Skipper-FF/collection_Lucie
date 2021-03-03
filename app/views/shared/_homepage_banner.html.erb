@@ -2,6 +2,11 @@
   <div class="container">
     <h1>Fashion business made simple</h1>
     <p>Concentrez-vous sur la création de vos collections, nous facilitons leur administration</p>
-    <a class="btn-green-flash btn-call-to-action" href="#">Demander une démo</a>
+    <% if user_signed_in? %>
+      <%= link_to "Dashboard", seasons_path, class: "dashbord-banner" %>
+    <% else %>
+      <%= link_to "Demander une démo", "#", class: "btn-green-flash btn-call-to-action" %>
+    <% end %>
   </div>
 </div>
+
