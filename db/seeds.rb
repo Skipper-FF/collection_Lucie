@@ -208,7 +208,8 @@ component1 = Component.create!(
   composition: "100% cotton",
   unit: "mètre",
   unit_price: "12€",
-  rating: 4
+  rating: 4,
+  color_hexadecimal: "#c8ad7f",
 )
 
 component2 = Component.create!(
