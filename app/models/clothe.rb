@@ -47,7 +47,7 @@ class Clothe < ApplicationRecord
   end
 
   def brand_trims
-    components.select{|component| component.element_type == "Brand trim"}
+    self.components.select{|component| component.element_type == "Brand trim"}
   end
 
 end
