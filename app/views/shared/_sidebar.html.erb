@@ -5,9 +5,9 @@
     <img class="picture-profil-side dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/dp07cstgb/image/upload/v1614790038/avatarU1_elu75q.jpg" class="logo-top">
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#"><%= link_to "Mon compte", "#", class: "suivi-title" %></a>
-          <a class="dropdown-item" href="#"><%= link_to "Deconnexion", destroy_user_session_path, class: "suivi-title" %></a>
+          <a class="dropdown-item" href="#"><%= link_to "Deconnexion", destroy_user_session_path, method: :delete, class: "suivi-title" %></a>
         </div>
-    <p class="name-sidebar">Lucie Dupont<p>
+    <p class="name-sidebar"><%= current_user.first_name %> <%= current_user.last_name %><p>
     <p class="fonction-sidebar">Responsable de collection</p>
   </div>
 
@@ -23,7 +23,7 @@
       </div>
       <ul class="collection-list">
         <% @all_seasons.each do |season| %>
-          <li class="element-collection <%= "active" if params[:controller] == "seasons" && season.id == params[:id].to_i %>">
+          <li class="element-collection <%= "active" if (params[:controller] == "seasons" && season.id == params[:id].to_i) || (params[:controller] == "clothes" && season.id == params[:season_id].to_i) %>">
             <%= link_to season.name, season_path(season) %>
           </li>
         <% end %>
@@ -47,9 +47,6 @@
   <div class="footer-sidebar">
     <div class="logo-footer">
       <img class="logo-sidebar" src="/assets/logo-collection-8a049a3d4e2f8c7ca8acafa79d3b91113bd143a22dcc853a018a60f730021b9e.jpg">
-    </div>
-    <div class="upadate-plan">
-      <p class="info-update">Upgrade your plan</p>
     </div>
   </div>
 

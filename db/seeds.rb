@@ -25,7 +25,7 @@ user1 = User.create!(
   last_name: "Dupont",
   password: "lucie12345",
   )
-user1.photo.attach(io: fileU1, filename: 'avatar.png', content_type: 'image/png')
+user1.photo.attach(io: fileU1, filename: 'avatar.jpg', content_type: 'image/jpg')
 user1.save!
 p user1
 
