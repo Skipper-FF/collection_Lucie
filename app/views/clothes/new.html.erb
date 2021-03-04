@@ -1,5 +1,83 @@
+
 <div class="container">
   <div class="form-design">
+    <div class="stepper-header">
+
+        <!-- Steppers Wrapper -->
+        <ul class="stepper stepper-horizontal">
+
+          <!-- First Step -->
+          <li class="active-tab" id="step-one-tab" >
+            <a href="#!">
+              <div class="step-active-done">
+                <div>    <span class="circle-done">1</span>  </div>
+                <div>   <span class="label-tab">Famille</span>  </div> 
+              </div>
+            </a>
+          </li>
+
+          <!-- Second Step -->
+          <li class="current-tab" id="step-two-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div> <span class="circle-next">2</span></div>
+              <div> <span class="label-tab">Modèle</span></div>
+            </div>
+            </a>
+          </li>
+
+          <!-- Third Step -->
+          <li class="current-tab" id="step-three-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div> <span class="circle-next">3</i></span> </div>
+              <div><span class="label-tab">Tissus</span></div>
+            </div>
+            </a>
+          </li>
+
+          <!-- Fourth Step -->
+          <li class="current-tab" id="step-four-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div><span class="circle-next">4</i></span></div>
+              <div><span class="label-tab">Composants</span></div>
+            </div>
+            </a>
+          </li>
+
+          <!-- Fifth Step -->
+          <li class="current-tab" id="step-five-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div><span class="circle-next">5</i></span></div>
+              <div><span class="label-tab">Branding</span></div>
+            </div>
+            </a>
+          </li>
+
+          <!-- Sixth Step -->
+          <li class="current-tab" id="step-six-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div><span class="circle-next">6</i></span></div>
+              <div><span class="label-tab">Production</span></div>
+            </div>
+            </a>
+          </li>
+
+
+        </ul>
+        <!-- /.Steppers Wrapper -->
+
+      </div>
+
+<!-- /.Horizontal Steppers -->
+
+
+<!--  CONTENU DES STEPS -->
+
+
     <div class="form">
       <%= simple_form_for [ @season, @clothe ] do |f| %>
         <div class="form-step active" id="step-one">
