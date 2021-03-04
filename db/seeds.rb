@@ -179,18 +179,11 @@ factoryfamily6 = FactoryFamily.create!(
 
 # =========== Clothe example nb 1  =====
 
-pattern1 = Pattern.create!(
-  name: "T-shirt poche poitrine",
-  description: "",
-  family_id: family5.id,
-)
-
-
 clothe1 = Clothe.create!(
   factory_id: factory1.id,
   season_id: season1.id,
   pattern_id: pattern1.id,
-  name: "Cool pullover",
+  name: "T-shirt blanc",
   reference: "SLSW2",
   quantity: 5000,
   confection_cost: 7,
@@ -220,8 +213,8 @@ component2 = Component.create!(
   description: "Technical fabrics",
   color: "Gray",
   composition: "90% polyester, 10% elasthane",
-  unit: "kg",
-  unit_price: "35€",
+  unit: "mètre",
+  unit_price: "7,5€",
   rating: 4.5
 )
 
@@ -267,7 +260,7 @@ component5 = Component.create!(
 
 TechnicalDetail.create!(
   clothe_id: clothe1.id,
-  component_id: component1.id,
+  component_id: componentAZ.id,
   quantity: 0.5,
 )
 
@@ -299,8 +292,8 @@ TechnicalDetail.create!(
 # =========== Clothe example nb 2 =====
 
 pattern2 = Pattern.create!(
-  name: "Pullover manches longues",
-  description: "",
+  name: "Pull maille nid d'abeille",
+  description: "Pull maille nid d'abeille",
   family_id: family1.id,
 )
 
@@ -309,7 +302,7 @@ clothe2 = Clothe.create!(
   factory_id: factory2.id,
   season_id: season2.id,
   pattern_id: pattern2.id,
-  name: "Hot pullover",
+  name: "Pull ",
   reference: "LSW1",
   quantity: 10000,
   confection_cost: 12,
@@ -657,8 +650,8 @@ componentMM = Component.create!(
   description: "Elegant fabrics",
   color: "Bleu Marine",
   composition: "95% cotton, 5% elasthane",
-  unit: "kg",
-  unit_price: "25€",
+  unit: "mètre",
+  unit_price: "7€",
   rating: 4.5
 )
 
@@ -708,12 +701,38 @@ TechnicalDetail.create!(
 
 
 # =========== Clothe example nb 6  =====
+pattern1 = Pattern.create!(
+  name: "T-shirt poche poitrine",
+  description: "T-shirt poche poitrine",
+  family_id: family5.id,
+)
+
+filetshirtpoche = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614873913/t-shirt_poche_poitrine_recwid.jpg')
+
+pattern6.photo.attach(io: filetshirtpoche, filename: 'tshirtcolrond.png', content_type: 'image/png')
+pattern6.save!
 
 pattern6 = Pattern.create!(
   name: "T-shirt col rond",
-  description: "",
+  description: "T-shirt col rond",
   family_id: family5.id,
 )
+
+filetshirtcolrond = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614873913/t-shirt_col_rond_xlrk82.jpg')
+
+pattern6.photo.attach(io: filetshirtcolrond, filename: 'tshirtcolrond.png', content_type: 'image/png')
+pattern6.save!
+
+
+pattern7 = Pattern.create!(
+  name: "T-shirt manche raglan",
+  description: "T-shirt manche raglan",
+  family_id: family5.id,
+)
+
+pattern7.photo.attach(io: fileF5, filename: 'tshirtraglan.png', content_type: 'image/png')
+pattern7.save!
+
 
 clothe6 = Clothe.create!(
   factory_id: factory6.id,
@@ -735,8 +754,21 @@ componentCC = Component.create!(
   description: "Elegant gray fabric",
   color: "Noir",
   composition: "79% Polyester, 21% Viscose.",
-  unit: "kg",
-  unit_price: "29€",
+  unit: "mètre",
+  unit_price: "8€",
+  rating: 4.5
+)
+
+componentAZ = Component.create!(
+  element_type: "Main fabric",
+  supplier: "Reda",
+  name: "Jersey 100% coton blanc",
+  reference: "WSH580",
+  description: "Jersey 100% coton blanc",
+  color: "Blanc",
+  composition: "79% Polyester, 21% Viscose.",
+  unit: "mètre",
+  unit_price: "6.9€",
   rating: 4.5
 )
 
