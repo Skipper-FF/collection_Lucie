@@ -2,8 +2,8 @@
     <fieldset class="form-group radio_buttons required clothe_family">
       <div class="family-wrapper">
         <input type="hidden" name="clothe[family]" value="">
-        <% @families.each_with_index do |family| %>
-          <div class="family-item">
+        <% @families.each do |family| %>
+          <div class="form-check family-item">
             <input class="form-check-input radio_buttons required family-selector my-class" type="radio" value="<%= family.id %>" name="clothe[family]" id="clothe_family_<%= family.id %>">
             <label class="form-check-label collection_radio_buttons" for="clothe_family_<%= family.id %>">
                 <%= cl_image_tag(family.photo.key) %>
