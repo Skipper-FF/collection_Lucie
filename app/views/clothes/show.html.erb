@@ -20,11 +20,12 @@
         </div>
     </div>
     <div class="show-right">
+    <h3>Données financières</h3>
       <div class="info-clothe">
         <div class="widget">
           <span class="total-widget"><strong>Prix de revient </strong></span>
           <h3><strong> <%= @clothe.total_cost %></strong><small> € HT / pièce </small></h3>
-          <span class="total-widget-down">Coût total : <strong><%= @clothe.total_production_cost %> K €</strong></span >
+          <span class="total-widget-down">Coût total : <strong><%= @clothe.total_production_cost %> K€</strong></span >
         </div>
         <div class="widget">
           <span class="total-widget"><strong>Quantités</strong></span>
@@ -35,13 +36,13 @@
 
           <span class="total-widget"><strong>Prix de vente unitaire </strong></span>
           <h3><strong><%= @clothe.selling_price  %></strong><small> € TTC</small></h3>
-          <span class="total-widget-down">CA total : <strong><%= number_with_delimiter @clothe.turnover %> K €</strong></span>
+          <span class="total-widget-down">CA total : <strong><%= number_with_delimiter @clothe.turnover %> K€</strong></span>
 
         </div>
         <div class="widget">
-          <span class="total-widget"> <strong>Taux de marge brute</strong>  </span >
+          <span class="total-widget"> <strong>Taux de marge brute</strong></span>
           <h3><strong><%= @clothe.margin_rate %></strong> %</h3>
-          <span class="total-widget-down"> <strong><%#= number_with_delimiter(@clothe.margin, delimiter: " ") %> </strong> Marge brute théorique : <%= @clothe.margin_value %> k €</span>
+          <span class="total-widget-down"> <strong><%#= number_with_delimiter(@clothe.margin, delimiter: " ") %> </strong> Marge brute : <span><%= @clothe.margin_value %> K€ </span></span>
           </div>
         </div>
       </div>
