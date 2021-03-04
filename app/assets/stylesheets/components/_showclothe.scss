@@ -25,6 +25,7 @@
 }
 .show-clothe {
   display: flex;
+  
 
 
 }
@@ -51,6 +52,9 @@ td{
 .show-right {
   padding: 22px;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 8px;
+  background-color: white;
+  
 }
 .widget {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -58,18 +62,21 @@ td{
   border-radius: 8px;
   margin: 10px;
   background-color: white;
+  height: 150px;
+  h3 {
+    color: #2A9D8F;
+    small {
+      font-size: 60%;
+      font-weight: 600;
+    }
+  }
 }
 
-.clothe-details-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
-}
 .info-left {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 22px;
   border-radius: 8px;
-  margin: 10px;
+  margin: 0px 1em 0px 0px;
   background-color: white;
 }
 strong {
@@ -81,7 +88,7 @@ strong {
 
 .btn-flat {
   color: white;
-  padding: 8px 24px;
+  padding: 8px 28px;
   border-radius: 4px;
   background: #2A9D8F;
   transition: background 0.3s ease;
@@ -103,4 +110,8 @@ strong {
 .photo-clothes-show {
   height: 278px;
 }
-
+.total-widget {
+  strong {
+color: black;
+  }
+}
