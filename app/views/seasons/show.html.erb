@@ -27,8 +27,8 @@
                 <p><strong><%= clothe.name %></strong></p>
                 <p>ref. <%= clothe.reference %></p>
                 <div class="d-flex">
-                  <div class="rond-couleur" style="background: <%= clothe.components[0].color_hexadecimal %>">
-                  <p class="color-clothe-card"><%= clothe.components[0].color %></p>
+                  <div class="rond-couleur" style="background: <%= clothe.main_fabric.color_hexadecimal %>">
+                  <p class="color-clothe-card"><%= clothe.main_fabric.color %></p>
                   </div>
                 </div>
               </div>

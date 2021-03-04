@@ -55,31 +55,31 @@ fileF4 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759865
 fileF5 = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759840/pattern-tshirt2_mmsvjm.jpg')
 
 family1 = Family.create!(
-  name: "PULLS"
+  name: "Pulls"
 )
 family1.photo.attach(io: fileF1, filename: 'pull.png', content_type: 'image/png')
 family1.save!
 
 family2 = Family.create!(
-  name: "PANTALONS"
+  name: "Pantalons"
 )
 family2.photo.attach(io: fileF2, filename: 'jeans.png', content_type: 'image/png')
 family2.save!
 
 family3 = Family.create!(
-  name: "MANTEAUX"
+  name: "Manteaux"
 )
 family3.photo.attach(io: fileF3, filename: 'manteau.png', content_type: 'image/png')
 family3.save!
 
 family4 = Family.create!(
-  name: "CHEMISES"
+  name: "Chemises"
 )
 family4.photo.attach(io: fileF4, filename: 'chemise.png', content_type: 'image/png')
 family4.save!
 
 family5 = Family.create!(
-  name: "T-SHIRTS"
+  name: "T-Shirts"
 )
 family5.photo.attach(io: fileF5, filename: 'tshirt.png', content_type: 'image/png')
 family5.save!
@@ -356,7 +356,7 @@ component2 = Component.create!(
   name: "Isolant",
   reference: "PL24",
   description: "Technical fabrics",
-  color: "Gray",
+  color: "White",
   composition: "90% polyester, 10% elasthane",
   unit: "mètre",
   unit_price: "7,5€",
@@ -413,7 +413,7 @@ componentAZ = Component.create!(
   unit: "mètre",
   unit_price: "6.9€",
   rating: 4.5,
-  color_hexadecimal: "#FCFCFC"
+  color_hexadecimal: "#F7F7F0"
 )
 
 
