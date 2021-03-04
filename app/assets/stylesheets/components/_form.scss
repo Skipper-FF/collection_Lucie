@@ -295,6 +295,15 @@
     }
   }
 
+  .category-item img {
+    vertical-align: middle;
+    border-style: none;
+    object-fit: contain;
+    height: 150px;
+    width: 150%;
+    margin-bottom: 15px;
+  }
+
 // #snippet_category_ruby + label {
 //   color: #FD1015;
 // }

@@ -10,8 +10,10 @@
         <input type="hidden" name="clothe[pattern_id]" value="">
         <% @patterns.each do |pattern| %>
             <div class="category-item">
-                <input class="form-check-input is-valid radio_buttons required category-selector" type="radio" value="<%= pattern.id %>" name="clothe[pattern_id]" id="clothe_pattern_id_<%= pattern.id %>">
-                <label class="form-check-label collection_radio_buttons" for="clothe_pattern_id_<%= pattern.id %>"><%= pattern.name %></label>
+                <input class="form-check-input radio_buttons required family-selector my-class" type="radio" value="<%= pattern.id %>" name="clothe[pattern_id]" id="clothe_pattern_id_<%= pattern.id %>">
+                <label class="form-check-label collection_radio_buttons" for="clothe_pattern_id_<%= pattern.id %>"><%= pattern.name %>
+                  <%= cl_image_tag(pattern.photo.key) %>
+                </label>
             </div>
         <% end %>
     </div>

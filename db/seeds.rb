@@ -1,12 +1,5 @@
 require "open-uri"
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 TechnicalDetail.destroy_all
 Component.destroy_all
 Clothe.destroy_all
@@ -68,7 +61,7 @@ family1.photo.attach(io: fileF1, filename: 'pull.png', content_type: 'image/png'
 family1.save!
 
 family2 = Family.create!(
-  name: "JEANS"
+  name: "PANTALONS"
 )
 family2.photo.attach(io: fileF2, filename: 'jeans.png', content_type: 'image/png')
 family2.save!
@@ -94,7 +87,7 @@ family5.save!
 factory1 = Factory.create!(
   name: "RGT Textiles",
   address: "Porto (Portugal)",
-  speciality: "Sportswear",
+  speciality: "Chemises",
   production_capacity: 10000,
   moq: "100",
   rating: 4
@@ -103,17 +96,16 @@ factory1 = Factory.create!(
 factory2 = Factory.create!(
   name: "AAC-Textiles",
   address: "Lisbonne (Portugal)",
-  speciality: "Sportswear",
+  speciality: "Manteaux",
   production_capacity: 7000,
   moq: "150",
   rating: 3.5
 )
 
-
 factory3 = Factory.create!(
   name: "BFIELD",
   address: "Łódź (Poland)",
-  speciality: "Jeans",
+  speciality: "Pantalons",
   production_capacity: 10000,
   moq: "1000",
   rating: 4
@@ -122,7 +114,7 @@ factory3 = Factory.create!(
 factory4 = Factory.create!(
   name: "M-Corp",
   address: "Łask (Poland)",
-  speciality: "Coats",
+  speciality: "Manteaux",
   production_capacity: 5000,
   moq: "500",
   rating: 4.5
@@ -131,7 +123,7 @@ factory4 = Factory.create!(
 factory5 = Factory.create!(
   name: "Baltic SC",
   address: "Kaunas (Lithuania)",
-  speciality: "Shirts",
+  speciality: "Chemises",
   production_capacity: 15000,
   moq: "1000",
   rating: 4
@@ -140,7 +132,7 @@ factory5 = Factory.create!(
 factory6 = Factory.create!(
   name: "SEWPORT",
   address: "Florence (Italia)",
-  speciality: "Blazers, Suits",
+  speciality: "T-shirt",
   production_capacity: 20000,
   moq: "3000",
   rating: 4.5
@@ -149,12 +141,12 @@ factory6 = Factory.create!(
 
 factoryfamily1 = FactoryFamily.create!(
   factory_id: factory1.id,
-  family_id: family1.id
+  family_id: family4.id
 )
 
 factoryfamily2 = FactoryFamily.create!(
   factory_id: factory2.id,
-  family_id: family1.id
+  family_id: family3.id
 )
 
 factoryfamily3 = FactoryFamily.create!(
@@ -169,13 +161,166 @@ factoryfamily4 = FactoryFamily.create!(
 
 factoryfamily5 = FactoryFamily.create!(
   factory_id: factory5.id,
-  family_id: family4.id
+  family_id: family2.id
 )
 
 factoryfamily6 = FactoryFamily.create!(
   factory_id: factory6.id,
   family_id: family5.id
 )
+
+factoryfamily7 = FactoryFamily.create!(
+  factory_id: factory6.id,
+  family_id: family4.id
+)
+
+factoryfamily8 = FactoryFamily.create!(
+  factory_id: factory4.id,
+  family_id: family5.id
+)
+
+## PATTERN 1 - T-SHIRT
+
+pattern1 = Pattern.create!(
+  name: "T-shirt poche poitrine",
+  description: "T-shirt poche poitrine",
+  family_id: family5.id,
+)
+
+filetshirtpoche = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614873913/t-shirt_poche_poitrine_recwid.jpg')
+
+pattern1.photo.attach(io: filetshirtpoche, filename: 'tshirtpoche.png', content_type: 'image/png')
+pattern1.save!
+
+## PATTERN 2 - PULL
+
+pattern2 = Pattern.create!(
+  name: "Pull maille nid d'abeille",
+  description: "Pull maille nid d'abeille",
+  family_id: family1.id,
+)
+
+filepullabeille = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614875889/pull_nid_d_abeille_cs362i.jpg')
+
+pattern2.photo.attach(io: filepullabeille, filename: 'pullnidabeille.png', content_type: 'image/png')
+pattern2.save!
+
+## PATTERN 3 - JEANS
+
+pattern3 = Pattern.create!(
+  name: "Jeans droit",
+  description: "Jeans droit",
+  family_id: family2.id,
+)
+
+filejeansdroit = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614875340/Jeans_yr7zro.jpg')
+
+pattern3.photo.attach(io: filejeansdroit, filename: 'jeansdroit.png', content_type: 'image/png')
+pattern3.save!
+
+## PATTERN 4 - MANTEAU
+
+pattern4 = Pattern.create!(
+  name: "Manteau imperméable",
+  description: "Manteau imperméable",
+  family_id: family3.id,
+)
+
+fileimpermeable = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759859/pattern-manteau_edc2op.jpg')
+
+pattern4.photo.attach(io: fileimpermeable, filename: 'jeansdroit.png', content_type: 'image/png')
+pattern4.save!
+
+## PATTERN 5 - CHEMISE
+
+pattern5 = Pattern.create!(
+  name: "Chemise col officier",
+  description: "Chemise col officier",
+  family_id: family4.id,
+)
+
+filechemiseofficier = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759865/pattern-chemise_dtpgyb.jpg')
+
+pattern5.photo.attach(io: filechemiseofficier, filename: 'chemiseofficier.png', content_type: 'image/png')
+pattern5.save!
+
+## PATTERN 6 - T-SHIRT
+
+pattern6 = Pattern.create!(
+  name: "T-shirt col rond",
+  description: "T-shirt col rond",
+  family_id: family5.id,
+)
+
+filetshirtcolrond = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614873913/t-shirt_col_rond_xlrk82.jpg')
+
+pattern6.photo.attach(io: filetshirtcolrond, filename: 'tshirtcolrond.png', content_type: 'image/png')
+pattern6.save!
+
+## PATTERN 7 - T-SHIRT
+
+pattern7 = Pattern.create!(
+  name: "T-shirt manche raglan",
+  description: "T-shirt manche raglan",
+  family_id: family5.id,
+)
+
+fileraglan = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759840/pattern-tshirt2_mmsvjm.jpg')
+
+pattern7.photo.attach(io: fileraglan, filename: 'tshirtraglan.png', content_type: 'image/png')
+pattern7.save!
+
+## PATTERN 8 - CHEMISE
+
+pattern8 = Pattern.create!(
+  name: "Chemise col francais",
+  description: "Chemise col francais",
+  family_id: family4.id,
+)
+
+filechemisevfrancais = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614876462/chemise_col_francais_bd9jzu.jpg')
+
+pattern8.photo.attach(io: filechemisevfrancais, filename: 'chemisefrancais.png', content_type: 'image/png')
+pattern8.save!
+
+## PATTERN 9 - PULL
+
+pattern9 = Pattern.create!(
+  name: "Pull maille anglaises",
+  description: "Pull maille anglaises",
+  family_id: family1.id,
+)
+
+filepullanglaise = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759846/pattern-pull_gd3iry.jpg')
+
+pattern9.photo.attach(io: filepullanglaise, filename: 'pullanglaise.png', content_type: 'image/png')
+pattern9.save!
+
+## PATTERN 10 - MANTEAU
+
+pattern10 = Pattern.create!(
+  name: "Parka d'hiver",
+  description: "Parka d'hiver",
+  family_id: family3.id,
+)
+
+fileparka = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614876792/parka_zzf2r9.jpg')
+
+pattern10.photo.attach(io: fileparka, filename: 'parka.png', content_type: 'image/png')
+pattern10.save!
+
+## PATTERN 11 - PANTALON
+
+pattern11 = Pattern.create!(
+  name: "Chino",
+  description: "Chino",
+  family_id: family2.id,
+)
+
+filechino = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614759854/pattern-pantalon_mgqlav.jpg')
+
+pattern11.photo.attach(io: filechino, filename: 'chino.png', content_type: 'image/png')
+pattern11.save!
 
 # =========== Clothe example nb 1  =====
 
@@ -257,6 +402,20 @@ component5 = Component.create!(
   rating: 4
 )
 
+componentAZ = Component.create!(
+  element_type: "Main fabric",
+  supplier: "Reda",
+  name: "Jersey 100% coton blanc",
+  reference: "WSH580",
+  description: "Jersey 100% coton blanc",
+  color: "Blanc",
+  composition: "79% Polyester, 21% Viscose.",
+  unit: "mètre",
+  unit_price: "6.9€",
+  rating: 4.5,
+  color_hexadecimal: "#FCFCFC"
+)
+
 
 TechnicalDetail.create!(
   clothe_id: clothe1.id,
@@ -291,18 +450,11 @@ TechnicalDetail.create!(
 
 # =========== Clothe example nb 2 =====
 
-pattern2 = Pattern.create!(
-  name: "Pull maille nid d'abeille",
-  description: "Pull maille nid d'abeille",
-  family_id: family1.id,
-)
-
-
 clothe2 = Clothe.create!(
-  factory_id: factory2.id,
+  factory_id: factory6.id,
   season_id: season2.id,
   pattern_id: pattern2.id,
-  name: "Pull ",
+  name: "Pull vert forêt",
   reference: "LSW1",
   quantity: 10000,
   confection_cost: 12,
@@ -313,14 +465,15 @@ clothe2 = Clothe.create!(
 component1b = Component.create!(
   element_type: "Main fabric",
   supplier: "Reda",
-  name: "Toile 100% coton sergé bleu foncé",
+  name: "Toile 100% coton sergé vert forêt",
   reference: "HWX28",
   description: "Hot and fleece cotton",
   color: "Bleu foncé",
   composition: "100% cotton",
   unit: "mètre",
   unit_price: "12€",
-  rating: 4
+  rating: 4,
+  color_hexadecimal: "#0C4D15"
 )
 
 component2b = Component.create!(
@@ -410,17 +563,11 @@ TechnicalDetail.create!(
 
 # =========== Clothe example nb 3  =====
 
-pattern3 = Pattern.create!(
-  name: "Regular jeans",
-  description: "",
-  family_id: family2.id,
-)
-
 clothe3 = Clothe.create!(
   factory_id: factory3.id,
   season_id: season2.id,
   pattern_id: pattern3.id,
-  name: "Hot jeans",
+  name: "Jeans droit brut",
   reference: "RJ430",
   quantity: 15000,
   confection_cost: 9,
@@ -439,7 +586,9 @@ componentAA = Component.create!(
   composition: "95% cotton, 5% elasthane",
   unit: "mètre",
   unit_price: "18€",
-  rating: 4.5
+  rating: 4.5,
+  color_hexadecimal: "#172287"
+
 )
 
 componentBB = Component.create!(
@@ -508,17 +657,12 @@ TechnicalDetail.create!(
 
 # =========== Clothe example nb 4  =====
 
-pattern4 = Pattern.create!(
-  name: "Manteau",
-  description: "",
-  family_id: family3.id,
-)
 
 clothe4 = Clothe.create!(
   factory_id: factory4.id,
   season_id: season1.id,
   pattern_id: pattern4.id,
-  name: "Manteau léger",
+  name: "Manteau imperméable",
   reference: "LTRC520",
   quantity: 8000,
   confection_cost: 12,
@@ -536,7 +680,8 @@ componentZZ = Component.create!(
   composition: "95% polyester, 5% elasthane",
   unit: "mètre",
   unit_price: "15€",
-  rating: 4
+  rating: 4,
+  color_hexadecimal: "#000000"
 )
 
 componentYY = Component.create!(
@@ -624,17 +769,12 @@ TechnicalDetail.create!(
 
 # =========== Clothe example nb 5  =====
 
-pattern5 = Pattern.create!(
-  name: "Shirt",
-  description: "",
-  family_id: family4.id,
-)
 
 clothe5 = Clothe.create!(
-  factory_id: factory5.id,
+  factory_id: factory1.id,
   season_id: season1.id,
   pattern_id: pattern5.id,
-  name: "Chemise d'été",
+  name: "Chemise col officier",
   reference: "LSH023",
   quantity: 10000,
   confection_cost: 7,
@@ -652,7 +792,8 @@ componentMM = Component.create!(
   composition: "95% cotton, 5% elasthane",
   unit: "mètre",
   unit_price: "7€",
-  rating: 4.5
+  rating: 4.5,
+  color_hexadecimal: "#250C9A"
 )
 
 componentNN = Component.create!(
@@ -700,45 +841,16 @@ TechnicalDetail.create!(
 )
 
 
-# =========== Clothe example nb 6  =====
-pattern1 = Pattern.create!(
-  name: "T-shirt poche poitrine",
-  description: "T-shirt poche poitrine",
-  family_id: family5.id,
-)
-
-filetshirtpoche = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614873913/t-shirt_poche_poitrine_recwid.jpg')
-
-pattern6.photo.attach(io: filetshirtpoche, filename: 'tshirtcolrond.png', content_type: 'image/png')
-pattern6.save!
-
-pattern6 = Pattern.create!(
-  name: "T-shirt col rond",
-  description: "T-shirt col rond",
-  family_id: family5.id,
-)
-
-filetshirtcolrond = URI.open('https://res.cloudinary.com/dp07cstgb/image/upload/v1614873913/t-shirt_col_rond_xlrk82.jpg')
-
-pattern6.photo.attach(io: filetshirtcolrond, filename: 'tshirtcolrond.png', content_type: 'image/png')
-pattern6.save!
+# =========== Clothe example nb 6  ====
 
 
-pattern7 = Pattern.create!(
-  name: "T-shirt manche raglan",
-  description: "T-shirt manche raglan",
-  family_id: family5.id,
-)
-
-pattern7.photo.attach(io: fileF5, filename: 'tshirtraglan.png', content_type: 'image/png')
-pattern7.save!
-
+##############################
 
 clothe6 = Clothe.create!(
   factory_id: factory6.id,
   season_id: season1.id,
   pattern_id: pattern6.id,
-  name: "Tshirt élégant",
+  name: "Tshirt col rond",
   reference: "LSB486",
   quantity: 8000,
   confection_cost: 20,
@@ -756,21 +868,10 @@ componentCC = Component.create!(
   composition: "79% Polyester, 21% Viscose.",
   unit: "mètre",
   unit_price: "8€",
-  rating: 4.5
+  rating: 4.5,
+  color_hexadecimal: "#000000"
 )
 
-componentAZ = Component.create!(
-  element_type: "Main fabric",
-  supplier: "Reda",
-  name: "Jersey 100% coton blanc",
-  reference: "WSH580",
-  description: "Jersey 100% coton blanc",
-  color: "Blanc",
-  composition: "79% Polyester, 21% Viscose.",
-  unit: "mètre",
-  unit_price: "6.9€",
-  rating: 4.5
-)
 
 componentDD = Component.create!(
   element_type: "Trim",
