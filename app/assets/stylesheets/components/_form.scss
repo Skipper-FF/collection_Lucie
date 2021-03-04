@@ -60,9 +60,15 @@
 
 .category-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 16px;
+}
+
+.clothe_pattern_id_ {
+  .category-item {
+    height: 86px;
   }
+}
   
   .category-item {
     flex: 0 0 30%;
@@ -151,8 +157,10 @@
   }
   
   .family-font {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 500;
+    color: $persian-green;
+    padding-bottom: 8px;
   }
   
   .family-item img {
@@ -169,11 +177,13 @@
   }
   
   .family-selector:checked + label {
-    border: 3px solid $persian-green;
+    border: 2px solid $persian-green;
   }
   
   .form-check-input.is-valid ~ .form-check-label {
     color: $persian-green!important;
+    font-size: 14px;
+    font-weight: 500;
   }
   .form-check {
     padding-left: 0px;
@@ -215,10 +225,11 @@
   .radio_buttons label {
     border-radius: 8px;
     //  margin-bottom: 16px;
+    }
     p {
       margin-bottom: 0px;
     }
-  }
+
   
   .box-pattern {
     display: flex;
@@ -281,7 +292,7 @@
   }
   
   .factory-choice-step {
-    width: 75%;
+    width: 100%;
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 8px;
     margin-left: 24px;
@@ -295,13 +306,27 @@
     }
   }
 
-  .category-item img {
+  .category-item {
+    img {
     vertical-align: middle;
     border-style: none;
     object-fit: contain;
     height: 150px;
     width: 150%;
     margin-bottom: 15px;
+    }
+    label {
+      padding: 5px 10px;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .category-selector:checked + label {
+    border: 2px solid $persian-green;
   }
 
 // #snippet_category_ruby + label {
