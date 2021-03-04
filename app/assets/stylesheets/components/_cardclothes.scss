@@ -3,7 +3,6 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 230px;
-  margin: 20px;
   border-radius: 8px;
   h2 {
     width: 60px;
@@ -112,6 +111,7 @@
 .card-group {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
 }
 
 
