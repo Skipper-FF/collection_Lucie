@@ -5,6 +5,7 @@
     border-radius: 3px;
     border: 1px solid rgba(0,0,0,0.1);
     box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
+    max-width: 950px;
     h2 {
       font-size: 24px;
       font-weight: 500;
@@ -208,6 +209,7 @@
   
   .new_clothe input {
     border-radius: 8px;
+    height: 50px;
   }
   
   .radio_buttons label {
@@ -280,7 +282,7 @@
   
   .factory-choice-step {
     width: 75%;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.2);
     border-radius: 8px;
     margin-left: 24px;
     height: 248px;

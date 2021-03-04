@@ -1,9 +1,87 @@
+
 <div class="container">
   <div class="form-design">
+    <div class="stepper-header">
+
+        <!-- Steppers Wrapper -->
+        <ul class="stepper stepper-horizontal">
+
+          <!-- First Step -->
+          <li class="active-tab" id="step-one-tab" >
+            <a href="#!">
+              <div class="step-active-done">
+                <div>    <span class="circle-done">1</span>  </div>
+                <div>   <span class="label-tab">Famille</span>  </div> 
+              </div>
+            </a>
+          </li>
+
+          <!-- Second Step -->
+          <li class="current-tab" id="step-two-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div> <span class="circle-next">2</span></div>
+              <div> <span class="label-tab">Modèle</span></div>
+            </div>
+            </a>
+          </li>
+
+          <!-- Third Step -->
+          <li class="current-tab" id="step-three-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div> <span class="circle-next">3</i></span> </div>
+              <div><span class="label-tab">Tissus</span></div>
+            </div>
+            </a>
+          </li>
+
+          <!-- Fourth Step -->
+          <li class="current-tab" id="step-four-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div><span class="circle-next">4</i></span></div>
+              <div><span class="label-tab">Composants</span></div>
+            </div>
+            </a>
+          </li>
+
+          <!-- Fifth Step -->
+          <li class="current-tab" id="step-five-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div><span class="circle-next">5</i></span></div>
+              <div><span class="label-tab">Branding</span></div>
+            </div>
+            </a>
+          </li>
+
+          <!-- Sixth Step -->
+          <li class="current-tab" id="step-six-tab">
+            <a href="#!">
+            <div class="step-active-current">
+              <div><span class="circle-next">6</i></span></div>
+              <div><span class="label-tab">Production</span></div>
+            </div>
+            </a>
+          </li>
+
+
+        </ul>
+        <!-- /.Steppers Wrapper -->
+
+      </div>
+
+<!-- /.Horizontal Steppers -->
+
+
+<!--  CONTENU DES STEPS -->
+
+
     <div class="form">
       <%= simple_form_for [ @season, @clothe ] do |f| %>
         <div class="form-step active" id="step-one">
-          <h2>Quelle est la famille du produit à ajouter ?</h2>
+          <h2>Famille du produit</h2>
           <div id="family-fieldset">
             <%= render 'families_input' %>
             <%#= f.input :family, as: :radio_buttons, collection: Family.all %>
@@ -14,7 +92,7 @@
         </div>
 
         <div class="form-step" id="step-two">
-          <h2>Compléter les informations générales du produit à ajouter</h2>
+          <h2>Informations générales</h2>
           <div class="box">
             <%= f.input :name, label: "Nom du produit" %>
             <%= f.input :reference, label: "Référence du produit" %>
@@ -31,7 +109,7 @@
         </div>
 
         <div class="form-step" id="step-three">    
-          <h2>Compléter la composition du produit à ajouter (1/3) | <strong>Tissus</strong></h2>
+          <h2>Composition du produit (1/3) | <strong>Tissus</strong></h2>
           <h6>Ajouter le tissu principal</h6>
           <%= f.simple_fields_for :technical_details do |form| %>
             <div class="form-components">
@@ -85,7 +163,7 @@
         </div>
 
         <div class="form-step" id="step-four">
-          <h2>Compléter la composition du produit à ajouter (2/3) | <strong>Composants</strong></h2>
+          <h2>Composition du produit (2/3) | <strong>Composants</strong></h2>
           <h6>Ajouter les composants | <em>boutons, zips, cordons...</em></h6>
           <div id="trim-forms">
             <div id="form-add-trim">
@@ -129,7 +207,7 @@
         </div>
 
         <div class="form-step" id="step-five">
-          <h2>Compléter la composition du produit à ajouter (3/3) | <strong>Composants de marque</strong></h2>
+          <h2>Composition du produit (3/3) | <strong>Composants de marque</strong></h2>
           <h6>Ajouter les composants de marques | <em>étiquettes...</em></h6>
           <div id="trim-forms">
             <div id="form-add-brand-trim">
@@ -173,7 +251,7 @@
         </div>
 
         <div class="form-step" id="step-six">
-          <h2>Completer les informations de production du produit à ajouter</h2>
+          <h2>Informations de production</h2>
           <div class="form-production-steps">
             <div class="quantities-choice-step">
               <%= f.input :quantity, as: :integer, input_html: { min: '0' }, label: "Qtés à produire" %>
@@ -189,7 +267,7 @@
           </div>
           <div class="box-previous-next">
             <%= link_to "< Précédent", "#", class: "go-to-step btn-small btn-light", data: {target: "step-five"} %>
-            <%= f.submit "Valider 🎉", class: 'btn-green-flash btn-small' %>
+            <%= f.submit "Valider", class: 'btn-green-flash btn-small' %>
           </div>
         </div>
       <% end %> 
