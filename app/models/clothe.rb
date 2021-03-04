@@ -18,12 +18,12 @@ class Clothe < ApplicationRecord
   # private
   # calcul du coût de revient total du vêtement en fctn des quantités à produire
   def total_production_cost
-    total_cost * quantity
+    total_cost * quantity / 1000
   end
 
   # calcul du C.A. total du vêtement en fctn des quantités produites
   def turnover
-    selling_price * quantity
+    selling_price * quantity / 1000
   end
 
   # calcul du taux de marge unitaire du vêtement 
@@ -33,7 +33,10 @@ class Clothe < ApplicationRecord
     margin = selling_price_ht - total_cost
     margin_rate = (( margin / selling_price_ht ) * 100 ).to_f.round(1)
   end
-
+  def margin_value 
+    selling_price_ht = selling_price / 1.2
+    margin = ((selling_price_ht - total_cost) * quantity / 1000 ).round(0)
+  end 
   def main_fabric
     self.components.select{|component| component.element_type == "Main fabric"}.first
   end
