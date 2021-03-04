@@ -7,7 +7,7 @@
           <a class="dropdown-item" href="#"><%= link_to "Mon compte", "#", class: "suivi-title" %></a>
           <a class="dropdown-item" href="#"><%= link_to "Deconnexion", destroy_user_session_path, class: "suivi-title" %></a>
         </div>
-    <p class="name-sidebar">Lucie Dupont<p>
+    <p class="name-sidebar"><%= current_user.first_name %><p>
     <p class="fonction-sidebar">Responsable de collection</p>
   </div>
 
