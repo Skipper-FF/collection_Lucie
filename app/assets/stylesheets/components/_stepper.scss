@@ -1,15 +1,18 @@
 .active-tab {
     font-weight: bold;
     list-style: none;
+    z-index: 4;
     .circle-next {
         background: $persian-green;
         border: 2px solid #2A9D8F;
         color: white;
+
     }
 }
 
 .current-tab {
     list-style: none;
+    z-index: 4;
 }
 
 .stepper-horizontal {
@@ -20,8 +23,18 @@
 	box-shadow: 0 3px 8px -6px rgba(0,0,0,.20);
 //    border-bottom: ;
     height: 140px;
+    width: 100%;
 }
 
+.stepper-horizontal:after {
+    content: " ";
+    top: 103px;
+    z-index: 0;
+    position: absolute;
+    width: 730px;
+    height: 2.5px;
+    background-color: #c7c9ca;
+}
 
 .step-active-done {
     display: block;
