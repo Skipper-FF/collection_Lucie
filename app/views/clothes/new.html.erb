@@ -39,11 +39,11 @@
                 <%= form.input :component, collection: @main_fabric, label: "Tissu principal" %>
               </div>
               <div class="form-component">
-                <%= form.input :quantity, input_html: { min: '0' }, label: "Metrage par produit" %>
+                <%= form.input :quantity, input_html: { min: '0' }, label: "Qté par produit (en mètre)" %>
               </div>
             </div>
           <% end %>
-          <h6>Ajouter les tissus secondaires</h6>
+          <h6>Ajouter les tissus secondaires | <em>doublure, fond de poche, isolant...</em></h6>
           <div id="secondary-forms">
             <div id="form-add-secondary-fabric">
               <%= f.simple_fields_for :technical_details do |form| %>
@@ -52,7 +52,7 @@
                     <%= form.input :component, collection: @secondary_fabric, label: "Tissu secondaire" %>
                   </div>
                   <div class="form-component">
-                    <%= form.input :quantity, input_html: { min: '0' }, label: "Metrage par produit" %>
+                    <%= form.input :quantity, input_html: { min: '0' }, label: "Qté par produit (en mètre)" %>
                   </div>
                 </div>
               <% end %>
@@ -65,7 +65,7 @@
                       <%= form.input :component, collection: @secondary_fabric, label: "Tissu secondaire" %>
                     </div>
                     <div class="form-component">
-                      <%= form.input :quantity, input_html: { min: '0' }, label: "Metrage par produit" %>
+                      <%= form.input :quantity, input_html: { min: '0' }, label: "Qté par produit (en mètre)" %>
                     </div>
                   </div>
                 <% end %>
@@ -95,7 +95,7 @@
                     <%= form.input :component, collection: @trim, label: "Composant" %>
                   </div>
                   <div class="form-component">
-                    <%= form.input :quantity, input_html: { min: '0' }, label: "Quantité par produit" %>
+                    <%= form.input :quantity, input_html: { min: '0' }, label: "Qté par produit" %>
                   </div>
                 </div>
               <% end %>
@@ -108,7 +108,7 @@
                       <%= form.input :component, collection: @trim, label: "Composant" %>
                     </div>
                     <div class="form-component">
-                      <%= form.input :quantity, input_html: { min: '0' }, label: "Quantité par produit" %>
+                      <%= form.input :quantity, input_html: { min: '0' }, label: "Qté par produit" %>
                     </div>
                   </div>
                 <% end %>
@@ -139,7 +139,7 @@
                     <%= form.input :component, collection: @brand_trim, label: "Composant de marque" %>
                   </div>
                   <div class="form-component">
-                    <%= form.input :quantity, input_html: { min: '0' }, label: "Quantité par produit" %>
+                    <%= form.input :quantity, input_html: { min: '0' }, label: "Qté par produit" %>
                   </div>
                 </div>
               <% end %>
@@ -152,7 +152,7 @@
                       <%= form.input :component, collection: @brand_trim, label: "Composant de marque" %>
                     </div>
                     <div class="form-component">
-                      <%= form.input :quantity, input_html: { min: '0' }, label: "Quantité par produit" %>
+                      <%= form.input :quantity, input_html: { min: '0' }, label: "Qté par produit" %>
                     </div>
                   </div>
                 <% end %>
@@ -174,13 +174,19 @@
 
         <div class="form-step" id="step-six">
           <h2>Completer les information de production du produit à ajouter</h2>
-          <%= f.input :quantity, as: :integer, input_html: { min: '0' }, label: "Quantités à produire" %>
-          <h6>Sélectionner l'usine de production</h6>
-          <div id="factory-fieldset">
-            <%= render 'factories_input' %>
+          <div class="form-production-steps">
+            <div class="quantities-choice-step">
+              <%= f.input :quantity, as: :integer, input_html: { min: '0' }, label: "Qtés à produire" %>
+              <%= f.input :confection_cost, as: :integer, input_html: { min: '0' }, label: "Prix de confection HT (CMT) | €" %>
+              <%= f.input :selling_price, as: :integer, input_html: { min: '0' }, label: "Prix de vente unitaire TTC | €" %>
+            </div>
+            <div class="factory-choice-step">
+              <h6>Sélectionner l'usine de production</h6>
+              <div id="factory-fieldset">
+                <%= render 'factories_input' %>
+              </div>
+            </div>
           </div>
-          <%= f.input :confection_cost, as: :integer, input_html: { min: '0' }, label: "Prix de confection HT (CMT) | €" %>
-          <%= f.input :selling_price, as: :integer, input_html: { min: '0' }, label: "Prix de vente unitaire TTC | €" %>
           <div class="box-previous-next">
             <%= link_to "< Précédent", "#", class: "go-to-step btn-small btn-light", data: {target: "step-five"} %>
             <%= f.submit "Ajouter le produit 🎉", class: 'btn-green-flash btn-small' %>

@@ -32,7 +32,8 @@
     text-align: left;
     font-size: 16px;
     color: rgba(0,0,0,0.5);
-    margin: 0px;
+    margin-top: 24px;
+    margin-bottom: -24px;
   }
 }
 
@@ -84,29 +85,10 @@
   
   .category-selector:checked + label {
     color: $persian-green !important;
-    border: 2px solid $persian-green;
+    border: 1px solid $persian-green;
   }
   
   
-  #snippet_category_ruby + label {
-    color: #FD1015;
-  }
-  
-  #snippet_category_ruby:checked + label {
-    background-color: #FD1015;
-    border-color: #FD1015;
-  }
-  
-  /*
-  #snippet_category_javascript + label {
-    color: #FFC65A;
-  }
-  
-  #snippet_category_javascript:checked + label {
-    background-color: #FFC65A;
-    border-color: #FFC65A;
-  }
-  */
   
   #snippet_category_css + label {
     color: #62DDF5;
@@ -116,109 +98,115 @@
     background-color: #62DDF5;
     border-color: #62DDF5;
   }
-
-/*MODIFS SUR LES CHECKBOXES DES FAMILIES (élts de l'ancienne page Add) */
-
-.my-class {
-  position: absolute;
-  transform: scale(0);
-}
-
-.my-class + label {
-  cursor: pointer;
-}
-
-.my-class:checked + label {
-
-}
-
-.family-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 16px;
-}
-
-.family-item {
-  background: white;
-  border-radius: 3px;
-  border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
-  align-items: center;
-  label {
-    padding: 5px 10px;
-    border: 3px solid transparent;
-    display: flex;
-    flex-direction: column;
+  
+  /*MODIFS SUR LES CHECKBOXES DES FAMILIES (élts de l'ancienne page Add) */
+  
+  .my-class {
+    position: absolute;
+    transform: scale(0);
+  }
+  
+  .my-class + label {
+    cursor: pointer;
+  }
+  
+  .my-class:checked + label {
+    
+  }
+  
+  .family-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+  }
+  
+  .family-item {
+    background: white;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
     align-items: center;
+    label {
+      padding: 5px 10px;
+      border: 3px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
-}
-
-.family-font {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.family-item img {
-  vertical-align: middle;
-  border-style: none;
-  object-fit: contain;
-  height: 150px;
-  width: 150%;
-  margin-bottom: 15px;
-}
-
-.form-check-label {
-  display: inline-block;
-}
-
-.family-selector:checked + label {
-  border: 3px solid $persian-green;
-}
-
-.form-step {
-  display: none;
-  &.active {
-    display: block;
+  
+  .family-font {
+    font-size: 20px;
+    font-weight: bold;
   }
-}
+  
+  .family-item img {
+    vertical-align: middle;
+    border-style: none;
+    object-fit: contain;
+    height: 150px;
+    width: 150%;
+    margin-bottom: 15px;
+  }
+  
+  .form-check-label {
+    display: inline-block;
+  }
+  
+  .family-selector:checked + label {
+    border: 3px solid $persian-green;
+  }
+  
+  .form-check-input.is-valid ~ .form-check-label {
+    color: $persian-green!important;
+  }
 
-.box {
-  display: flex;
-  justify-content: space-around;
-}
+  .form-step {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  
+  .box {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .box div {
+    width: 45%;
+  }
+  
+  .box-next {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .box-previous-next {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .new_clothe input {
+    border-radius: 8px;
+    height: 50px;
+  }
+  
+  .radio_buttons label {
+    border-radius: 8px;
+    //  margin-bottom: 16px;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  
+  .box-pattern {
+    display: flex;
+    justify-content: space-around;
+  }
 
-.box div {
-  width: 45%;
-}
-
-.box-next {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.box-previous-next {
-  display: flex;
-  justify-content: space-between;
-}
-
-.new_clothe input {
-  border-radius: 8px;
-  height: 50px;
-}
-
-.radio_buttons label {
-  border-radius: 8px;
-//  margin-bottom: 16px;
-p {
-  margin-bottom: 0px;
-}
-}
-
-.box-pattern {
-  display: flex;
-  justify-content: space-around;
-}
-
+  // LABEL DESIGN
+  
 .clothe_name label {
   position: absolute;
   top: 45px;
@@ -229,6 +217,49 @@ p {
 .clothe_reference label {
   position: absolute;
   top: 45px;
-  right: 345px;
+  right: 300px;
   background-color: white;
 }
+
+.clothe_technical_details_component select{
+  height: 50px;
+  border-radius: 8px;
+  width: 600px;
+}
+
+.clothe_technical_details_component label {
+  transform: translate(12px, 20px);
+  background-color: white;
+}
+
+.clothe_technical_details_quantity label {
+  transform: translate(12px, 20px);
+  background-color: white;
+}
+
+// FACTORY CHOICE STEP
+
+.form-production-steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+    // #snippet_category_ruby + label {
+    //   color: #FD1015;
+    // }
+    
+    // #snippet_category_ruby:checked + label {
+    //   background-color: #FD1015;
+    //   border-color: #FD1015;
+    // }
+    
+    /*
+    #snippet_category_javascript + label {
+      color: #FFC65A;
+    }
+    
+    #snippet_category_javascript:checked + label {
+      background-color: #FFC65A;
+      border-color: #FFC65A;
+    }
+    */
