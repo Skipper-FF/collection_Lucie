@@ -2,13 +2,17 @@
     <%#= f.input :factory_id, collection: Factory.all, as: :radio_buttons %>
 <%# end %>
 
-<fieldset class="form-group radio_buttons required clothe_factory_id">
-    <legend class="col-form-label pt-0">Usine de production <abbr title="required">*</abbr></legend>
+<fieldset class="radio_buttons required clothe_factory_id">
+  <div class="family-wrapper">
     <input type="hidden" name="clothe[factory_id]" value="">
     <% @factories.each do |factory| %>
-        <div class="form-check">
-            <input class="form-check-input radio_buttons required" type="radio" value="<%= factory.id %>" name="clothe[factory_id]" id="clothe_factory_id_<%= factory.id %>">
-            <label class="form-check-label collection_radio_buttons" for="clothe_factory_id_<%= factory.id %>"><%= factory.name %></label>
+        <div class="form-check family-item">
+            <input class="form-check-input radio_buttons required family-selector my-class" type="radio" value="<%= factory.id %>" name="clothe[factory_id]" id="clothe_factory_id_<%= factory.id %>">
+            <label class="form-check-label collection_radio_buttons" for="clothe_factory_id_<%= factory.id %>">
+              <%= cl_image_tag("usine-green_ocqj12", width: 100, height: 100, crop: :fill) %>
+              <p class="factory-font"><%= factory.name %></p>
+            </label>
         </div>
     <% end %>
+  </div>
 </fieldset>

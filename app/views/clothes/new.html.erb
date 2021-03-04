@@ -129,7 +129,7 @@
         </div>
 
         <div class="form-step" id="step-five">
-          <h2>Compléter la composition du produit à ajouter(3/3) | <strong>Composants de marque</strong></h2>
+          <h2>Compléter la composition du produit à ajouter (3/3) | <strong>Composants de marque</strong></h2>
           <h6>Ajouter les composants de marques | <em>étiquettes...</em></h6>
           <div id="trim-forms">
             <div id="form-add-brand-trim">
@@ -173,12 +173,12 @@
         </div>
 
         <div class="form-step" id="step-six">
-          <h2>Completer les information de production du produit à ajouter</h2>
+          <h2>Completer les informations de production du produit à ajouter</h2>
           <div class="form-production-steps">
             <div class="quantities-choice-step">
               <%= f.input :quantity, as: :integer, input_html: { min: '0' }, label: "Qtés à produire" %>
-              <%= f.input :confection_cost, as: :integer, input_html: { min: '0' }, label: "Prix de confection HT (CMT) | €" %>
-              <%= f.input :selling_price, as: :integer, input_html: { min: '0' }, label: "Prix de vente unitaire TTC | €" %>
+              <%= f.input :confection_cost, as: :integer, input_html: { min: '0' }, label: "Prix de confection HT €" %>
+              <%= f.input :selling_price, as: :integer, input_html: { min: '0' }, label: "Prix de vente unitaire TTC €" %>
             </div>
             <div class="factory-choice-step">
               <h6>Sélectionner l'usine de production</h6>
@@ -189,7 +189,7 @@
           </div>
           <div class="box-previous-next">
             <%= link_to "< Précédent", "#", class: "go-to-step btn-small btn-light", data: {target: "step-five"} %>
-            <%= f.submit "Ajouter le produit 🎉", class: 'btn-green-flash btn-small' %>
+            <%= f.submit "Valider 🎉", class: 'btn-green-flash btn-small' %>
           </div>
         </div>
       <% end %> 
