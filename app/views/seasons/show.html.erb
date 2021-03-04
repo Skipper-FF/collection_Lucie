@@ -26,7 +26,11 @@
               <div class="info-card-clothe">
                 <p><strong><%= clothe.name %></strong></p>
                 <p>ref. <%= clothe.reference %></p>
-                <p class="color-clothe-card"><%= clothe.components[0].color %></p>
+                <div class="d-flex">
+                  <div class="rond-couleur" style="background: <%= clothe.components[0].color_hexadecimal %>">
+                  <p class="color-clothe-card"><%= clothe.components[0].color %></p>
+                  </div>
+                </div>
               </div>
               <h4 class="card-trip-pricing"><%= clothe.confection_cost %>€</h4>
             </div>
