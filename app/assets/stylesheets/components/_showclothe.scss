@@ -148,3 +148,51 @@ color: black;
     color: #2A9D8F;
    }
 }
+
+
+.selling-price-form {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.selling-price-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  .form-group {
+    margin: 0;
+  }
+  .form-control.is-valid {
+    border-color: none;
+    background-image: none;
+  }
+  .form-control {
+    border-color: transparent;
+    padding: 0px;
+    padding-left: 32px;
+  }
+  input {
+    font-size: 25px;
+    color: $persian-green;
+    font-weight: bold;
+    text-align: center;
+  }
+  .submit-selling-price {
+    color: $green;
+    font-size: 22px;
+    cursor: pointer;
+    padding-left: 10px;
+    .fas {margin-right: 0};
+  }
+}
+
+
+#selling-price-trigger {
+  &.active {
+    display: none;
+  }
+  &:hover { cursor: pointer}
+}

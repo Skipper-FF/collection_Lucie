@@ -30,6 +30,7 @@ import "bootstrap";
 import { addComponent } from '../components/addComponent';
 import { showPatterns } from '../components/showPatterns';
 import { formSteps } from '../components/formSteps';
+import { sellingPriceTrigger } from '../components/sellingPriceTrigger';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -37,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   addComponent();
   showPatterns();
   formSteps();
+  sellingPriceTrigger();
 });

@@ -38,7 +38,13 @@
         <div class="widget">
 
           <span class="total-widget"><strong>Prix de vente unitaire </strong></span>
-          <h3><strong><%= @clothe.selling_price  %></strong><small> € TTC</small></h3>
+          <h3 id="selling-price-trigger"><strong><%= @clothe.selling_price  %></strong><small> € TTC</small></h3>
+          <%= simple_form_for [@clothe.season, @clothe], html: {class: "selling-price-form"} do |f| %>
+            <div class="selling-price-box">
+              <%= f.input :selling_price, label: false %>
+              <div class="submit-selling-price"><i class="fas fa-check"></i></div>
+            </div>
+          <% end %>
           <span class="total-widget-down">CA total : <strong><%= number_with_delimiter @clothe.turnover, delimiter: " " %> €</strong></span>
 
         </div>
