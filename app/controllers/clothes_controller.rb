@@ -55,6 +55,14 @@ class ClothesController < ApplicationController
     end
   end
 
+  def update
+    @clothe = Clothe.find(params[:id])
+    @clothe.update(clothe_params)
+    if @clothe.save
+      redirect_to season_clothe_path(@clothe.season, @clothe)
+    end
+  end
+
   def add
     @families = Family.all
     @clothe = Clothe.new
