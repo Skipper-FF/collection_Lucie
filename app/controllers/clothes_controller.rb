@@ -57,10 +57,11 @@ class ClothesController < ApplicationController
 
   def update
     @clothe = Clothe.find(params[:id])
-    @clothe.update(clothe_params)
-    if @clothe.save
-      redirect_to season_clothe_path(@clothe.season, @clothe)
+    if clothe_params[:selling_price]
+      @clothe.update(clothe_params)
+      @clothe.save
     end
+    redirect_to season_clothe_path(@clothe.season, @clothe)
   end
 
   def add

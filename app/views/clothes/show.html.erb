@@ -51,7 +51,7 @@
         <div class="widget">
           <span class="total-widget"> <strong>Taux de marge brute</strong></span>
           <h3 class="<%= "negative" if @clothe.margin_rate < 0 %>"><strong><%= @clothe.margin_rate %></strong> %</h3>
-          <span class="total-widget-down"> <strong></strong> Marge brute : <span class="<%= "negative" if @clothe.margin_value < 0 %>"><%= @clothe.margin_value %> €</span></span>
+          <span class="total-widget-down"> <strong></strong> Marge brute : <span class="<%= "negative" if @clothe.margin_value < 0 %>"><%= number_with_delimiter @clothe.margin_value, delimiter: " " %> €</span></span>
           </div>
         </div>
       </div>
