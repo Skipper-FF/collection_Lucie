@@ -24,11 +24,11 @@
   font-size: 30px;
 }
 .show-clothe {
-  display: flex;
-  
-
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 16px;
 }
+
 .main-cloth-infos {
   display: flex;
   & img {
@@ -54,7 +54,7 @@ td{
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 8px;
   background-color: white;
-  width: 614px;
+  width: 100%;
      h3 {
       text-align: left;
       color: #2A9D8F;
@@ -82,7 +82,6 @@ td{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 22px;
   border-radius: 8px;
-  margin: 0px 1em 0px 0px;
   background-color: white;
 }
 strong {
@@ -103,15 +102,33 @@ strong {
   padding-left: 300px;
 }
 
+.cloth-color-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.rond-couleur-show {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
 .cloth-color {
   color: #2A9D8F;
-  border: 1px solid #4A4A4A;
-  padding: 8px 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 8px 8px;
   border-radius: 50px;
   font-weight: normal;
   opacity: 0.9;
   transition: opacity 0.3s ease;
-  }
+  width: 60%;
+  text-align: center;
+}
+
 
 .photo-clothes-show {
   height: 278px;
