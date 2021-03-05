@@ -9,10 +9,13 @@
         <%= cl_image_tag(@clothe.pattern.photo.key) %>
         <div class="main-cloth-main-infos">
           <h3><strong class="title-name"><%=  @clothe.name %></strong></h3>
-          <p>Saison Autumn Winter 2021
-           Ref. LVHUSH</p>
+          <p> <%= @clothe.season.name %></p>
+          <p>Ref. <%= @clothe.reference %></p>
           <p>Produit par : <%= @clothe.factory.name %></p>
-          <span class="cloth-color"><%= @clothe.main_fabric.color %></span>
+          <div class="cloth-color-tab">
+            <div class="rond-couleur-show" style="background: <%= @clothe.main_fabric.color_hexadecimal %>"></div>
+            <div class="cloth-color"><%= @clothe.main_fabric.color %></div>
+          </div>
         </div>
       </div>
         <div class="button-show">
@@ -30,7 +33,7 @@
         <div class="widget">
           <span class="total-widget"><strong>Quantités</strong></span>
           <h3><strong> <%= @clothe.quantity %> </strong></h3>
-          <span class="total-widget-down">produites par AAC Textile</span >
+          <span class="total-widget-down">produites par <%= @clothe.factory.name %></span >
         </div>
         <div class="widget">
 
