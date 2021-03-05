@@ -166,8 +166,9 @@ color: black;
     margin: 0;
   }
   .form-control.is-valid {
-    border-color: none;
+    border-color: transparent;
     background-image: none;
+    box-shadow: none;
   }
   .form-control {
     border-color: transparent;
@@ -179,6 +180,11 @@ color: black;
     color: $persian-green;
     font-weight: bold;
     text-align: center;
+  }
+  input:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
   }
   .submit-selling-price {
     color: $green;

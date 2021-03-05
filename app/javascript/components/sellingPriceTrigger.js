@@ -4,6 +4,8 @@ const sellingPriceTrigger = () => {
     trigger.addEventListener('click', (e) => {
       const form = document.querySelector(".selling-price-form");
       form.classList.toggle("active");
+      const input = form.querySelector("#clothe_selling_price");
+      input.focus();
       e.currentTarget.classList.toggle("active");
       fetchClotheUpdate(form);
     });
