@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Fashion business made simple</h1>
     <p>Concentrez-vous sur la création de vos collections, nous facilitons leur administration</p>
-    <% if user_signed_in? %>
+    <% if user_signed_in? && @latest_season %>
       <%= link_to "Accéder au tableau de bord", season_path(@latest_season), class: "dashbord-banner" %>
     <% else %>
       <%= link_to "Demander une démo", "#", class: "btn-green-flash btn-call-to-action" %>
