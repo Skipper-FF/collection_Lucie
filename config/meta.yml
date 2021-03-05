@@ -1,0 +1,5 @@
+meta_product_name: "Collection"
+meta_title: "Collection - Fashion business made simple"
+meta_description: "Concentrez-vous sur la création de vos collections, nous facilitons leur administration"
+meta_image: "couv1200x630.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
